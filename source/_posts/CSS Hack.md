@@ -1,4 +1,4 @@
-﻿---
+---
 title: CSS Hack
 ---
 [TOC]

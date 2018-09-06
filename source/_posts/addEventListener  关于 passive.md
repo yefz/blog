@@ -1,4 +1,4 @@
-﻿---
+---
 title: addEventListener  关于 passive
 ---
 [TOC]

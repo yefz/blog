@@ -1,4 +1,4 @@
-﻿---
+---
 title: ECMAScript 6 学习总结
 ---
 [TOC]

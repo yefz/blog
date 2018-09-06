@@ -1,4 +1,4 @@
-﻿---
+---
 title: Ajax 搭配 Promise 封装
 ---
 [TOC]

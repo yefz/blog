@@ -1,4 +1,4 @@
-﻿---
+---
 title: Vue-router 路由
 ---
 [TOC]

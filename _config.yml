@@ -75,7 +75,9 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 # theme: icarus
 # theme: yilia
-theme: hueman
+# theme: hueman
+theme: jane
+# theme: jade-starter
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

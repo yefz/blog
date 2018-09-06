@@ -1,4 +1,4 @@
-﻿---
+---
 title: Vue-cli 3.0 构建项目（二）设置接口代理
 ---
 - `vue.config.js`
