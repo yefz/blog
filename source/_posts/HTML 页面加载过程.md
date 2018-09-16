@@ -1,5 +1,8 @@
 ---
 title: HTML 页面加载过程
+categories: HTML基础
+tags:
+  - loading
 ---
 
 # window.onload 和 DOMContentLoaded 的区别

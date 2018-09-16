@@ -1,5 +1,8 @@
 ---
 title: Jade 模板引擎
+categories: Template
+tags:
+  - Jade
 ---
 
 ## 注意事项

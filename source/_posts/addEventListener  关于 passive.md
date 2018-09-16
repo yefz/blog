@@ -1,5 +1,8 @@
 ---
 title: addEventListener  关于 passive
+categories: JavaScript
+tags:
+  - 原生JS
 ---
 
 语法： `el.addEventListener(type, listener[, useCapture])`

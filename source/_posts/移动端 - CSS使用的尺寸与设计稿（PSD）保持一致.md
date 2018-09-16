@@ -1,5 +1,8 @@
 ---
 title: 移动端 - CSS使用的尺寸与设计稿（PSD）保持一致
+categories: CSS
+tags:
+  - Mobile
 ---
 
 ##像素概念

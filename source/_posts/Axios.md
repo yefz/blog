@@ -1,5 +1,9 @@
 ---
 title: Axios
+categories: JavaScript
+tags:
+  - Vue
+  - HTTP请求库
 ---
 
 #Axios

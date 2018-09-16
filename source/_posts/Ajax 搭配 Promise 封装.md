@@ -1,5 +1,9 @@
 ---
 title: Ajax 搭配 Promise 封装
+categories: JavaScript
+tags:
+  - 原生JS
+  - 异步
 ---
 
 #简述

@@ -1,5 +1,8 @@
 ---
 title: Vue-router 路由
+categories: Vue
+tags:
+  - router
 ---
 
 #vue-router 使用步骤

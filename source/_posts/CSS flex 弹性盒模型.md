@@ -1,5 +1,8 @@
 ---
 title: CSS flex 弹性盒模型
+categories: CSS
+tags:
+  - flex
 ---
  
 # flex box 弹性盒模型

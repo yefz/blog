@@ -1,5 +1,8 @@
 ---
 title: FFC：基础算法题
+categories: JavaScript
+tags:
+  - FCC
 ---
 
 FCC 练习代码，在线偶尔会丢失，留个记录

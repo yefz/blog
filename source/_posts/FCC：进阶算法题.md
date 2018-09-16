@@ -1,5 +1,8 @@
 ---
 title: FFC：进阶算法题
+categories: JavaScript
+tags:
+  - FCC
 ---
 
 #1. Sum All Numbers in a Range
