@@ -1,7 +1,6 @@
 ---
 title: CSS flex 弹性盒模型
 ---
- [TOC]
  
 # flex box 弹性盒模型
 ![flex box](https://img-blog.csdn.net/2018050917031034)
@@ -10,20 +9,19 @@ title: CSS flex 弹性盒模型
 
 ![这里写图片描述](https://img-blog.csdn.net/2018051018481297)
 
-
 # 弹性容器
 - 使用弹性盒模型时父元素必须要加 `display: flex | inline-flex`
 
 ## 新版 and 旧版
 ``` css
 .box {
-    display: -webkit-flex; /* new: Chrome 21+ */
-    display: flex;         /* new: Opera 12.1, Firefox 22+ */
+  display: -webkit-flex; /* new: Chrome 21+ */
+  display: flex;         /* new: Opera 12.1, Firefox 22+ */
     
 	display: -webkit-box;  /* old */
-    display: -moz-box;     /* old: Firefox */
+  display: -moz-box;     /* old: Firefox */
     
-    display: -ms-box;      /* IE 10 */
+  display: -ms-box;      /* IE 10 */
 	
 	/* 行内弹性盒 */
 	display: -webkit-inline-flex; 

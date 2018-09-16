@@ -1,7 +1,6 @@
 ---
 title: Vue-router 路由
 ---
-[TOC]
 
 #vue-router 使用步骤
 - 安装模块

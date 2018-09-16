@@ -1,7 +1,7 @@
 ---
 title: Axios
 ---
-[TOC]
+
 #Axios
 基于Promise 用于浏览器和 nodejs 的与服务端通信库
 特征
@@ -247,8 +247,8 @@ axios.create({
 		port: 9000,
 		// HTTP 基础验证应当用于连接代理，并提供凭据
 		auth: : {
-			username: 'mikeymike',
-			password: 'rapunz3l'
+			username: 'admin',
+			password: 'admin'
 		}
 	},
 	

@@ -1,7 +1,6 @@
 ---
 title: HTML 页面加载过程
 ---
-[TOC]
 
 # window.onload 和 DOMContentLoaded 的区别
 ![这里写图片描述](https://img-blog.csdn.net/2018051920063573)

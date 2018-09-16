@@ -1,6 +1,7 @@
 ---
 title: Vue-cli 3.0 构建项目（三）配置 TypeScript
 ---
+
 `tsconfig.json`：
 ``` javascript
 {

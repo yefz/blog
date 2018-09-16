@@ -1,7 +1,7 @@
 ---
 title: CSS Hack
 ---
-[TOC]
+
 #CSS hack
 ##1. 渲染模式
 `<meta http-equiv="x-ua-compatible" content="webkit|ie-comp|ie-stand">`

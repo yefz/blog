@@ -1,7 +1,6 @@
 ---
 title: FFC：基础算法题
 ---
-[TOC]
 
 FCC 练习代码，在线偶尔会丢失，留个记录
 #1. Reverse a String

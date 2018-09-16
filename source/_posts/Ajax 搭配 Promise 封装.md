@@ -1,7 +1,6 @@
 ---
 title: Ajax 搭配 Promise 封装
 ---
-[TOC]
 
 #简述
 
@@ -53,10 +52,10 @@ function getAjax(type, url, data) {
 
 		var xhr = null
 		if (window.XMLHttpRequest) {
-	        xhr = new XMLHttpRequest();
-	    } else {
-	        xhr = new ActiveXObject("Microsoft.XMLHTTP");
-	    }
+      xhr = new XMLHttpRequest();
+    } else {
+      xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
 	
 		xhr.open(type, url, true);
 	
@@ -71,18 +70,18 @@ function getAjax(type, url, data) {
 		if (type == 'GET') {
 			xhr.send()
 		} else {
-	        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	        xhr.send(formatParams(data));
+      xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+      xhr.send(formatParams(data));
 		}
 
 	})
 	
 	function formatParams(data) {
-	    var arr = [];
-	    for(var name in data){
-	        arr.push(name + '=' + data[name]);
-	    }
-	    return arr.join("&");
+    var arr = [];
+    for(var name in data){
+      arr.push(name + '=' + data[name]);
+    }
+    return arr.join("&");
 	}
 }
 ```
@@ -92,16 +91,16 @@ function getAjax(type, url, data) {
 function getAjax(type, url, data) {
 	return new Promise(function(resolve, reject) {
 		$.ajax({
-	        url: url,
-	        type: type,
-	        data: data,
-	        sussess: function(data) {
-	            resolve(data)
-	        },
-	        error: function(error) {
-	            reject(error)
-	        }
-	    })
+      url: url,
+      type: type,
+      data: data,
+      sussess: function(data) {
+        resolve(data)
+      },
+      error: function(error) {
+        reject(error)
+      }
+    })
 	})
 }
 ```

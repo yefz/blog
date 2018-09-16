@@ -1,7 +1,6 @@
 ---
 title: FFC：进阶算法题
 ---
-[TOC]
 
 #1. Sum All Numbers in a Range
 求指定范围内所有数组之和

@@ -1,7 +1,6 @@
 ---
 title: addEventListener  关于 passive
 ---
-[TOC]
 
 语法： `el.addEventListener(type, listener[, useCapture])`
 
@@ -15,9 +14,9 @@ title: addEventListener  关于 passive
 - DOM 规范做了修订：`addEventListener()` 的第三个参数可为 `{}` **对象**
 ``` javascript
 el.addEventListener(type, listener, {
-    capture: false, // === useCapture
-    once: false,    // 是否设置单次监听
-    passive: false  // 是否让 阻止默认行为(preventDefault()) 失效
+  capture: false, // === useCapture
+  once: false,    // 是否设置单次监听
+  passive: false  // 是否让 阻止默认行为(preventDefault()) 失效
 })
 ```
 如何移除 `{ passive: true }` 的监听事件

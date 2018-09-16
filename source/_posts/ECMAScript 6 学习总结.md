@@ -1,7 +1,7 @@
 ---
 title: ECMAScript 6 学习总结
 ---
-[TOC]
+
 #版本历史
 - *ECMAScript: 是标准化组织 ECMA 发布的脚本语言规范。*
 | 版本| 发布时间 | 与前版本差异 | 
