@@ -6,7 +6,7 @@ tags:
   - 异步
 ---
 
-#简述
+# 简述
 
 ## Ajax（Asynchronous JavaScript And XML）
 	是一种创建交互式网页应用的开发技术、改善用户体验，实现无刷新效果
@@ -47,7 +47,7 @@ xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 - Promise对象的状态改变，只有两种可能：
 	- `pending` => `fulfilled`
 	- `pending` => `rejected`
-#JavaScript
+# JavaScript
 - 原生 `ajax` 和 `Promise` 封装
 ``` javascript
 function getAjax(type, url, data) {
@@ -89,7 +89,7 @@ function getAjax(type, url, data) {
 	}
 }
 ```
-#jQuery
+# jQuery
 - `$.ajax` 和 `Promise` 封装
 ``` javascript
 function getAjax(type, url, data) {
