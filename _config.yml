@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 凝弧的博客
+title: 凝弧
 subtitle:
-description:
+description: 你看到什么，听到什么，做什么，和谁在一起，有一种心灵深处满溢出来的不懊悔，也不羞耻的平和与喜悦。
 keywords:
 author: 凝弧
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -82,3 +82,10 @@ deploy:
   type: git
   repo: git@github.com:yefz/yefz.github.io.git
   branch: master
+  delete: false
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
