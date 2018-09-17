@@ -21,7 +21,6 @@ function reverseString(str) {
 	
 }
 ```
-![这里写图片描述](https://img-blog.csdn.net/20180527180311110)
 
 #2. Factorialize a Number
 计算一个整数的阶乘
@@ -37,7 +36,6 @@ function factorialize(n){
     
 }
 ```
-![这里写图片描述](https://img-blog.csdn.net/20180527181557202)
 
 #3. Check for Palindromes
 检查回文字符串

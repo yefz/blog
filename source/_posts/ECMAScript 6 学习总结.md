@@ -84,7 +84,6 @@ fun('xm', 18, 'book');
 let elemList = document.getElementsByTagName('li');
 Array.from(elemList) // => 输出如下
 ```
-![这里写图片描述](https://img-blog.csdn.net/20180505212847935?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dpbGR5ZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 - `Array.from` 接受第二个参数，用来对每个元素进行处理，将处理后的值放入返回的数组。
 ``` javascript
@@ -111,7 +110,7 @@ let arr3 = Array.of(1, 3, 5);
 
 console.log(arr1, arr2, arr3)
 ```
-![这里写图片描述](https://img-blog.csdn.net/20180506002032475?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dpbGR5ZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
 ##copyWithin() 内部拷贝
 - 将数组的一部分元素复制到其他位置 ,会改动原数组
 - 语法：`arrObj.copyWithin(replaceIndex, startIndex, endIndex)`

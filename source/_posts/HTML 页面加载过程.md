@@ -6,7 +6,6 @@ tags:
 ---
 
 # window.onload 和 DOMContentLoaded 的区别
-![这里写图片描述](https://img-blog.csdn.net/2018051920063573)
 
 - `DOMContentLoaded`：DOM结构加载完毕
 - `window.onload`：DOM结构和静态资源加载完毕

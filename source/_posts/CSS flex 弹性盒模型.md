@@ -6,11 +6,9 @@ tags:
 ---
  
 # flex box 弹性盒模型
-![flex box](https://img-blog.csdn.net/2018050917031034)
  
 #浏览器支持程度
 
-![这里写图片描述](https://img-blog.csdn.net/2018051018481297)
 
 # 弹性容器
 - 使用弹性盒模型时父元素必须要加 `display: flex | inline-flex`
@@ -35,11 +33,9 @@ tags:
 ## 1. justify-content 主轴对齐
 - 新版语法：`justify-content: flex-start | flex-end | center | space-between | space-around;`
 	左对齐 | 右对齐 | 居中 | 两端对齐 | 分散对齐
-![justify-content](https://img-blog.csdn.net/2018051011521259)
 
 - 旧版语法：`box-pack: start | end | center | justify`
 	左对齐 | 右对齐 | 居中 | 两端对齐
-![这里写图片描述](https://img-blog.csdn.net/20180510125857763)
 ## 2. align-items 侧轴对齐(单行)
 <span id='side'></span>
 
@@ -47,22 +43,18 @@ tags:
 - 新版语法：`align-items: start | end | center | baseline | stretch`
 	顶端对齐 | 底端对齐 | 垂直居中 | 基线对齐 | 填充（未设置  | auto，将占满整个容器的高度）
 - 旧版语法：`box-align: start | end | center | baseline | stretch` （与新版行为一致）
-![align-items](https://img-blog.csdn.net/20180510144918701)
 
 ## 3.  align-content 侧轴对齐(多行)
 - 针对多轴(多行)的情况进行排列
 - 新版语法：`align-content: flex-start | flex-end | center | space-between | space-around | stretch`
 	顶端对齐 | 底端对齐 | 垂直居中 | 垂直两端对齐 | 垂直分散对齐 | 分散对齐（贴合顶端）
-![align-content](https://img-blog.csdn.net/20180510202338508)
 
 ## 4. flex-direction 排列方向
 - 新版语法：`flex-direction: row | row-reverse | column | column-reverse`
 	行 | 行反转 | 列 | 列反转
-![flex-direction](https://img-blog.csdn.net/20180510191759125)
 
 - 旧版语法：`box-orient: horizontal | vertical | inline-axis | block-axis`
 	行 | 列 | 沿行轴排列 | 沿块轴排列
-![这里写图片描述](https://img-blog.csdn.net/20180510223820296)
 ``` less
 // 模拟行反转 flex-direction: row-reverse
 .flex-direction(row-reverse) {
@@ -89,7 +81,6 @@ tags:
 ## 5. flex-wrap 换行方式
 - 新版语法：`flex-wrap: nowrap | wrap | wrap-reverse`
 	单行伸缩 | 断行 | 反向断行 
-![这里写图片描述](https://img-blog.csdn.net/20180510195210734)
 
 ## 6. flex-flow 复合简写
 - 新版语法: `flex-flow: <flex-direction> <flex-wrap>`
@@ -102,7 +93,6 @@ tags:
 伸缩，不会溢出容器
 - 旧版语法：`box-ordinal-group: <integer>`
 固定，会溢出容器
-![这里写图片描述](https://img-blog.csdn.net/20180511070529280)
 
 ## 2. flex-grow 伸张因子
 - 新版语法：`flex-grow: <number>`
@@ -124,7 +114,6 @@ tags:
 .item3 { width: 50px }
 ```
 ###伸张比率（`flex-grow`）之和 小于 `1`
-![这里写图片描述](https://img-blog.csdn.net/20180511190718441)
 ``` css
 .item1 { flex-grow: .1 }
 .item2 { flex-grow: .2 }
@@ -138,7 +127,6 @@ item3.width = 50 + 100 * 0.3 = 80px
 ```
 
 ###伸张比率（`flex-grow`）之和 大于 `1`
-![这里写图片描述](https://img-blog.csdn.net/20180511190737474)
 ``` css
 .item1 { flex-grow: 1 }
 .item2 { flex-grow: 2 }
@@ -171,7 +159,6 @@ item3.width = 50 + 100 * (2 / 5) = 90px
 .item3 { width: 150px }
 ```
 ###项目收缩系数（`flex-shrink`）之和小于 `1`
-![这里写图片描述](https://img-blog.csdn.net/2018051115215656)
 ``` css
 .item1 { flex-shrink: .1 }
 .item2 { flex-shrink: .2 }
@@ -188,7 +175,6 @@ item3.width = 150 - 100 * 0.3 = 120px
 - 仅收缩 100 × (0.1 + 0.2 + 0.3) = `60px` 的宽度，仍会有 100 × 0.4 = `40px` 的溢出
 
 ###项目收缩系数（`flex-shrink`）之和大于 `1`
-![这里写图片描述](https://img-blog.csdn.net/20180511152400809)
 ``` css
 .item1 { flex-shrink: 1 }
 .item2 { flex-shrink: 2 }
@@ -207,7 +193,6 @@ item3.width = 150 - 100 × (2 / 5) = 110px
 a. 已设置 `flex-basis` 属性的情况下，`width` 属性值会被忽略
 b. 未设置 `flex-basis` 属性的情况下，`flex-basis` 为 `width` 属性大小
 c. 若 `width` 也未设置的情况下，则 `flex-basis` 为 `content` 的大小
-![这里写图片描述](https://img-blog.csdn.net/20180511160146778)
 ``` html
 <div class = "box">
 	<div class = "item1">a</div>
@@ -225,20 +210,17 @@ c. 若 `width` 也未设置的情况下，则 `flex-basis` 为 `content` 的大�
 .item3 { }
 ```
 - `min-width` 和 `max-width` 会限制 `flex-basis` 值
- ![这里写图片描述](https://img-blog.csdn.net/20180511160942949)
 ``` css
 .item1 { flex-basis : 50px;  min-width: 100px; }
 .item2 { flex-basis : 100px; max-width: 50px; }
 ```
 
 - 基准值溢出盒子容器的情况下，则会按相对总值()所占比例进行收缩
-![这里写图片描述](https://img-blog.csdn.net/20180511162433840)
 
 ## 5. align-self 独立对齐
 - 允许单个项目有与其他项目不一样的对齐方式，可覆盖 `align-items` 属性
 - 语法：`align-self: auto | flex-start | flex-end | center | baseline | stretch`
 	对齐方式：[同侧轴对齐（单行）align-items](#side)
-![这里写图片描述](https://img-blog.csdn.net/20180511192844479)
 
 ## 6. flex 复合简写
 - 新版语法：`flex: flex-grow[ flex-shrink[ flex-basis]]`，默认值为 `0 1 auto`，后两个属性可选

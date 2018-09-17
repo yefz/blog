@@ -32,9 +32,7 @@ new VueRouter({
 ##1. hash 和 history模式
 - 默认使用hash模式
 如果需要兼容至IE9，推荐使用默认的哈希模式
-![hash](https://img-blog.csdn.net/20180726211818781)
 - 切换 history 模式
-![history ](https://img-blog.csdn.net/20180726211924178)
 ``` javascript
 new Router({
 	mode: 'history'
@@ -160,7 +158,6 @@ new Router({
 ``` 
 ##5. 命名视图
 - 设置子路由 URL路径 相对于根路径，即去掉 home，组件嵌套不变
-![这里写图片描述](https://img-blog.csdn.net/20180726222930938)
 ```
 new Router({
 	routes: [
@@ -268,7 +265,6 @@ this.$router.query
 ##10. 导航切换过渡动画 transition 使用
 提供了transition的封装组件，添加过渡动画
 
-![这里写图片描述](https://img-blog.csdn.net/20180727222417854)
 过渡的 CSS 类名，使用 name 属性改变类名前缀
 
 - v-enter : 定义 `进入` 过渡的 `开始` 状态
@@ -307,7 +303,6 @@ this.$router.query
 ```
 
 ##11. 动态设置 name 属性左右切换
-![这里写图片描述](https://img-blog.csdn.net/20180727231933631)
 
 - `HTML`
 ``` html
