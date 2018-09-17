@@ -1,6 +1,7 @@
 ---
 title: Vuex 状态管理模式
 categories: Vue
+password: admin
 tags:
   - Vue-cli 3.0
 ---
@@ -13,10 +14,10 @@ Vuex是什么
 只能通过显示的提交 mutations (`store.commit`、`store.dispatch`)来改变状态，
 使得我们可以方便地跟踪每一个状态的变化。
 
-#Vuex 核心概念
+# Vuex 核心概念
 ![这里写图片描述](https://img-blog.csdn.net/20180729114834602)
 
-#使用 Vuex
+# 使用 Vuex
 - 安装 vuex 模块
 ```
 npm install vuex --save
@@ -73,7 +74,7 @@ export default new Vuex.Store({
 })
 ```
 
-##store
+## store
 类似容器，包含应用的大部分状态
 ```html
 <!-- 模板中调用 -->
@@ -88,7 +89,7 @@ export default {
 	}
 }
 ```
-##State
+## State
 Vuex 使用单一状态树，这可以让我们能够直接地定位任一特定的状态片段，在调试的过程中也能轻易地取得整个当前应用状态的快照。需要注意，单状态树和模块化并不冲突！
 
 由于 store 中的状态是响应式的，在组件中调用 store 中的状态简单到仅需要在计算属性中返回即可
@@ -99,11 +100,11 @@ computed: {
   }
 }
 ```
-##Getter
+## Getter
 `Getter(state, getters)` 可以从 store 中的 state 中派生出一些状态（过滤、计数），类似于计算属性
 `getter` 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。
 >完整请参照 https://vuex.vuejs.org/zh-cn/getters.html\
-##Mutation
+## Mutation
 `mutation` 必须是同步函数，且需遵守 Vue 的响应规则
 
 - 更改 Vuex 的 store 中的状态的唯一方法是提交 mutation
@@ -114,7 +115,7 @@ computed: {
 	- 使用 `Vue.set(obj, 'newProp', 123)`
 	- 或者以新对象替换老对象：`state.obj = { ...state.obj, newProp: 123 }`
 >完整请参照：https://vuex.vuejs.org/zh-cn/mutations.html
-##Action
+## Action
 Action 类似于 mutation，不同在于：
 
 - Action 提交的是 mutation，而不是直接变更状态。
@@ -154,7 +155,7 @@ actions: {
 }
 ```
 >完整请参照：https://vuex.vuejs.org/zh-cn/actions.html
-##辅助函数
+## 辅助函数
 - 当一个组件需要获取多个状态时候，将这些状态都声明为计算属性会有些重复和冗余。
 为了解决这个问题，我们可以使用 `mapState` 辅助函数帮助我们生成计算属性。
 ``` javascript
