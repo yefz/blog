@@ -5,7 +5,7 @@ tags:
   - ES6
 ---
 
-#版本历史
+# 版本历史
 - *ECMAScript: 是标准化组织 ECMA 发布的脚本语言规范。*
 | 版本| 发布时间 | 与前版本差异 | 
 | ---- |:----:| ----:| 
@@ -20,8 +20,8 @@ tags:
 | 6.0 | 2015.06.17 | 正式发布，浏览器逐步支持中... | 
 
 
-#1. 变量声明
-##常量 const
+# 变量声明
+## 常量 const
 - ES5 :
 ``` javascript
 Object.defineProperty(window, 'PI', {
@@ -37,7 +37,7 @@ const PI = 3.1415926;
 console.log(PI); // => 3.1415926
 ```
 
-##变量 let（块级作用域）
+## 变量 let（块级作用域）
 - 不允许重复声明
 - 不存在声明提前（无变量提升）
 - 具有块级作用域，包含在`{}`中
@@ -54,7 +54,7 @@ console.log(PI); // => 3.1415926
 	let a;
 }
 ```
-#2. 数组扩展
+# 数组扩展
 ## Array.from() 转化数组
 - `Array.from()`用于将两类对象转为真正的数组：
 	-- 类数组（伪数组）对象
@@ -100,7 +100,7 @@ Array.from(oldArr, n => n * 2);
 Array.from(oldArr, (n) => n * 2)  
 Array.from(oldArr).map(n => n * 2);  
 ```
-##Array.of() 非稀疏数组
+## Array.of() 非稀疏数组
 - 用于将一组值转换为数组
 - 避免了使用 `new Array()` 单个参数会构建一个长度为3的稀疏数组问题
 ``` javascript
@@ -111,7 +111,7 @@ let arr3 = Array.of(1, 3, 5);
 console.log(arr1, arr2, arr3)
 ```
 
-##copyWithin() 内部拷贝
+## copyWithin() 内部拷贝
 - 将数组的一部分元素复制到其他位置 ,会改动原数组
 - 语法：`arrObj.copyWithin(replaceIndex, startIndex, endIndex)`
 - `不包含结束元素`，左闭右开 ，负值代表倒数
@@ -121,7 +121,7 @@ let arr = [1, 2, 3, 4, 5];
 arr.copyWithin(1, 3, 5);
 console.log(arr); // => [1, 4, 5, 4, 5]
 ```
-##find()、findIndex() 查找
+## find()、findIndex() 查找
 - 以回调函数作为参数
 - 回调函数的参数依次为元素、索引、数组引用，与ES5数组方法相同
 ``` javascript
@@ -138,7 +138,7 @@ console.log(arr.findIndex(function(item) {
 })) // => 3
 
 ```
-##fill() 填充
+## fill() 填充
 - 用于填充数组 ,会修改调用它的数组
 - 语法：`arrObj.fill(fillElement, startIndex, endIndex)`
 ``` javascript
@@ -148,13 +148,13 @@ var arr2 = [...arr1];
 console.log(arr1.fill('c'));       // => ["c", "c", "c"]
 console.log(arr2.fill('d', 1, 3)); // => [ 1 , "d", "d"]
 ```
-##include() 包含
+## include() 包含
 - 用于检测数组是否包含指定元素，可以检测到 `NaN`
 - 语法：`arrObj.include(element)`
 ``` javascript
 console.log([1,2,NaN].includes(1)); // => true
 ```
-##entries()、keys()、values() 迭代
+## entries()、keys()、values() 迭代
 - 用于迭代数组，返回一个迭代器对象 ，配合for-of循环可以迭代数组
 - `arrObj.entries()` 默认  遍历键值对
 ``` javascript
@@ -176,7 +176,7 @@ for(let val of arr.values()) {
 }
 ```
 
-#3. Map( ) 对象
+# Map( ) 对象
 - 只能通过构造创建 `map` 对象
 ``` javascript
 var map = new Map();
@@ -190,7 +190,7 @@ for(let index of map.entries()) {
 }
 ```
 
-#4. 箭头函数 ( ) => { }
+# 箭头函数 ( ) => { }
 - 不存在 `arguments` 属性
 - `this` 是在定义函数的时候绑定，且无法使用 `call()`、`apply()`，一般指向 `window`
 - 形参与返回值唯一的情况下可简写
@@ -216,7 +216,7 @@ v => {
 }
 ```
 
-#5. 对象类 class
+# 对象类 class
 ## 继承 extends
 - ES5 :
 ``` javascript
@@ -304,7 +304,7 @@ console.log(proxyCat.get('like')); // => jack
 console.log(proxyCat.get('name')); // => tom
 
 ```
-#6. 解构赋值
+# 解构赋值
 - 键值对应
 ``` javascript
 var [a,b,c] = [1,2,3];
@@ -313,14 +313,14 @@ var [a,{b,c},[d,e]] = [1,{b:2,c:3},[4,5]]
 
 console.log(a,b,c,d,e) // => 12345
 ```
-#7. 模板字符串（template string）
+# 模板字符串（template string）
 - 增强版的字符串，用(Esc键下) 的反引号 `` ` 标识，调用变量 `${name}`
 ``` javascript
 var a = '皆';
 var str = `万物${a}虚，万事${a}允`;
 console.log(str); // => 万物皆虚，万事皆允
 ```
-#8. 异步处理 Promise()
+# 异步处理 Promise()
 - 主要用于获取异步数据
 - 语法 ` new Promise((resolve, reject) => { })`
 `resolve` 异步成功后的回调函数
@@ -349,7 +349,7 @@ promise
 	console.log(error);
 })
 ```
-#9. 数字扩展
+# 数字扩展
 ##指数(求幂)运算符 `**`
 运算符左操作是基数，右操作数是指数
 ``` javascript
@@ -359,7 +359,7 @@ const power2 = power1 **= 2;
 console.log(power) // => 9
 console.log(power) // => 81
 ```
-##进制标识
+## 进制标识
 二进制 `0b` / `0B`，八进制 `0o` / `0O`
 ``` javascript
 console.log(0b110 === 6) // => true
@@ -369,7 +369,7 @@ console.log(0o20 === 10) // => true
 console.log(Number(0b110)) // => 6
 console.log(Number(0o20))  // => 10
 ```
-##Number 方法
+## Number 方法
 - `parseInt()`、移植到Number对象上面，行为不变
 - `parseFloat()`，移植到Number对象上面，行为不变
 
@@ -383,7 +383,7 @@ console.log(Number(0o20))  // => 10
 	- `Number.MAX_SAFE_INTEGER` 范围上限
 	- `Number.MIN_SAFE_INTEGER` 范围下限
 	- `Number.isSafeInteger()` 判断一个整数是否落在这个范围之内
-##Math对象新增方法
+## Math对象新增方法
 - `Math.trunc()` 去除一个数的小数部分，返回整数部分
 - `Math.sign()` 判断一个数到底是正数、负数、还是零。对于非数值，会先将其转换为数值
 - `Math.cbrt()` 用于计算一个数的立方根
@@ -401,7 +401,7 @@ console.log(Number(0o20))  // => 10
 - `Math.asinh(x)` 返回x的反双曲正弦（inverse hyperbolic sine）
 - `Math.acosh(x)` 返回x的反双曲余弦（inverse hyperbolic cosine）
 - `Math.atanh(x)` 返回x的反双曲正切（inverse hyperbolic tangent）
-#10. 函数扩展
+# 函数扩展
 ## 默认值 
 - 参数默认值的位置
 ``` javascript
@@ -494,7 +494,7 @@ console.log([...arr1, ...arr2]); // => ["A", "B", "C", 1, 3, 5]
 // JavaScript 会将 32 位 Unicode 字符，识别为 2 个字符(length = 2)，采用扩展运算符就没有这个问题
 console.log([...'sky']); // => ["s", "k", "y"]
 ```
-##尾调用（Tail Call）、尾递归
+## 尾调用（Tail Call）、尾递归
 - 指某个函数的最后一步是调用另一个函数
 - 尾调用优化（Tail call optimization），调用栈只有一层
 - 只有不再用到外部变量，才能进行 尾调用优化！

@@ -10,7 +10,7 @@ tags:
 - 尽量使用 `p #{obj} #{obj}` 避免使用 `p=obj=obj`
 - 关键词前面一律不加 `-` 如 each、while、else …
 ## 环境安装
-### 1. 实时编译
+### 实时编译
 ``` nodejs
 // 全局安装模块
 npm install -g jade
@@ -18,7 +18,7 @@ npm install -g jade
 // -P（格式化） -w（实时监测）
 jade -P -w index.jade
 ```
-### 2. Nodejs 中使用
+### Nodejs 中使用
 ``` javascript
 const http = require('http');
 const jade = require('jade');
@@ -46,7 +46,7 @@ server.on('request', (req, res)=>{
 
 server.listen(8080);
 ```
-###3. Express 框架中使用
+### Express 框架中使用
 ``` javascript
 const express = require('express');
 const app = express();
@@ -66,9 +66,9 @@ app.get('/', (req, res) => {
 })
 
 ```
-##语法 API
+## 语法 API
 - Jade是变体的HTML，使用 `缩进` 来描述元素的层级从属关系
-###1. doctype html
+### doctype html
 ``` jade
 // html 4.1
 doctype html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"
@@ -76,7 +76,7 @@ doctype html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/stri
 // html 5，!!!5 写法已废弃
 doctype html
 ```
-###2. 注释
+### 注释
 - 注释，使用 `//`，如需注释多行，请缩进注释内容即可
 - 不编译注释 ，使用`//-`
 - 条件注释（if IE）
@@ -86,7 +86,7 @@ doctype html
 <script src='respond.min.js'></script>
 <![endif]-->
 ```
-###3. id & class
+### id & class
 - 添加 `id`、`class` 属性
 ``` jade
 div.className
@@ -100,7 +100,7 @@ div.className#idName
 ``` jade
 #idName.className
 ```
-###4. 标签属性
+### 标签属性
 - 设置标签属性，当属性值是 `undefined ` 或者 `null ` 时不会被加上
 ``` jade
 a(href='index.html', title='home')
@@ -162,7 +162,7 @@ ul(style={list-style:none,margin:'5px 10px'})
 ``` jade
 div(class=['red', 'blue'])
 ```
-###5. 标签文本
+### 标签文本
 - 设置标签文本（单行）
 ``` jade
 p hannah
@@ -206,7 +206,7 @@ p
 ``` html
 <p>hannah is Shy girl</p>
 ```
-###6. 内联 & 块展开
+### 内联 & 块展开
 - Jade 支持以自然的方式定义标签嵌套
 ``` jade
 ul
@@ -224,7 +224,7 @@ ul
 	li: a(href='#') contB
 	li.last: a(href='#') contC
 ```
-###7. Case 表达式
+### Case 表达式
 - 显示匹配项，与 switch 循环一样
 ``` jade
 friends = 5

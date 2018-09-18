@@ -7,8 +7,8 @@ tags:
   - IE兼容
 ---
 
-#CSS hack
-##1. 渲染模式
+# CSS hack
+## 渲染模式
 `<meta http-equiv="x-ua-compatible" content="webkit|ie-comp|ie-stand">`
 
 - webkit内核渲染
@@ -38,7 +38,7 @@ tags:
 ``` html
 <meta http-equiv="x-ua-compatible" content="IE=9;IE=8;IE=7;IE=Edge">
 ```
-##2. 属性前缀（内部hack）
+## 属性前缀（内部hack）
 
 - `S` ，IE 标准模式 Standards mode
 - `Q` ，IE 混杂（怪异）模式 Quirks mode
@@ -59,7 +59,7 @@ tags:
 - `\0` IE 8 / 9 / 10 生效
 - `\9\0` IE 9 / 10生效
 
-##3. 选择器前缀（选择器hack）
+## 选择器前缀（选择器hack）
 
 - IE 6 `*html`
 - IE 7 `*+html`
@@ -70,7 +70,7 @@ tags:
 - IE 9 / 10 `@media screen and (min-width: 0\0) { }`
 - IE 10 `@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { }`
 
-##4. 条件注释（HTML条件注释）
+## 条件注释（HTML条件注释）
 
 | gt | gte | lt | lte | ! |
 |:---:|:---:|:---:|:---:|:---:|

@@ -6,7 +6,7 @@ tags:
 ---
 
 FCC 练习代码，在线偶尔会丢失，留个记录
-#1. Reverse a String
+# Reverse a String
 翻转字符串
 
 思路：
@@ -22,7 +22,7 @@ function reverseString(str) {
 }
 ```
 
-#2. Factorialize a Number
+# Factorialize a Number
 计算一个整数的阶乘
 
 思路：
@@ -37,7 +37,7 @@ function factorialize(n){
 }
 ```
 
-#3. Check for Palindromes
+# Check for Palindromes
 检查回文字符串
 
 思路：
@@ -58,7 +58,7 @@ function palindrome(str) {
 ```
 Codepen：https://codepen.io/wildye/pen/yjmxyz?editors=0012
 
-#4. Find the Longest Word in a String
+# Find the Longest Word in a String
 找出最长单词
 
 思路：
@@ -78,7 +78,7 @@ function findLongestWord(str) {
 }
 ```
 
-#5. Title Case a Sentence
+# Title Case a Sentence
 句中单词首字母大写
 
 思路：
@@ -96,7 +96,7 @@ function titleCase(str) {
 }
 ```
 
-#6. Return Largest Numbers in Arrays 
+# Return Largest Numbers in Arrays 
 找出多个数组中的最大数
 
 思路：
@@ -117,7 +117,7 @@ var arr = [[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1
 console.log(largestOfFour(arr)); // => [5, 27, 39, 1001]
 ```
 
-#7. Confirm the Ending
+# Confirm the Ending
 检查字符串结尾
 
 思路：
@@ -134,7 +134,7 @@ function confirmEnding(str, target) {
 confirmEnding("Bastian", "n");
 ```
 
-#8. Repeat a string repeat a string
+# Repeat a string repeat a string
 重复输出字符串
 
 思路：
@@ -153,7 +153,7 @@ function repeat(str, num) {
 repeat("abc", 3);
 ```
 
-#9. Truncate a string
+# Truncate a string
 截断字符串，如果字符串的长度比指定的参数num长，则把多余的部分用`...`来表示。
 
 思路：
@@ -182,7 +182,7 @@ function truncate(str, num) {
 truncate("A-tisket a-tasket A green and yellow basket", 11);
 ```
 
-#10. Chunky Monkey
+# Chunky Monkey
 猴子吃香蕉, 分割数组
 
 思路：
@@ -204,7 +204,7 @@ function chunk(arr, size) {
 chunk(["a", "b", "c", "d"], 2); // => [["a", "b"], ["c", "d"]]
 ```
 
-#11. Slasher Flick
+# Slasher Flick
 截断数组
 
 思路：
@@ -218,7 +218,7 @@ function slasher(arr, howMany) {
 slasher([1, 2, 3], 2);
 ```
 
-#12. Mutations
+# Mutations
 比较字符串，如果数组第一个字符串元素包含了第二个字符串元素的所有字符，函数返回true。
 
 思路：
@@ -244,7 +244,7 @@ function mutation(arr) {
 mutation(["hello", "hey"]);
 ```
 
-#13. Falsy Bouncer
+# Falsy Bouncer
 过滤数组假值
 
 思路：
@@ -267,7 +267,7 @@ function bouncer(arr) {
 bouncer([7, "ate", "", false, 9]);
 ```
 
-#14. Seek and Destroy
+# Seek and Destroy
 摧毁数组
 
 思路：
@@ -290,7 +290,7 @@ function destroyer(arr) {
 destroyer([1, 2, 3, 1, 2, 3], 2, 3); // => [1, 1]
 ```
 
-#15. Where do I belong
+# Where do I belong
 数组排序并找出元素索引
 
 思路：
@@ -308,7 +308,7 @@ function where(arr, num) {
 }
 ```
 
-#16. Caesars Cipher
+# Caesars Cipher
 凯撒密码
 
 思路：

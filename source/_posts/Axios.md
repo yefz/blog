@@ -6,7 +6,7 @@ tags:
   - HTTP请求库
 ---
 
-#Axios
+# Axios
 基于Promise 用于浏览器和 nodejs 的与服务端通信库
 特征
 
@@ -29,7 +29,7 @@ install axios --save
 ```
 const http = require('axios')
 ```
-##使用
+## 使用
 需要的模块中引入使用
 ``` javascript
 import axios from 'axios'
@@ -62,7 +62,7 @@ Vue.use(VueAxios, Axios)
 this.$http[method]()
 ```
 
-##取消请求
+## 取消请求
 ``` javascript
 // 创建取消请求令牌
 const { CancelToken } = axios
@@ -89,7 +89,7 @@ http.get('user')
 		}
 	})
 ```
-##并发请求
+## 并发请求
 ``` javascript
 created () {
 	function http1() {
@@ -117,7 +117,7 @@ axios.all([http1(), http2()])
 ``` javascript
 
 ```
-##拦截器
+## 拦截器
 全局拦截器
 ``` javascript
 // 请求拦截
@@ -149,7 +149,7 @@ axios.interceptors.response.use(
 axios.interceptors.request.eject(myInterceptor)
 ```
 
-##自定义请求实例
+## 自定义请求实例
 可以使用自定义配置新建一个 axios 实例
 ``` javascript
 import axios from 'axios'

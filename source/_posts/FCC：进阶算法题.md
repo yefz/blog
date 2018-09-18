@@ -5,7 +5,7 @@ tags:
   - FCC
 ---
 
-#1. Sum All Numbers in a Range
+# Sum All Numbers in a Range
 求指定范围内所有数组之和
 
 思路：
@@ -29,7 +29,7 @@ function sumAll(arr) {
 
 console.log(sumAll(5, 1)); // => 15
 ```
-#2. Diff Two Arrays
+# Diff Two Arrays
 比较两个数组，然后返回一个新数组，该数组的元素为两个给定数组中所有独有的数组元素。
 
 思路：
@@ -62,7 +62,7 @@ function diff(arr1, arr2) {
 
 }
 ```
-#3. Roman Numeral Converter
+# Roman Numeral Converter
 将给定的数字转换成罗马数字
 ``` javascript
 function convert(num) {
@@ -88,92 +88,92 @@ function convert(num) {
 }
 convert(100);
 ```
-#4. Where art thou
+# Where art thou
 
 ``` javascript
 
 ```
-#5. Search and Replace
+# Search and Replace
 
 ``` javascript
 
 ```
-#6. Pig Latin
+# Pig Latin
 
 ``` javascript
 
 ```
-#7. DNA Pairing
+# DNA Pairing
 
 ``` javascript
 
 ```
-#8. Missing letters
+# Missing letters
 
 ``` javascript
 
 ```
-#9. Boo who
+# Boo who
 
 ``` javascript
 
 ```
-#10. Sorted Union
+# Sorted Union
 
 ``` javascript
 
 ```
-#11. Convert HTML Entities
+# Convert HTML Entities
 
 ``` javascript
 
 ```
-#12. Spinal Tap Case
+# Spinal Tap Case
 
 ``` javascript
 
 ```
-#13. Sum All Odd Fibonacci Numbers
+# Sum All Odd Fibonacci Numbers
 
 ``` javascript
 
 ```
-#14. Sum All Primes
+# Sum All Primes
 
 ``` javascript
 
 ```
-#15. Smallest Common Multiple
+# Smallest Common Multiple
 
 ``` javascript
 
 ```
-#16. Finders Keepers
+# Finders Keepers
 
 ``` javascript
 
 ```
-#17. Drop it
+# Drop it
 
 ``` javascript
 
 ```
-#18. Steamroller
+# Steamroller
 
 ``` javascript
 
 ```
-#19. Binary Agents
+# Binary Agents
 
 ``` javascript
 
 ```
-#20. Everything Be True
+# Everything Be True
 
 ``` javascript
 
 ```
-#21. Arguments Optional
+# Arguments Optional
 
 ``` javascript
 

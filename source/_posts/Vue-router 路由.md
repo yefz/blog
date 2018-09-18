@@ -5,7 +5,7 @@ tags:
   - router
 ---
 
-#vue-router 使用步骤
+# vue-router 使用步骤
 - 安装模块
 ```
 npm install vue-router --save
@@ -28,8 +28,8 @@ new VueRouter({
 ```
 <router-view></router-view>
 ```
-#功能配置
-##1. hash 和 history模式
+# 功能配置
+## hash 和 history模式
 - 默认使用hash模式
 如果需要兼容至IE9，推荐使用默认的哈希模式
 - 切换 history 模式
@@ -38,7 +38,7 @@ new Router({
 	mode: 'history'
 })
 ```
-##2. router-link 各种配置项
+## router-link 各种配置项
 - 导入页面组件
 ```
 import Home from './views/Home.vue'
@@ -78,7 +78,7 @@ new Router({
 ```
 <router-link to="/" active-Class="is-active">home</router-link>
 ```
-##3. 重定向和别名
+## 重定向和别名
 - 默认事件为 click 触发，但这是可以改变的
 ```
 <!-- 鼠标移入时触发跳转 -->
@@ -124,7 +124,7 @@ new Router({
 	]
 })
 ```
-##4. 嵌套路由的使用
+## 嵌套路由的使用
 - 精确匹配
 全包含匹配（默认）: 访问 `/home` 时 `/` 依然处于激活状态
 精确匹配：访问 `/home` 时 `/` 不会处于激活状态
@@ -156,7 +156,7 @@ new Router({
 	]
 })
 ``` 
-##5. 命名视图
+## 命名视图
 - 设置子路由 URL路径 相对于根路径，即去掉 home，组件嵌套不变
 ```
 new Router({
@@ -194,7 +194,7 @@ new Router({
 	]
 })
 ```
-##6. 滚动行为
+## 滚动行为
 记录滚动条位置，后退或前进后保留页面滚动位置
 ```
 new Router({
@@ -216,7 +216,7 @@ new Router({
 	}
 })
 ```
-##7. 动态路径参数
+## 动态路径参数
 匹配到的所有路由，全部都映射到同一个组件
 路径: `/user/:userId` ，userId为动态路径参数
 获取参数: 路由信息对象 `$router.params`
@@ -243,7 +243,7 @@ new Router({
 `fullPath` 字符串，URL包含查询参数和 hash 的完整路径
 `matched` 数组，包含当前路由的所有嵌套路径片段的 路由记录
 `name` 字符串， 当前路由的名称
-##8. 监控 $router 路由信息对象
+## 监控 $router 路由信息对象
 ```
 watch: {
 	$router () {
@@ -252,7 +252,7 @@ watch: {
 	}
 }
 ```
-##9. query 字符串传参
+## query 字符串传参
 - 设置
 ```
 <router-link to="?name=jack" exact></router-link>
@@ -262,7 +262,7 @@ watch: {
 ```
 this.$router.query
 ```
-##10. 导航切换过渡动画 transition 使用
+## 导航切换过渡动画 transition 使用
 提供了transition的封装组件，添加过渡动画
 
 过渡的 CSS 类名，使用 name 属性改变类名前缀
@@ -302,7 +302,7 @@ this.$router.query
 </transition>
 ```
 
-##11. 动态设置 name 属性左右切换
+## 动态设置 name 属性左右切换
 
 - `HTML`
 ``` html
@@ -377,7 +377,7 @@ new Router({
 })
 ```
 
-##12. 编程式导航
+## 编程式导航
 借助于 router 的实例方法，通过编写代码来实现导航的切换
 
 - `back` : 回退一步
@@ -408,7 +408,7 @@ export default {
 	}
 }
 ```
-##13. 全局钩子函数
+## 全局钩子函数
 导航发生变化时，导航钩子主要用来拦截导航，让它完成跳转或取消
 
 - 钩子函数
@@ -446,7 +446,7 @@ router.afterEach((to, from, next) => {
 	window.document.title = to.meta.title || 'miaov'
 })
 ```
-##14. 组件级钩子函数
+## 组件级钩子函数
 ```
 export default {
 	data () {
@@ -469,7 +469,7 @@ export default {
 	}
 }
 ```
-##15. 滚动动画
+## 滚动动画
 ```
 npm i tween.js --save
 ```
@@ -517,7 +517,7 @@ export default {
 	}
 }
 ```
-##16. 利用 webpack 实现懒加载
+## 利用 webpack 实现懒加载
 把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应组件
 
 - webpack代码分割功能
@@ -551,7 +551,7 @@ export default {
 }
 ```
 
-##17. 服务器配置
+## 服务器配置
 - `build/index.js`
 ```
 module.exports = {
