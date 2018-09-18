@@ -43,33 +43,33 @@ Vue.use(Vuex)
 // 定义容器, 并作为模块导出
 export default new Vuex.Store({
 
-	// 状态：store.state
-	state: {
-	    token: '',
-	},
+  // 状态：store.state
+  state: {
+    token: '',
+  },
 
-	// 计算状态：store.getters
-	getters: {
-		loginStatus: state => {
-			return state.token
-		},
-	},
+  // 计算状态：store.getters
+  getters: {
+    loginStatus: state => {
+      return state.token
+    },
+  },
 
-	// 更改状态：store.commit()
-	mutations: {
-		setToken (state, value) {
-			state.token = value
-			localStorage.setItem('TOKEN', value)
-	    }
-	}
+  // 更改状态：store.commit()
+  mutations: {
+    setToken (state, value) {
+      state.token = value
+      localStorage.setItem('TOKEN', value)
+    }
+  }
 
-	// 更改状态(异步)：store.dispatch()
-	mutations: {
-		setToken (state, value) {
-			state.token = value
-			localStorage.setItem('TOKEN', value)
-	    }
-	}
+  // 更改状态(异步)：store.dispatch()
+  mutations: {
+    setToken (state, value) {
+      state.token = value
+      localStorage.setItem('TOKEN', value)
+    }
+  }
 })
 ```
 
@@ -82,10 +82,10 @@ export default new Vuex.Store({
 ``` javascript
 // 组件中调用
 export default {
-	created () {
-		this.store.state.activePage
-		this.store.commit('activePage', 'home')
-	}
+  created () {
+    this.store.state.activePage
+    this.store.commit('activePage', 'home')
+  }
 }
 ```
 ## State
@@ -124,14 +124,14 @@ Action 类似于 mutation，不同在于：
 `store.dispatch` 可以处理被触发的 action 的处理函数返回的 Promise，并且 `store.dispatch` 仍旧返回 Promise。
 ``` javascript
 actions: {
-	actionA ({ commit }) {
-		return new Promise((resolve, reject) => {
-			setTimeout(() => {
-				commit('someMutation')
-				resolve()
-			}, 1000)
-		})
-	}
+  actionA ({ commit }) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        commit('someMutation')
+        resolve()
+      }, 1000)
+    })
+  }
 }
 ```
 现在你可以：
@@ -141,7 +141,8 @@ store.dispatch('actionA').then(() => {
 })
 ```
 在另外一个 action 中也可以：
-```
+
+```  javascript
 // 假设 getData() 和 getOtherData() 返回的是 Promise
 actions: {
   async actionA ({ commit }) {
@@ -153,6 +154,7 @@ actions: {
   }
 }
 ```
+
 >完整请参照：https://vuex.vuejs.org/zh-cn/actions.html
 ## 辅助函数
 - 当一个组件需要获取多个状态时候，将这些状态都声明为计算属性会有些重复和冗余。
@@ -162,33 +164,33 @@ actions: {
 import { mapState } from 'vuex'
 
 export default {
-	created () {
-		console.log(this.activePage)
-		this.setActivePage('home')
-	}，
-	computed: {
-		...mapState({
-			// 使用对象展开运算符将此对象混入到外部对象中
-		})
-	}
-	computed: mapState(
+  created () {
+    console.log(this.activePage)
+    this.setActivePage('home')
+  }，
+  computed: {
+    ...mapState({
+      // 使用对象展开运算符将此对象混入到外部对象中
+    })
+  }
+  computed: mapState(
 
-		// 映射 this.token 为 store.state.token
-		'token',
-		// 映射多个状态
-		['token', 'count'],
+    // 映射 this.token 为 store.state.token
+    'token',
+    // 映射多个状态
+    ['token', 'count'],
 
-		// 箭头函数可使代码更简练
-		token: state => state.token,
+    // 箭头函数可使代码更简练
+    token: state => state.token,
 
-		// 传字符串参数 'token' 等同于 `state => state.token`
-		tokenAlias: 'token',
+    // 传字符串参数 'token' 等同于 `state => state.token`
+    tokenAlias: 'token',
 
-		// 为了能够使用 `this` 获取局部状态，必须使用常规函数
-		tokenPlus (state) {
-			return `Bearer ${state.token}`
-		}
-	)
+    // 为了能够使用 `this` 获取局部状态，必须使用常规函数
+    tokenPlus (state) {
+      return `Bearer ${state.token}`
+    }
+  )
 }
 ```
 >参考博客
