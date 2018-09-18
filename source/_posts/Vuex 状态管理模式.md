@@ -1,7 +1,6 @@
 ---
 title: Vuex 状态管理模式
 categories: Vue
-password: admin
 tags:
   - Vue-cli 3.0
 ---
