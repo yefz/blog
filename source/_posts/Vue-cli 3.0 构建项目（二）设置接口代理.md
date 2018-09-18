@@ -3,6 +3,7 @@ title: Vue-cli 3.0 构建项目（二）设置接口代理
 categories: Vue
 tags:
   - Vue-cli 3.0
+abbrlink: c120297a
 ---
 
 - `vue.config.js`

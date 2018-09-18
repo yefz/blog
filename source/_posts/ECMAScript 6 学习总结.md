@@ -3,6 +3,7 @@ title: ECMAScript 6 学习总结
 categories: ES6
 tags:
   - ES6
+abbrlink: bf27d385
 ---
 
 # 版本历史

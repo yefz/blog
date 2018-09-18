@@ -3,6 +3,7 @@ title: Vue-router 路由
 categories: Vue
 tags:
   - router
+abbrlink: 54fe33e
 ---
 
 # vue-router 使用步骤

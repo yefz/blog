@@ -3,6 +3,7 @@ title: addEventListener  关于 passive
 categories: JavaScript
 tags:
   - 原生JS
+abbrlink: babd8e57
 ---
 
 语法： `el.addEventListener(type, listener[, useCapture])`

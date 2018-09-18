@@ -3,6 +3,7 @@ title: HTML 页面加载过程
 categories: HTML基础
 tags:
   - loading
+abbrlink: 3317f8ab
 ---
 
 # window.onload 和 DOMContentLoaded 的区别

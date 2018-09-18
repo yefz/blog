@@ -3,6 +3,7 @@ title: Jade 模板引擎
 categories: Template
 tags:
   - Jade
+abbrlink: 27d5828b
 ---
 
 ## 注意事项

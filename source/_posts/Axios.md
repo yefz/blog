@@ -4,6 +4,7 @@ categories: JavaScript
 tags:
   - Vue
   - HTTP请求库
+abbrlink: 6155a9d6
 ---
 
 # Axios

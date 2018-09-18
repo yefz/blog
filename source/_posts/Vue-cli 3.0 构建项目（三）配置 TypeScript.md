@@ -3,6 +3,7 @@ title: Vue-cli 3.0 构建项目（三）配置 TypeScript
 categories: Vue
 tags:
   - Vue-cli 3.0
+abbrlink: d1574a7f
 ---
 
 `tsconfig.json`：

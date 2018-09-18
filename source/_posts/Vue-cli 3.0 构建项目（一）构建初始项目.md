@@ -3,6 +3,7 @@ title: Vue-cli 3.0 构建项目（一）构建初始项目
 categories: Vue
 tags:
   - Vue-cli 3.0
+abbrlink: 853fb169
 ---
 
 官方文档 https://cli.vuejs.org/

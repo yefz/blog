@@ -3,6 +3,7 @@ title: FFC：进阶算法题
 categories: JavaScript
 tags:
   - FCC
+abbrlink: 92e55de9
 ---
 
 # Sum All Numbers in a Range

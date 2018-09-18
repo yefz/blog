@@ -3,6 +3,7 @@ title: CSS flex 弹性盒模型
 categories: CSS
 tags:
   - flex
+abbrlink: 494c855e
 ---
  
 # flex box 弹性盒模型

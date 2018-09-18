@@ -4,6 +4,7 @@ categories: JavaScript
 tags:
   - 原生JS
   - 异步
+abbrlink: 5a21beee
 ---
 
 # 简述
