@@ -3,6 +3,7 @@ title: HTML 页面加载过程
 categories: HTML基础
 tags:
   - loading
+date: 2016-06-06 08:00
 abbrlink: 3317f8ab
 ---
 

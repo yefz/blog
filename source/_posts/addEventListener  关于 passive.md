@@ -1,8 +1,8 @@
 ---
 title: addEventListener  关于 passive
 categories: JavaScript
-tags:
-  - 原生JS
+tags: 原生JS
+date: 2018-07-15 08:00
 abbrlink: babd8e57
 ---
 
@@ -16,7 +16,8 @@ abbrlink: babd8e57
 2015年底，为了扩展新的选项，从而自定义更多的行为
 
 - DOM 规范做了修订：`addEventListener()` 的第三个参数可为 `{}` **对象**
-``` javascript
+
+```javascript
 el.addEventListener(type, listener, {
   capture: false, // === useCapture
   once: false,    // 是否设置单次监听
@@ -24,7 +25,7 @@ el.addEventListener(type, listener, {
 })
 ```
 如何移除 `{ passive: true }` 的监听事件
-``` javascript
+```javascript
 // 直接省略第三个参数
 el.removeEventListener(type, listener)
 

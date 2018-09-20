@@ -6,8 +6,9 @@ tags:
 abbrlink: d1574a7f
 ---
 
-`tsconfig.json`：
-``` javascript
+`tsconfig.json`:
+
+```javascript
 {
   // 编译选项
   "compilerOptions": {

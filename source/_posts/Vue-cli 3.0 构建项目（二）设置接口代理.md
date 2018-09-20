@@ -7,8 +7,10 @@ abbrlink: c120297a
 ---
 
 - `vue.config.js`
+
 vue.config.js是一个可选的配置文件，新建该文件，存放在项目根目录（将自动加载）中
-``` javascript
+
+```javascript
 // 作为配置文件，直接导出配置对象即可
 module.exports = {
 	devServer: {

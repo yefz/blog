@@ -4,6 +4,7 @@ categories: JavaScript
 tags:
   - 原生JS
   - 异步
+date: 2017-07-15 08:00
 abbrlink: 5a21beee
 ---
 

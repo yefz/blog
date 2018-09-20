@@ -1,29 +1,17 @@
 ---
-title: ECMAScript 6 学习总结
-categories: ES6
-tags:
-  - ES6
-abbrlink: bf27d385
+title: ES6 学习总结
+tags: ES6
+categories: JavaScript
+description: ECMAScript 是标准化组织 ECMA 发布的脚本语言规范
+abbrlink: 19516f1f
+date: 2018-09-20 08:14:43
 ---
 
-# 版本历史
-- *ECMAScript: 是标准化组织 ECMA 发布的脚本语言规范。*
-| 版本| 发布时间 | 与前版本差异 | 
-| ---- |:----:| ----:| 
-| 1.0 | 1997.06 | 首版 | 
-| 2.0 | 1998.06 | 格式修正，以使得其形式与ISO/IEC16262国际标准一致 | 
-| 3.0 | 1999.12 | 成为JavaScript的通行标准，得到了广泛支持 | 
-| 4.0 | 2007.10 | 过于激进，发布后废除 | 
-| 3.1 | 2008.07 | 4.0的缩水版，别名ECMA Harmony | 
-| 5.0 | 2009.12 | 成为ISO国际标准，浏览器必须支持 | 
-| 6.0 | 2013.03 | 制定草案 | 
-| 6.0 | 2013.12 | 发布草案，12个月讨论期 | 
-| 6.0 | 2015.06.17 | 正式发布，浏览器逐步支持中... | 
-
-
 # 变量声明
+
 ## 常量 const
-- ES5 :
+
+- ES5
 ``` javascript
 Object.defineProperty(window, 'PI', {
 	value: 3.1415926,
@@ -38,11 +26,10 @@ const PI = 3.1415926;
 console.log(PI); // => 3.1415926
 ```
 
-## 变量 let（块级作用域）
+## 变量 let
 - 不允许重复声明
 - 不存在声明提前（无变量提升）
 - 具有块级作用域，包含在`{}`中
-
 - ES5 :
 ``` javascript
 (function() {
@@ -55,7 +42,9 @@ console.log(PI); // => 3.1415926
 	let a;
 }
 ```
+
 # 数组扩展
+
 ## Array.from() 转化数组
 - `Array.from()`用于将两类对象转为真正的数组：
 	-- 类数组（伪数组）对象
@@ -518,4 +507,3 @@ function fact(n,total){
 >[ES6数字扩展](https://www.cnblogs.com/xiaohuochai/p/7266540.html)
 >[ES6--函数扩展](https://blog.csdn.net/tiem_erhu/article/details/51035344)
 >[学习笔记：ES6之数组扩展（重要）](https://blog.csdn.net/qq_38658877/article/details/78063666)
-
