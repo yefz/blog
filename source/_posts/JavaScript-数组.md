@@ -1,8 +1,9 @@
 ---
 title: JavaScript 数组
 abbrlink: f62c9be1
-date: 2018-09-22 16:17:13
+date: 2018-04-20 22:18:50
 tags:
+description: 'JavaScript基础 - 数组篇回顾笔记'
 ---
 
 ## 创建

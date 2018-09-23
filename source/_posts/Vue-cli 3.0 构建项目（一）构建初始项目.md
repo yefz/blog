@@ -4,6 +4,7 @@ categories: Vue
 tags:
   - Vue-cli 3.0
 date: 2018-06-30 22:29:42
+description: 'Vue-cli 3.0 项目构建配置选项'
 abbrlink: 853fb169
 ---
 

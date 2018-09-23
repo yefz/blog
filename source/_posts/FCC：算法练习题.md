@@ -777,3 +777,30 @@ function checkCashRegister(price, cash, cid) {
 
 checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
 ```
+
+# 收集题目
+
+## 斐波那契数列
+规律：n = ( n - 1 ) + ( n - 2 )  
+节点：1和2的数列都是1
+```javascript
+function fibo(n) {
+  if (n == 1 || n == 2) return 1;
+  return fibo(n-1) + fibo(n-2);
+}
+
+// ES6 尾递归优化
+function fibo(n, ac1 = 1, ac2 = 1) {
+  if (n <= 1) return ac2;
+  return fibo(n - 1, ac2, ac1 + ac2);
+}
+
+// output
+function fun(s) {
+  var nums = '';
+  for (n = 1; n <= s; n++) {
+      nums += "," + fact(n);
+  }
+  return numfb;
+}
+```

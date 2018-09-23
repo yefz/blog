@@ -1,8 +1,9 @@
 ---
 title: JavaScript 字符串
 abbrlink: edd08d15
-date: 2018-09-22 16:11:35
+date: 2018-04-20 21:41:49
 tags:
+description: 'JavaScript基础 - 字符串篇回顾笔记'
 ---
 
 ## 合并字符串 concat()
