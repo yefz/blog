@@ -1,11 +1,11 @@
 ---
 title: Node.js事件驱动模型
-abbrlink: '63603e54'
+abbrlink: 63603e54
 date: 2018-04-13 07:37:20
 tags:
 ---
 
-![事件驱动模型](https://wildye.cn/static/images/blog/node%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9E%8B.jpg)
+![事件驱动模型](https://wildye.cn/static/images/blog/63603e54/01.jpg)
 
 ## 主线程
 1. 执行 node 代码，将代码加入队列中

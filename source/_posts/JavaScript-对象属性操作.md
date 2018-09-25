@@ -74,7 +74,7 @@ var name = Object.getOwnPropertyDescriptor(person, 'name');
 console.log(name)
 ```
 - 输出：
-![这里写图片描述](https://wildye.cn/static/images/blog/blog_003.jpg)
+![这里写图片描述](https://wildye.cn/static/images/blog/b068a1d1/01.jpg)
 ## Object. getOwnPropertyDescriptor`s`()
 ```javascript
 // 语法
@@ -87,7 +87,7 @@ var person = {
 var name = Object.getOwnPropertyDescriptors(person);
 console.log(name)
 ```
-![这里写图片描述](https://wildye.cn/static/images/blog/blog_004.jpg)
+![这里写图片描述](https://wildye.cn/static/images/blog/b068a1d1/02.jpg)
 
 >参考
 >[js中的Object.defineProperty()和defineProperties()](https://segmentfault.com/a/1190000011294519#articleHeader22)

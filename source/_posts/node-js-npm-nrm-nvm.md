@@ -8,7 +8,7 @@ tags:
 ## node.js 安装
 node.js官网下载地址 ：https://nodejs.org/en/download/current/
 安装包带有 npm ，自动添加了系统环境变量
-![这里写图片描述](https://wildye.cn/static/images/blog/blog_003.png)
+![这里写图片描述](https://wildye.cn/static/images/blog/50721b11/01.png)
 
 - Linux（Ubuntn 16.4）
 
@@ -53,11 +53,11 @@ npm_mirror: https://npm.taobao.org/mirrors/npm/
 4. 进入环境变量面板 Win + R  => sysdm.cpl  
 5. 新建 `NVM_HOME` 、 `NVM_SYMLINK`
 
-![这里写图片描述](https://wildye.cn/static/images/blog/blog_004.png)
+![这里写图片描述](https://wildye.cn/static/images/blog/50721b11/02.png)
 
 6. 将 `NVM_HOME` 、 `NVM_SYMLINK` 加入 `Path` 变量中
 
-![这里写图片描述](https://wildye.cn/static/images/blog/blog_005.png)
+![这里写图片描述](https://wildye.cn/static/images/blog/50721b11/03.png)
 
 7. 验证环境变量
 cmd窗口输入 set [变量名] 查看上面配置的变量，安装完成！
@@ -191,12 +191,12 @@ nrm use cnpm
 // 列出可用源
 nrm ls
 ```
-![这里写图片描述](https://wildye.cn/static/images/blog/blog_006.png)
+![这里写图片描述](https://wildye.cn/static/images/blog/50721b11/04.png)
 ```javascript
 // 测试所有源的响应时间
 nrm test
 ```
-![这里写图片描述](https://wildye.cn/static/images/blog/blog_007.png)
+![这里写图片描述](https://wildye.cn/static/images/blog/50721b11/05.png)
 
 > 参考引用：  
 > [npm link的基本用法及实例](https://blog.csdn.net/u014291497/article/details/75194456)  
