@@ -73,3 +73,35 @@ console.log("Top:" + div.offsetTop);        // IE7及以上 OK
 尺寸（有滚动条） = `content + 3px`;
 
 尺寸（无滚动条） = `content + padding * 2`;
+
+## IE8 兼容 border-radius 属性方案
+IE8及以下不支持 border-radius属性，如果要想在IE浏览器中实现圆角的效果
+
+- 利用VML矢量可标记语言作为画笔绘出圆角  
+下载：http://css3pie.com/download-latest-1.x
+
+- 在 IE8及一下引入 PIE.js 文件
+```html
+<!--[if lte IE 8]>
+	<script src="PIE.js"></script>
+<![endif]-->
+```
+- less code
+```less
+input {
+  border: 1px solid #000;
+  .ie8-border-radius(10px);
+}
+
+// 解决IE8不支持圆角
+.ie8-border-radius(@size: 5px) {
+  position: relative;
+  z-index: 2;
+  -moz-border-radius: @size;
+  -webkit-border-radius: @size;
+  border-radius: @size;
+  behavior: url(PIC.htc); // 相对于html文件路径
+}
+```
+- IE 找 `PIC.htc` 文件是相对 html文件路径来找的
+- 需要有定位属性 `position:relative` 和较高的层级 `z-index: 2`

@@ -189,3 +189,132 @@ npm install --save gulp-load-plugins   // 一次性加载
 ```
 >引用
 >https://www.cnblogs.com/2050/p/4198792.html
+
+## .src() 匹配模式详解
+语法：`gulp.src(globs[, options])`
+- `globs`：文件匹配模式(类似正则表达式)，用来匹配文件路径(包括文件名)
+- `options`：为可选参数。通常情况下我们不需要用到
+```
+gulp.src('**/*.js')
+```
+
+Gulp 内部使用了 node-glob 模块来实现其文件匹配功能
+
+### 单匹配模式
+<table>
+	<tr>
+	    <td>匹配符</td>
+	    <td>code</td>
+	    <td>匹配</td>
+	    <td>不匹配</td>
+	    <td>备注</td>
+	</tr>
+	<tr>
+	    <td rowspan="3"><code>*</code></td>
+	    <td><code>*</code></td>
+	    <td><code>a.b</code>， <code>x.y</code>， <code>abc</code>， <code>abc/</code></td>
+	    <td><code>a/b.js</code></td>
+	    <td>不匹配<code>/</code>，除非<code>/</code>出现在末尾</td>
+	</tr>
+	<tr>
+	    <td><code>*.*</code></td>
+	    <td><code>a.b</code>， <code>x.y</code></td>
+	    <td><code>abc</code></td>
+	    <td>匹配所有带后缀的文件</td>
+	</tr>
+	<tr>
+	    <td><code>*/*/*.js</code></td>
+	    <td><code>a/b/c.js</code>， <code>x/y/z.js</code></td>
+	    <td><code>a/b.js</code>， <code>a/b/c/d.js</code></td>
+	    <td>匹配固定层级目录</td>
+	</tr>
+	<tr>
+	    <td rowspan="4"><code>**</code></td>
+	    <td><code>**</code></td>
+	    <td><code>abc</code>， <code>a/b</code>， <code>a/b.js</code>， <code>a/b/c</code>， <code>a/b/c.js</code></td>
+	    <td></td>
+	    <td>匹配所有的目录和文件</td>
+	</tr>
+	<tr>
+	    <td><code>**/*.js</code></td>
+	    <td><code>a.js</code>， <code>a/b.js</code>， <code>a/b/c.js</code></td>
+	    <td></td>
+	    <td>匹配所有目录下的 <code>.js</code> 文件</td>
+	</tr>
+	<tr>
+	    <td><code>a/**/z</code></td>
+	    <td><code>a/z</code>， <code>a/b/z</code>， <code>a/b/c/z</code>， <code>a/b/c/d/z</code></td>
+	    <td></td>
+	    <td></td>
+	</tr>
+	<tr>
+	    <td><code>a/**b/z</code></td>
+	    <td><code>a/b/z</code>， <code>a/nb/z</code></td>
+	    <td><code>a/c/nb/z</code>， <code></code></td>
+	    <td><code>**</code> 单独出现才能匹配多级目录</td>
+	</tr>
+	<tr>
+	    <td rowspan="2"><code>?</code></td>
+	    <td><code>?.js</code></td>
+	    <td><code>a.js</code>， <code>b.js</code>， <code>c.js</code></td>
+	    <td></td>
+	    <td>占位符匹配，不匹配 <code>/</code></td>
+	</tr>
+	<tr>
+	    <td><code>a??</code></td>
+	    <td><code>a.b</code>， <code>abc</code></td>
+	    <td><code>ab/</code></td>
+	    <td>占位符与字符搭配使用</td>
+	</tr>
+	<tr>
+	    <td rowspan="2"><code>[]</code></td>
+	    <td><code>[abc].js</code></td>
+	    <td><code>a.js</code>， <code>b.js</code>， <code>c.js</code></td>
+	    <td><code>ab.js</code>， <code>xyz.js</code></td>
+	    <td>整个 <code>[]</code> 只匹配一个字符</td>
+	</tr>
+	<tr>
+	    <td><code>[^abc].js</code><br /><code>[!abc].js</code></td>
+	    <td><code>x.js</code>， <code>y.js</code></td>
+	    <td><code>a.js</code>， <code>b.js</code>， <code>c.js</code></td>
+	    <td>排除匹配字符</td>
+	</tr>
+</table>
+
+### 多匹配模式 - 类正则
+
+| 表达式 | 备注 |
+| ----- |:------:|
+| `!(pattern\|pattern\|pattern)` | 匹配任何与括号中给定的任一模式都不匹配的 |
+| `?(pattern\|pattern\|pattern)` | 匹配括号中给定的任一模式0次或1次，类似于js正则中的 `(pattern\|pattern\|pattern)?` |
+| `+(pattern\|pattern\|pattern)` | 匹配括号中给定的任一模式至少1次，类似于js正则中的 `(pattern\|pattern\|pattern)+` |
+| `*(pattern\|pattern\|pattern)` | 匹配括号中给定的任一模式0次或多次，类似于js正则中的 `(pattern\|pattern\|pattern)*` |
+| `@(pattern\|pattern\|pattern)` | 匹配括号中给定的任一模式1次，类似于js正则中的 `(pattern\|pattern\|pattern)` |
+
+### 多匹配模式 - 数组
+
+使用数组匹配多种模式
+```javascript
+gulp.src(['js/*.js', 'css/*.css', '*.html'])
+```
+
+### 多匹配模式 - 数组 + 排除模式
+
+排除模式不能出现在数组的第一个元素中
+```javascript
+gulp.src([*.js,'!b*.js']) // 匹配所有js文件，但排除掉以b开头的js文件
+gulp.src(['!b*.js',*.js]) // 不排除任何文件，因为排除模式不能出现在数组的第一个元素中
+```
+
+### 多匹配模式 - 展开模式  
+
+以 `{}` 作为定界符，根据它里面的内容，会展开为多个模式，  
+最后匹配的结果为所有展开的模式相加起来得到的结果 !
+
+| 表达式 | 匹配结果 |
+| :- | - |
+| `a{b, c}d` | `abc`，`acd` |
+| `a{b,}c` | `abc`，`ac` |
+| `a{0..3}c` | `a0c`，`a1c`，`a2c` |
+| `a{b, c{d, e}f}g` | `abg`，`acdfg`，`acefg` |
+| `a{b, c}d{e, f}g` | `abdeg`，`acdeg`，`abdeg`，`abdfg` |
