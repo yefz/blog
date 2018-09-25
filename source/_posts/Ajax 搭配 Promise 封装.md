@@ -11,7 +11,7 @@ abbrlink: 5a21beee
 # 简述
 
 ## Ajax（Asynchronous JavaScript And XML）
-	是一种创建交互式网页应用的开发技术、改善用户体验，实现无刷新效果
+是一种创建交互式网页应用的开发技术、改善用户体验，实现无刷新效果
 优点：
 
 - 无需插件支持
@@ -27,12 +27,13 @@ abbrlink: 5a21beee
 依赖 `XMLHttpRequest` 对象实现
 
 - 设置请求头 
-| code | type |
-| :-: | :-: |
-| `application/x-www-form-urlencoded` | 表单字符类型 |
-| `multiline/form-data` | 表单类型 |
-| `application/json` | json 类型 |
-| `text/xml` |  |
+
+| type | code |
+| :- | :- |
+| 表单字符类型 | `application/x-www-form-urlencoded` |
+| 表单类型 | `multiline/form-data` |
+| json 类型 | `application/json` |
+|  | `text/xml` |
 ``` javascript
 xhr = new XMLHttpRequest();
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
