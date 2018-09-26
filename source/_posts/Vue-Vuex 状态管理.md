@@ -1,5 +1,5 @@
 ---
-title: Vuex 状态管理模式
+title: Vue-Vuex 状态管理
 abbrlink: 332f043
 date: 2018-07-29 14:09:48
 categories: Vue
