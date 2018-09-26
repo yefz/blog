@@ -1,10 +1,10 @@
 ---
 title: Vue-router 路由
+abbrlink: 54fe33e
+date: 2018-07-26 23:13:31
 categories: Vue
 tags:
   - router
-date: 2018-07-26 23:13:31
-abbrlink: 54fe33e
 ---
 
 # vue-router 使用步骤

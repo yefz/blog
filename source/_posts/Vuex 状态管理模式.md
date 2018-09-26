@@ -1,10 +1,10 @@
 ---
 title: Vuex 状态管理模式
+abbrlink: 332f043
+date: 2018-07-29 14:09:48
 categories: Vue
 tags:
   - Vue-cli 3.0
-date: 2018-07-29 14:09:48
-abbrlink: 332f043
 ---
 
 Vuex是什么

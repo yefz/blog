@@ -1,13 +1,13 @@
 ---
 title: FCC：2018算法题
+abbrlink: bc7f9755
+date: 2018-09-21 23:02:43
+categories: 算法
 tags:
   - FCC
   - 算法
   - 面试题
-categories: 算法
 description: 'https://learn.freecodecamp.one/ 2018年9月更新的算法题'
-abbrlink: bc7f9755
-date: 2018-09-21 23:02:43
 ---
 
 # 算法基础

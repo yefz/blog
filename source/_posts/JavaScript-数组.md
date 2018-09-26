@@ -2,6 +2,7 @@
 title: JavaScript 数组
 abbrlink: f62c9be1
 date: 2018-04-20 22:18:50
+categories:
 tags:
 description: 'JavaScript基础 - 数组篇回顾笔记'
 ---

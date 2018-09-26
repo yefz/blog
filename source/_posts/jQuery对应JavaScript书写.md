@@ -2,6 +2,7 @@
 title: jQuery对应JavaScript书写
 abbrlink: a25f9acc
 date: 2018-03-21 22:57:03
+categories:
 tags:
 ---
 

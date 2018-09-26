@@ -1,11 +1,11 @@
 ---
 title: Vue-cli 3.0 构建项目（三）配置 TypeScript
+abbrlink: d1574a7f
+date: 2018-08-19 11:12:06
 categories: Vue
 tags:
   - Vue-cli 3.0
-date: 2018-08-19 11:12:06
 description: 'Vue-cli 3.0 tsconfig.json 配置项说明'
-abbrlink: d1574a7f
 ---
 
 `tsconfig.json`:

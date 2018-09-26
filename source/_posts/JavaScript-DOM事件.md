@@ -1,7 +1,8 @@
 ---
-title: JavaScript DO事件
+title: JavaScript DOM事件
 abbrlink: 4ce9c398
 date: 2018-03-22 14:19:08
+categories:
 tags:
 ---
 

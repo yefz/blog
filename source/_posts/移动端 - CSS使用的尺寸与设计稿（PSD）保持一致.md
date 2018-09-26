@@ -1,15 +1,15 @@
 ---
 title: 移动端 - CSS使用的尺寸与设计稿（PSD）保持一致
+abbrlink: d1676c71
+date: 2018-04-12 09:22:31
 categories: CSS
 tags:
   - Mobile
-date: 2018-04-12 09:22:31
-abbrlink: d1676c71
 ---
 
 # 像素概念
 
-- **物理像素 ( physical pixel ) **
+- **物理像素 ( physical pixel )**
 物理分辨率就是硬件固有的分辨率，是屏幕上最小的物理显示单元
 
 - **设备无关像素 ( 逻辑像素 )**
