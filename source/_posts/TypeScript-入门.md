@@ -20,6 +20,7 @@ TypeScript是一个应用程序级的JavaScript开发语言。
 - TypeScript 遵循 JavaScript 的语法和语义，方便了无数的 JavaScript 开发者。
 - TypeScript 可以重用现有的 JavaScript 代码，调用流行的 JavaScript 库。
 - TypeScript 可以编译成简洁、简单的 JavaScript 代码，在任意浏览器、Node.js 或任何兼容 ES3的 环境上运行。
+
 ![这里写图片描述](https://wildye.cn/static/images/blog/8eff68f4/01.jpg)
 
 [在线 compiler 开发](http://www.typescriptlang.org/play/)
