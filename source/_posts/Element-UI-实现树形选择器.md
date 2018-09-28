@@ -5,7 +5,7 @@ date: 2018-09-29 00:45:17
 categories:
 tags:
 password:
-description:
+description: 结合 el-popover、el-tree、el-input 实现的下拉树状列表选择器
 ---
 
 ![事件驱动模型](https://wildye.cn/static/images/blog/1ab23fc5/01.jpg)
