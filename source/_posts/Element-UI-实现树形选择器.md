@@ -8,13 +8,27 @@ password:
 description: 结合 el-popover、el-tree、el-input 实现的下拉树状列表选择器
 ---
 
-![事件驱动模型](https://wildye.cn/static/images/blog/1ab23fc5/01.jpg)
+![树形选择器](https://wildye.cn/static/images/blog/1ab23fc5/01.jpg)
 
 ## 组件调用
 
 ```html
 <template>
-  <select-tree :options="options" v-model="selected" />
+  <!-- 行模式 -->
+  <el-form inline>
+    <el-form-item label="inline 默认：">
+      <select-tree :options="options" v-model="selected" />
+    </el-form-item>
+    <el-form-item label="inline 定义宽度：">
+      <select-tree width="200" :options="options" v-model="selected" />
+    </el-form-item>
+  </el-form>
+  <!-- 块模式 -->
+  <el-form>
+    <el-form-item label="自适应：">
+      <select-tree :options="options" v-model="selected" />
+    </el-form-item>
+  </el-form>
 </template>
 
 <script>
@@ -69,6 +83,8 @@ export default {
     @hide="onHidePopover">
     <el-tree
       ref="tree"
+      class="select-tree"
+      :style="`min-width: ${treeWidth}`"
       :data="data"
       :props="props"
       :expand-on-click-node="false"
@@ -77,9 +93,10 @@ export default {
     </el-tree>
     <el-input
       slot="reference"
+      ref="input"
       v-model="labelModel"
-      style="width:170px"
       clearable
+      :style="`width: ${width}px`"
       :class="{ 'rotate': showStatus }"
       suffix-icon="el-icon-arrow-down"
       :placeholder="placeholder">
@@ -93,6 +110,8 @@ export default {
   props: {
     // 接收绑定参数
     value: String,
+    // 输入框宽度
+    width: String,
     // 选项数据
     options: {
       type: Array,
@@ -140,6 +159,8 @@ export default {
     return {
       // 树状菜单显示状态
       showStatus: false,
+      // 菜单宽度
+      treeWidth: 'auto',
       // 输入框显示值
       labelModel: '',
       // 实际请求传值
@@ -147,9 +168,14 @@ export default {
     };
   },
   created() {
+    // 检测输入框原有值并显示对应 label
     if (this.value) {
       this.labelModel = this.queryTree(this.data, this.value);
     }
+    // 获取输入框宽度同步至树状菜单宽度
+    this.$nextTick(() => {
+      this.treeWidth = `${(this.width || this.$refs.input.$refs.input.clientWidth) - 24}px`;
+    });
   },
   methods: {
     // 单击节点
@@ -199,8 +225,30 @@ export default {
 </script>
 
 <style>
-  .el-input.el-input--suffix.rotate .el-input__suffix {
+  .select-tree .el-input.el-input--suffix.rotate .el-input__suffix {
     transform: rotate(180deg);
+  }
+  .select-tree {
+    max-height: 350px;
+    overflow-y: scroll;
+  }
+  /* 菜单滚动条 */
+  .select-tree::-webkit-scrollbar {
+    z-index: 11;
+    width: 6px;
+  }
+  .select-tree::-webkit-scrollbar-track,
+  .select-tree::-webkit-scrollbar-corner {
+    background: #fff;
+  }
+  .select-tree::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    width: 6px;
+    background: #b4bccc;
+  }
+  .select-tree::-webkit-scrollbar-track-piece {
+    background: #fff;
+    width: 6px;
   }
 </style>
 ```
