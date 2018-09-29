@@ -214,7 +214,6 @@ export default {
     },
     // 树节点过滤方法
     filterNode(query, data) {
-      console.log(query);
       if (!query) return true;
       return data[this.props.label].indexOf(query) !== -1;
     },
