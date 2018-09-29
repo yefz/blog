@@ -162,7 +162,13 @@ export default {
   },
   watch: {
     labelModel(val) {
+      if (!val) {
+        this.valueModel = '';
+      }
       this.$refs.tree.filter(val);
+    },
+    value(val) {
+      this.labelModel = this.queryTree(this.data, val);
     },
   },
   data() {
