@@ -81,7 +81,6 @@ export default {
 
 ```html
 <!-- 树状选择器 -->
-<!-- 树状选择器 -->
 <template>
   <el-popover
     ref="popover"
@@ -92,11 +91,13 @@ export default {
     <el-tree
       ref="tree"
       class="select-tree"
+      highlight-current
       :style="`min-width: ${treeWidth}`"
       :data="data"
       :props="props"
       :expand-on-click-node="false"
       :filter-node-method="filterNode"
+      :default-expand-all="false"
       @node-click="onClickNode">
     </el-tree>
     <el-input
@@ -204,7 +205,7 @@ export default {
     // 显示时触发
     onShowPopover() {
       this.showStatus = true;
-      this.$refs.tree.filter('');
+      this.$refs.tree.filter(false);
     },
     // 隐藏时触发
     onHidePopover() {
@@ -213,6 +214,7 @@ export default {
     },
     // 树节点过滤方法
     filterNode(query, data) {
+      console.log(query);
       if (!query) return true;
       return data[this.props.label].indexOf(query) !== -1;
     },
@@ -266,6 +268,10 @@ export default {
 </script>
 
 <style>
+  .el-input.el-input--suffix {
+    cursor: pointer;
+    overflow: hidden;
+  }
   .el-input.el-input--suffix.rotate .el-input__suffix {
     transform: rotate(180deg);
   }
