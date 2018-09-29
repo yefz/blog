@@ -26,7 +26,7 @@ description: 结合 el-popover、el-tree、el-input 实现的下拉树状列表�
   <!-- 块模式 -->
   <el-form>
     <el-form-item label="自适应：">
-      <select-tree :options="options" v-model="selected" />
+      <select-tree v-model="selected" :options="options" :props="defaultProps" />
     </el-form-item>
   </el-form>
 </template>
@@ -43,6 +43,13 @@ export default {
     return {
       // 默认选中值
       selected: 'A',
+      // 数据默认字段
+      defaultProps: {
+        parent: 'parentId',   // 父级唯一标识
+        value: 'id',          // 唯一标识
+        label: 'label',       // 标签显示
+        children: 'children', // 子级
+      },
       // 数据列表
       options: [
         {
@@ -73,6 +80,7 @@ export default {
 ## SelectTree.vue
 
 ```html
+<!-- 树状选择器 -->
 <!-- 树状选择器 -->
 <template>
   <el-popover
@@ -128,8 +136,9 @@ export default {
       type: Object,
       required: false,
       default: () => ({
-        value: 'parentId',
-        label: 'label',
+        parent: 'parentId',
+        value: 'rowGuid',
+        label: 'areaName',
         children: 'children',
       }),
     },
@@ -185,7 +194,9 @@ export default {
       this.onCloseTree();
     },
     // 偏平数组转化为树状层级结构
-    switchTree() {},
+    switchTree() {
+      return this.cleanChildren(this.buildTree(this.options, '0'));
+    },
     // 隐藏树状菜单
     onCloseTree() {
       this.$refs.popover.showPopper = false;
@@ -220,12 +231,42 @@ export default {
       }
       return '';
     },
+    // 将一维的扁平数组转换为多层级对象
+    buildTree(data, id = '0') {
+      const fa = (parentId) => {
+        const temp = [];
+        for (let i = 0; i < data.length; i++) {
+          const n = data[i];
+          if (n[this.props.parent] === parentId) {
+            n.children = fa(n.rowGuid);
+            temp.push(n);
+          }
+        }
+        return temp;
+      };
+      return fa(id);
+    },
+    // 清除空 children项
+    cleanChildren(data) {
+      const fa = (list) => {
+        list.map((e) => {
+          if (e.children.length) {
+            fa(e.children);
+          } else {
+            delete e.children;
+          }
+          return e;
+        });
+        return list;
+      };
+      return fa(data);
+    },
   },
 };
 </script>
 
 <style>
-  .select-tree .el-input.el-input--suffix.rotate .el-input__suffix {
+  .el-input.el-input--suffix.rotate .el-input__suffix {
     transform: rotate(180deg);
   }
   .select-tree {
