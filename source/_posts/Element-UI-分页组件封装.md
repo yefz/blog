@@ -43,8 +43,8 @@ export default {
 
 ## PagingQuery.vue
 ```html
+<!-- 分页查询 -->
 <template>
-  <!-- 分页 -->
   <div class="clearfix" style="margin-top: 10px">
     <el-pagination
       class="float-right"
@@ -61,7 +61,7 @@ export default {
 
 <script>
 export default {
-  name: 'Pagination',
+  name: 'PagingQuery',
   props: ['pager'],
   computed: {
     total() {
@@ -75,7 +75,7 @@ export default {
   watch: {
     total() {
       // 存在记录但未获取到数据时, 重新请求
-      if (this.isEmptyList) {
+      if (this.pager.page > 1 && this.isEmptyList) {
         this.pager.page -= 1;
         this.$emit('query');
       }
