@@ -2,7 +2,7 @@
 title: JavaScript异步加载JS
 abbrlink: 737ef138
 date: 2018-03-26 14:36:41
-categories:
+categories: Ajax
 tags:
 ---
 

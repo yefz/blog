@@ -1,9 +1,9 @@
 ---
 title: addEventListener  关于 passive
+abbrlink: babd8e57
+date: 2018-05-07 11:50:23
 categories: JavaScript
 tags: 原生JS
-date: 2018-05-07 11:50:23
-abbrlink: babd8e57
 ---
 
 语法： `el.addEventListener(type, listener[, useCapture])`

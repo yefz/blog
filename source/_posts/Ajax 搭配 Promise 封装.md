@@ -2,10 +2,10 @@
 title: Ajax 搭配 Promise 封装
 abbrlink: 5a21beee
 date: 2018-05-05 18:37:41
-categories: JavaScript
+categories: Ajax
 tags:
   - 原生JS
-  - 异步
+  - promise
 ---
 
 # 简述

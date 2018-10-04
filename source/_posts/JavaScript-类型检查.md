@@ -2,8 +2,8 @@
 title: JavaScript 类型检查
 abbrlink: 4a40d9b3
 date: 2018-04-20 22:40:08
-categories:
-tags:
+categories: JavaScript
+tags: 原生JS
 ---
 
 @[toc]

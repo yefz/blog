@@ -2,8 +2,12 @@
 title: node.js npm & nrm & nvm
 abbrlink: 50721b11
 date: 2018-04-21 08:08:11
-categories:
+categories: Node
 tags:
+ - npm
+ - 依赖管理
+ - 版本管理
+ - 镜像源管理
 ---
 
 ## node.js 安装

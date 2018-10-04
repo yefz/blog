@@ -2,7 +2,7 @@
 title: Tool Sunny-Ngrok 内网穿透
 abbrlink: 77374df0
 date: 2018-10-01 10:48:22
-categories:
+categories: 工具
 tags:
 password:
 description:

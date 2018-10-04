@@ -4,8 +4,8 @@ abbrlink: 6155a9d6
 date: 2018-07-29 16:33:12
 categories: JavaScript
 tags:
-  - Vue
-  - HTTP请求库
+  - http
+  - plugin
 ---
 
 ## Axios 特性

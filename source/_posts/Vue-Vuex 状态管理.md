@@ -4,7 +4,8 @@ abbrlink: 332f043
 date: 2018-07-29 14:09:48
 categories: Vue
 tags:
-  - Vue-cli 3.0
+ - Vue-cli 3.0
+ - Vuex
 ---
 
 Vuex是什么

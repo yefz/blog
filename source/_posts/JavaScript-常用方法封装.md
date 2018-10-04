@@ -2,8 +2,8 @@
 title: JavaScript 常用方法封装
 abbrlink: 10c4ce7
 date: 2018-04-20 12:44:12
-categories:
-tags:
+categories: JavaScript
+tags: 原生JS
 ---
 
 ## 获取数据类型，返回字符串

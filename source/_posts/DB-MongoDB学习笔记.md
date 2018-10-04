@@ -2,8 +2,11 @@
 title: DB-MongoDB学习笔记
 abbrlink: fb23b0b5
 date: 2018-05-12 13:18:46
-categories:
+categories: DataBase
 tags:
+ - MongoDB
+ - 分布式
+ - 非关系数据库
 password:
 description:
 ---

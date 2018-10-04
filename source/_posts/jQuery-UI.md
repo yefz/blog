@@ -2,7 +2,7 @@
 title: jQuery UI
 abbrlink: 3505c7d5
 date: 2018-03-19 20:48:33
-categories:
+categories: JavaScript
 tags:
   - UI
   - jQuery
