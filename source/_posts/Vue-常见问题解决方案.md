@@ -18,7 +18,7 @@ this.arr[1] = 'text';
 this.arr.length = 1;
 
 // 使用`set`方式
-this.$set(this.arr,index,newVal);
+this.$set(this.arr, index, newVal);
 ```
 
 - Vue 无法添加或删除对象属性：
@@ -56,7 +56,7 @@ export default {
   watch: {
     itemModel() {
       // 触发事件改变父组件绑定的 v-model 值
-      this.$emit('setModel', this.temModel)
+      this.$emit('setModel', this.itemModel)
     },
   },
 };
