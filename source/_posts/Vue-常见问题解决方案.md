@@ -10,7 +10,7 @@ description:
 
 ## 数组和对象不能直接赋值情况
 
-- Vue 检测不到数组变化：
+Vue 检测不到数组变化：
 ```javascript
 // 使用索引设置元素值时
 this.arr[1] = 'text';
@@ -21,7 +21,7 @@ this.arr.length = 1;
 this.$set(this.arr, index, newVal);
 ```
 
-- Vue 无法添加或删除对象属性：
+Vue 无法添加或删除对象属性：
 ```javascript
 // 单个属性
 this.$set(this.client, 'name', 'hannah');
@@ -31,6 +31,27 @@ Object.assign({}, this.client, { name:'wee', age:12 });
 ```
 
 ## 父组件绑定子组件 v-model 值
+
+父组件
+```html
+<template>
+  <demo-input v-model="formModel"></demo-input>
+</template>
+
+<script>
+import DemoInput from '@/components/DemoInput';
+
+export default {
+  data() {
+    return {
+      formModel: '',
+    };
+  },
+};
+</script>
+```
+
+子组件
 ```html
 <template>
   <el-input v-model="itemModel"></el-input>
@@ -58,25 +79,6 @@ export default {
       // 触发事件改变父组件绑定的 v-model 值
       this.$emit('setModel', this.itemModel)
     },
-  },
-};
-</script>
-```
-
-父组件调用
-```html
-<template>
-  <demo-input v-model="formModel"></demo-input>
-</template>
-
-<script>
-import DemoInput from '@/components/DemoInput';
-
-export default {
-  data() {
-    return {
-      formModel: '',
-    };
   },
 };
 </script>
