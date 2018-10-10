@@ -2,8 +2,8 @@
 title: Element-UI 实现树形选择器
 abbrlink: 1ab23fc5
 date: 2018-09-29 00:45:17
-categories:
-tags:
+categories: Element UI
+tags: 自定义组件
 password:
 description: 结合 el-popover、el-tree、el-input 实现的下拉树状列表选择器
 ---
@@ -86,11 +86,11 @@ export default {
     ref="popover"
     placement="bottom-start"
     trigger="click"
+    class="select-tree scrollbar"
     @show="onShowPopover"
     @hide="onHidePopover">
     <el-tree
       ref="tree"
-      class="select-tree"
       highlight-current
       :style="`min-width: ${treeWidth}`"
       :data="data"
@@ -272,35 +272,39 @@ export default {
 };
 </script>
 
-<style>
-  .el-input.el-input--suffix {
-    cursor: pointer;
-    overflow: hidden;
-  }
-  .el-input.el-input--suffix.rotate .el-input__suffix {
-    transform: rotate(180deg);
-  }
-  .select-tree {
-    max-height: 350px;
+<style lang="scss">
+  .scrollbar {
     overflow-y: scroll;
+    &::-webkit-scrollbar {
+      z-index: 11;
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-corner {
+      background: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+      // border-radius: 5px;
+      width: 6px;
+      background-color: #eee;
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+    &::-webkit-scrollbar-track-piece {
+      background: #fff;
+      width: 6px;
+    }
   }
-  /* 菜单滚动条 */
-  .select-tree::-webkit-scrollbar {
-    z-index: 11;
-    width: 6px;
+  .select-tree .el-tree {
+    max-height: 350px;
+    .scrollbar;
   }
-  .select-tree::-webkit-scrollbar-track,
-  .select-tree::-webkit-scrollbar-corner {
-    background: #fff;
+  .select-tree .el-input.el-input--suffix {
+    cursor: pointer;
   }
-  .select-tree::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    width: 6px;
-    background: #b4bccc;
-  }
-  .select-tree::-webkit-scrollbar-track-piece {
-    background: #fff;
-    width: 6px;
+  .select-tree .el-input.el-input--suffix.rotate .el-input__suffix {
+    transform: rotate(180deg);
   }
 </style>
 ```

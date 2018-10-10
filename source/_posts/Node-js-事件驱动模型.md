@@ -2,8 +2,8 @@
 title: Node.js 事件驱动模型
 abbrlink: 63603e54
 date: 2018-04-13 07:37:20
-categories:
-tags:
+categories: Node
+tags: 事件驱动
 ---
 
 ![事件驱动模型](https://wildye.cn/static/images/blog/63603e54/01.jpg)

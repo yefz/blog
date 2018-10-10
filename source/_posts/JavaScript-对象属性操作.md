@@ -2,8 +2,8 @@
 title: JavaScript 对象属性操作
 abbrlink: b068a1d1
 date: 2018-04-26 07:56:43
-categories:
-tags:
+categories: JavaScript
+tags: 原生JS
 ---
 
 ## 数据属性（数据描述符）

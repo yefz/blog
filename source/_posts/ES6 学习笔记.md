@@ -3,7 +3,8 @@ title: ES6 学习总结
 abbrlink: 19516f1f
 date: 2018-04-12 09:23:12
 categories: JavaScript
-tags: ES6
+tags:
+  - ECMAScript 2015
 description: ECMAScript 是标准化组织 ECMA 发布的脚本语言规范
 ---
 

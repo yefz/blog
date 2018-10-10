@@ -2,8 +2,10 @@
 title: 前端包管理工具 bower
 abbrlink: 5704c15e
 date: 2018-05-31 11:18:09
-categories: Util
+categories: 工具
 tags:
+  - 构建
+  - 依赖管理
 ---
 
 ## 简介

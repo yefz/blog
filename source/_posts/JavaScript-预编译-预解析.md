@@ -2,8 +2,8 @@
 title: JavaScript 预编译/预解析
 abbrlink: f86e38e7
 date: 2018-03-26 20:28:35
-categories:
-tags:
+categories: JavaScript
+tags: 原生JS
 ---
 
 ```javascript
