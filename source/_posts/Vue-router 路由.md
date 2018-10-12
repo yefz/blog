@@ -247,7 +247,7 @@ new Router({
 ## 监控 $router 路由信息对象
 ```
 watch: {
-  $router () {
+  $route () {
     // 路径发生变化，$router会重新赋值
     console.log(this.$router.params)
   }
