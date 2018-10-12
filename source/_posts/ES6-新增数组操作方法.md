@@ -15,6 +15,11 @@ description: EC6新增的数据方法
 const arr = [1, "2", 3, 3, "2"];
 
 console.log(arr.find(n => typeof n === "number")); // => 1
+
+// value：每一次迭代查找的数组元素;
+// index：每一次迭代查找的数组元素索引;
+// arr：被查找的数组。
+arr.find(value, index, arr) => typeof n === "number");
 ```
 
 ## findIndex()
