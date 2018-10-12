@@ -14,7 +14,7 @@ description: EC6新增的数据方法
 ``` javascript
 const arr = [1, "2", 3, 3, "2"];
 
-console.log(arr.find(n =&gt; typeof n === "number")); // => 1
+console.log(arr.find(n => typeof n === "number")); // => 1
 ```
 
 ## findIndex()
@@ -23,7 +23,7 @@ console.log(arr.find(n =&gt; typeof n === "number")); // => 1
 ``` javascript
 const arr = [1, "2", 3, 3, "2"];
 
-console.log(arr.findIndex(n =&gt; typeof n === "number")); // => 0
+console.log(arr.findIndex(n => typeof n === "number")); // => 0
 ```
 
 ## fill()
