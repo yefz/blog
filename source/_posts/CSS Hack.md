@@ -44,6 +44,7 @@ tags:
 
 - `S` ，IE 标准模式 Standards mode
 - `Q` ，IE 混杂（怪异）模式 Quirks mode
+
 | hack | 语法 | IE6(S) |IE7(S)| IE8(S)|IE9(S)|IE10(S)|IE6(Q)|IE7(Q)|IE8(Q)|IE9(Q)|IE10(Q)|
 |:-:|:----|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | `*` | `*color:red` | √ | √ |  |  |  | √ | √ | √ | √ | √ |
@@ -54,6 +55,7 @@ tags:
 | `\0` | `color:red\0` |  |  | √ | √ | √ |  |  |  |  |  |
 | `\9\0` | `color:red\9\0` |  |  |  | √ | √ |  |  |  |  |  |
 | `!important` | `color:red!important` |  | √ | √ | √ | √ |  |  |  |  | √ |
+
 说明：在标准模式中
 
 - `-` 是 IE 6 专有的hack

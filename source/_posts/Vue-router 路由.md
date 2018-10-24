@@ -135,6 +135,7 @@ new Router({
 ``` 
 - 嵌套路由
 一旦有默认子路由，那就无需在父路由里设置 `name`
+
 ```
 new Router({
   routes: [
@@ -157,8 +158,10 @@ new Router({
   ]
 })
 ``` 
+
 ## 命名视图
 - 设置子路由 URL路径 相对于根路径，即去掉 home，组件嵌套不变
+
 ```
 new Router({
   routes: [
@@ -176,8 +179,10 @@ new Router({
   ]
 })
 ```
+
 - 命名视图
 在同级展示多个视图（并列显示），而不是嵌套展示
+
 ``` html
 <router-view></router-view>
 <router-view name="slider"></router-view>
@@ -195,6 +200,7 @@ new Router({
   ]
 })
 ```
+
 ## 滚动行为
 记录滚动条位置，后退或前进后保留页面滚动位置
 ```
