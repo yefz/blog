@@ -2,7 +2,9 @@
 title: Element-UI 分页组件封装
 abbrlink: c0ec785e
 date: 2018-09-28 20:03:05
-categories: Element UI
+categories:
+  - 04_UI
+  - Element
 tags: 自定义组件
 password:
 description: 分页组件二次封装，当前页无数据会自动触发查询上一页数据

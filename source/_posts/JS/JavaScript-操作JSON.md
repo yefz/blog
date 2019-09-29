@@ -2,7 +2,9 @@
 title: JavaScript 操作JSON
 abbrlink: 750b9fdf
 date: 2018-04-21 00:03:29
-categories: JavaScript
+categories:
+  - 03_JS
+  - 原生JS
 tags:
  - 原生JS
  - JSON

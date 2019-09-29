@@ -2,7 +2,9 @@
 title: Vue 常见问题解决方案
 abbrlink: 6a109200
 date: 2018-10-04 21:51:02
-categories: Vue
+categories:
+  - 05_LIB
+  - Vue
 tags:
 password:
 description:

@@ -2,7 +2,9 @@
 title: Element-UI 实现树形选择器
 abbrlink: 1ab23fc5
 date: 2018-09-29 00:45:17
-categories: Element UI
+categories:
+  - 04_UI
+  - Element
 tags: 自定义组件
 password:
 description: 结合 el-popover、el-tree、el-input 实现的下拉树状列表选择器

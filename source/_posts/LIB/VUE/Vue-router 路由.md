@@ -2,7 +2,9 @@
 title: Vue-router 路由
 abbrlink: 54fe33e
 date: 2018-07-26 23:13:31
-categories: Vue
+categories:
+  - 05_LIB
+  - Vue
 tags: router
 ---
 

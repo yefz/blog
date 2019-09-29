@@ -2,7 +2,9 @@
 title: Java JDBC
 abbrlink: 92858b10
 date: 2018-05-01 14:45:20
-categories: java
+categories:
+  - 06_SERVER
+  - Java
 tags: JDBC
 password:
 description:

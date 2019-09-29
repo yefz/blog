@@ -2,7 +2,9 @@
 title: LESS 函数方法
 abbrlink: c578b8a8
 date: 2018-04-22 15:22:17
-categories: CSS
+categories:
+  - 02_CSS
+  - 预处理
 tags: LESS
 ---
 

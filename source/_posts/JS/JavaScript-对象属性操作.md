@@ -2,7 +2,9 @@
 title: JavaScript 对象属性操作
 abbrlink: b068a1d1
 date: 2018-04-26 07:56:43
-categories: JavaScript
+categories:
+  - 03_JS
+  - 原生JS
 tags: 原生JS
 ---
 

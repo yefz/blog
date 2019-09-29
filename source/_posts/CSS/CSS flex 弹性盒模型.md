@@ -2,13 +2,15 @@
 title: CSS flex 弹性盒模型
 abbrlink: 494c855e
 date: 2018-05-10 08:55:36
-categories: CSS
+categories:
+  - 02_CSS
+  - 布局
 tags:
   - CSS3
   - flex
 ---
  
-# flex box 弹性盒模型
+# flex box 弹性盒模型1
  
 #浏览器支持程度
 

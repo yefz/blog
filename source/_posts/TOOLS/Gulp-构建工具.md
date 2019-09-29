@@ -2,7 +2,9 @@
 title: 构建工具 Gulp
 abbrlink: 22c087c5
 date: 2018-04-28 20:26:07
-categories: 工具
+categories:
+  - 08_TOOLS
+  - 构建
 tags:
  - 构建
 ---

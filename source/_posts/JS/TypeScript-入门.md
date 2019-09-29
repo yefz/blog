@@ -2,7 +2,9 @@
 title: TypeScript 入门
 abbrlink: 8eff68f4
 date: 2018-07-29 18:04:34
-categories: JavaScript
+categories:
+  - 03_JS
+  - 原生JS
 tags:
   - TypeScript
 password:

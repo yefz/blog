@@ -2,7 +2,9 @@
 title: jQuery-插件开发基础
 abbrlink: '59791396'
 date: 2018-06-11 15:30:53
-categories: JavaScript
+categories:
+  - 05_LIB
+  - jQuery
 tags: jQuery
 password:
 description:

@@ -2,7 +2,9 @@
 title: IE兼容问题总结
 abbrlink: 8bd15521
 date: 2018-03-22 17:19:39
-categories: IE
+categories:
+  - 02_CSS
+  - 浏览器兼容
 tags:
 ---
 

@@ -2,7 +2,9 @@
 title: JavaScript 节点操作
 abbrlink: 351fe1ec
 date: 2018-04-23 22:14:02
-categories: JavaScript
+categories:
+  - 03_JS
+  - 原生JS
 tags: 原生JS
 ---
 

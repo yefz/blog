@@ -2,7 +2,9 @@
 title: JavaScript 常用方法封装
 abbrlink: 10c4ce7
 date: 2018-04-20 12:44:12
-categories: JavaScript
+categories:
+  - 03_JS
+  - 原生JS
 tags: 原生JS
 ---
 

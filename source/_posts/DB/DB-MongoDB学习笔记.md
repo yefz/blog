@@ -2,7 +2,9 @@
 title: DB-MongoDB学习笔记
 abbrlink: fb23b0b5
 date: 2018-05-12 13:18:46
-categories: DataBase
+categories:
+  - 07_DB
+  - MongoDB
 tags:
  - MongoDB
  - 分布式

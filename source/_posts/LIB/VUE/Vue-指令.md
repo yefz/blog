@@ -2,7 +2,9 @@
 title: Vue 指令
 abbrlink: 6e6ccd0
 date: 2018-05-02 19:17:39
-categories: Vue
+categories:
+  - 05_LIB
+  - Vue
 tags:
 password:
 description:

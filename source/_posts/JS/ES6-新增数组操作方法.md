@@ -2,7 +2,9 @@
 title: ES6 新增数组操作方法
 abbrlink: 10b2314b
 date: 2018-10-12 22:28:26
-categories: JavaScript
+categories:
+  - 03_JS
+  - ES6
 tags:
   - ECMAScript 2015
 description: EC6新增的数据方法

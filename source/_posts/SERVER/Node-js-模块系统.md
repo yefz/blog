@@ -2,7 +2,9 @@
 title: Node.js 模块系统
 abbrlink: 4eacaea8
 date: 2018-05-19 19:09:41
-categories: Node
+categories:
+  - 06_SERVER
+  - Node.js
 tags: Node 原生模块
 password:
 description:

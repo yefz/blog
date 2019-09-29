@@ -2,7 +2,9 @@
 title: 移动端 - CSS使用的尺寸与设计稿（PSD）保持一致
 abbrlink: d1676c71
 date: 2018-04-12 09:22:31
-categories: 移动端
+categories:
+  - 02_CSS
+  - 移动端
 tags:
   - CSS
 ---

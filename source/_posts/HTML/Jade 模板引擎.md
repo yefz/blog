@@ -2,7 +2,9 @@
 title: Jade 模板引擎
 abbrlink: 27d5828b
 date: 2018-04-27 20:31:33
-categories: Template
+categories:
+  - 01_HTML
+  - 模板引擎
 tags:
   - Jade
   - 模板引擎

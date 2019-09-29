@@ -2,7 +2,9 @@
 title: Vue-事件修饰符
 abbrlink: 58dbf8cf
 date: 2018-05-07 11:04:01
-categories: Vue
+categories:
+  - 05_LIB
+  - Vue
 tags: Event
 password:
 description:

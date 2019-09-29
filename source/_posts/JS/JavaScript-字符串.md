@@ -2,7 +2,9 @@
 title: JavaScript 字符串
 abbrlink: edd08d15
 date: 2018-04-20 21:41:49
-categories: JavaScript
+categories:
+  - 03_JS
+  - 原生JS
 tags: 原生JS
 description: 'JavaScript基础 - 字符串篇回顾笔记'
 ---

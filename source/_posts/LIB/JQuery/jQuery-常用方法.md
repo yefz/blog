@@ -2,7 +2,9 @@
 title: jQuery 常用方法
 abbrlink: 8373a53
 date: 2018-05-06 17:21:11
-categories: JavaScript
+categories:
+  - 05_LIB
+  - jQuery
 tags: jQuery
 password:
 description:
