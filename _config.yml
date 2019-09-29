@@ -8,12 +8,12 @@ subtitle:
 description: 你看到什么，听到什么，做什么，和谁在一起，有一种心灵深处满溢出来的不懊悔，也不羞耻的平和与喜悦。
 keywords:
 author: 凝弧
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://callsoul.cn
 root: /
 permalink: posts/:abbrlink/
 # permalink_defaults:
@@ -79,7 +79,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: landscape
-theme: next
+theme: icarus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
