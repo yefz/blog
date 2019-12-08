@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Vm Blog',
-  description: '淡然Vm的个人博客',
+  title: '凝弧',
+  description: '理解了目标，方向自然就出现了',
   dest: 'dist',
   locales: { '/': { lang: 'zh-cmn-Hans' } },
   head: [
@@ -20,42 +20,47 @@ module.exports = {
   themeConfig: {
     type: 'blog',
     nav: [
-      { text: 'Home', link: '/', icon: 'reco-home' },
-      { text: 'TimeLine', link: '/timeLine/', icon: 'reco-date' },
+      { text: '', link: '/', icon: 'reco-home' },
+      { text: '时间轴', link: '/timeLine/', icon: 'reco-date' },
+      { text: '文档', link: '/docs/', icon: 'reco-document' },
       {
-        text: 'Contact',
+        text: '关于',
         icon: 'reco-message',
         items: [
           {
             text: 'GitHub',
-            link: 'https://github.com/danranVm',
+            link: 'https://github.com/yefz',
             icon: 'reco-github',
           },
           {
-            text: '知乎',
-            link: 'https://www.zhihu.com/people/danranVm',
-            icon: 'reco-zhihu',
+            text: 'CSDN',
+            link: 'https://blog.csdn.net/wildye',
+            icon: 'reco-csdn',
           },
           {
-            text: '微信',
-            link: '',
-            icon: 'reco-wechat',
+            text: '掘金',
+            link: 'https://juejin.im/user/5cf0c6b2f265da1b667bc0fe',
+            icon: 'reco-juejin',
           },
         ],
       },
     ],
     // 博客设置
     blogConfig: {
-      category: {
-        location: 2, // 在导航栏菜单中所占的位置，默认2
-        text: 'Category', // 默认 “分类”
-      },
       tag: {
         location: 3, // 在导航栏菜单中所占的位置，默认3
-        text: 'Tag', // 默认 “标签”
+        text: '标签', // 默认 “标签”
+      },
+      category: {
+        location: 3, // 在导航栏菜单中所占的位置，默认2
+        text: '分类', // 默认 “分类”
+      },
+      base: {
+        location: 5, // 在导航栏菜单中所占的位置，默认2
+        text: '文档', // 默认 “分类”
       },
     },
-    logo: '/images/head.png',
+    logo: '/images/avatar.png',
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
@@ -64,7 +69,7 @@ module.exports = {
     // 最后更新时间
     lastUpdated: '上次更新',
     // 作者
-    author: '淡然Vm',
+    author: '凝弧',
     // 项目开始时间
     startYear: '2018',
     /**
@@ -78,8 +83,8 @@ module.exports = {
     // },
 
     valineConfig: {
-      appId: 'vfrUFUJkmotIMbDPCakpr0Ek-gzGzoHsz', // your appId
-      appKey: 'WygRSyMF3sroGszrCs23ACLe',
+      appId: '', // your appId
+      appKey: '',
       placeholder: '填写邮箱可以收到回复提醒哦！',
       notify: true,
       recordIP: true,

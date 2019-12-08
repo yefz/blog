@@ -1,6 +1,9 @@
 ---
 home: true
-bgImage: 'images/post-bg-universe.png'
-bgImageStyle: { height: '350px' }
-faceImage: 'images/head.png'
+bgImage: 'images/banner_3.jpg'
+bgImageStyle: { 
+  height: '450px',
+  color: '#666'
+}
+faceImage: 'images/avatar.png'
 ---
