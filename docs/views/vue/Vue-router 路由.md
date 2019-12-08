@@ -1,7 +1,7 @@
 ---
 title: Vue-router 路由
-abbrlink: 54fe33e
 date: 2018-07-26 23:13:31
+publish: true
 categories:
   - Vue.js
 tags:

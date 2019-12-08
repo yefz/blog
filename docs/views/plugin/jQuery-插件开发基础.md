@@ -1,13 +1,11 @@
 ---
 title: jQuery-插件开发基础
-abbrlink: '59791396'
 date: 2018-06-11 15:30:53
+publish: true
 categories:
   - Plugin
   - jQuery
 tags: jQuery
-password:
-description:
 ---
 
 ## 闭包

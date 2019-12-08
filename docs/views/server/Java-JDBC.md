@@ -1,12 +1,10 @@
 ---
 title: Java JDBC
-abbrlink: 92858b10
 date: 2018-05-01 14:45:20
+publish: true
 categories:
   - Server
 tags: Java
-password:
-description:
 ---
 
 ## JDBC（Java DataBase Connection）

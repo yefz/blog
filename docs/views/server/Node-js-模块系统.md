@@ -1,12 +1,10 @@
 ---
 title: Node.js 模块系统
-abbrlink: 4eacaea8
 date: 2018-05-19 19:09:41
+publish: true
 categories:
   - Server
 tags: Node.js
-password:
-description:
 ---
 
 一个文件就是一个模块，在模块中 变量、函数、对象都属于该模块，对外是不可见的

@@ -1,15 +1,15 @@
 ---
 title: Vue-cli 3.0 构建项目（二）设置接口代理
-abbrlink: c120297a
 date: 2018-07-21 09:20:37
+publish: true
 categories:
   - Vue.js
 tags: Vue-cli
-description: 'Vue-cli 3.0 设置接口代理解决跨域问题'
 ---
 
 - `vue.config.js`
 
+Vue-cli 3.0 设置接口代理解决跨域问题
 vue.config.js是一个可选的配置文件，新建该文件，存放在项目根目录（将自动加载）中
 
 ```javascript

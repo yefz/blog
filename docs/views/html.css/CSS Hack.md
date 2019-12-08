@@ -1,7 +1,7 @@
 ---
 title: CSS Hack
-abbrlink: 18d3ed61
 date: 2018-05-01 14:12:56
+publish: true
 categories:
   - HTML/CSS
 tags:

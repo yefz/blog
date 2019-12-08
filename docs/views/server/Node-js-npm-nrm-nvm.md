@@ -1,7 +1,7 @@
 ---
 title: node.js npm & nrm & nvm
-abbrlink: 50721b11
 date: 2018-04-21 08:08:11
+publish: true
 categories:
   - Server
 tags: Node.js

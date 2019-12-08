@@ -1,13 +1,11 @@
 ---
 title: TypeScript 入门
-abbrlink: 8eff68f4
 date: 2018-07-29 18:04:34
+publish: true
 categories:
   - TypeScript
 tags:
   - TypeScript
-password:
-description:
 ---
 
 ## 特性简介

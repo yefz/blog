@@ -1,7 +1,7 @@
 ---
 title: JavaScript DOM事件
-abbrlink: 4ce9c398
 date: 2018-03-22 14:19:08
+publish: true
 categories:
   - JavaScript
 tags:

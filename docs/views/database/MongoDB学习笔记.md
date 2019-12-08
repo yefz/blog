@@ -1,14 +1,16 @@
 ---
 title: DB-MongoDB 学习笔记
-abbrlink: fb23b0b5
 date: 2018-05-12 13:18:46
+publish: true
 categories:
   - DataBase
 tags:
  - MongoDB
-password:
-description:
 ---
+
+::: tip
+非关系型数据库
+:::
 
 ## 安装配置
 下载 [mongoDB 2.0.43](https://www.mongodb.org/dl/win32/x86_64-2008plus-ssl?_ga=2.33286462.1829829008.1526102215-89839735.1523783267), 

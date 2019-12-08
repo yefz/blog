@@ -1,12 +1,10 @@
 ---
 title: Vue 指令
-abbrlink: 6e6ccd0
 date: 2018-05-02 19:17:39
+publish: true
 categories:
   - Vue.js
 tags:
-password:
-description:
 ---
 
 ## v-text 输出文本

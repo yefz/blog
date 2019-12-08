@@ -1,15 +1,15 @@
 ---
 title: jQuery UI
-abbrlink: 3505c7d5
 date: 2018-03-19 20:48:33
+publish: true
 categories:
   - UI
 tags: jquery-ui
-password:
-description:
 ---
 
+::: tip
 jQuery UI包含了许多维持状态的小部件（Widget），因此，它与典型的 jQuery 插件使用模式略有不同。所有的 jQuery UI 小部件（Widget）使用相同的模式。
+:::
 
 # 交互
 

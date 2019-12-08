@@ -1,14 +1,15 @@
 ---
 title: Element-UI 分页组件封装
-abbrlink: c0ec785e
 date: 2018-09-28 20:03:05
+publish: true
 categories:
   - UI
 tags: element-ui
-password:
-description: 分页组件二次封装，当前页无数据会自动触发查询上一页数据
 ---
 
+::: tip
+分页组件二次封装，当前页无数据会自动触发查询上一页数据
+:::
 
 ## 更新记录：
 - 修复了删除当前所有数据未触发退回上一页问题。

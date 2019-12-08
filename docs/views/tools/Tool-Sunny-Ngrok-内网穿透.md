@@ -1,12 +1,10 @@
 ---
 title: Tool Sunny-Ngrok 内网穿透
-abbrlink: 77374df0
 date: 2018-10-01 10:48:22
+publish: true
 categories:
   - Tools
 tags:
-password:
-description:
 ---
 
 在开发钉钉应用或微信小程序时，会用到内外穿透工具来方便外网访问应用

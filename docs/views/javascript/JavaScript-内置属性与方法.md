@@ -1,7 +1,7 @@
 ---
 title: JavaScript 内置属性与方法
-abbrlink: '68683349'
 date: 2018-04-25 23:44:09
+publish: true
 categories:
   - JavaScript
 tags: 原生JS

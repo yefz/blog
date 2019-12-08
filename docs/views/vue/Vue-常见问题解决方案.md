@@ -1,12 +1,10 @@
 ---
 title: Vue 常见问题解决方案
-abbrlink: 6a109200
 date: 2018-10-04 21:51:02
+publish: true
 categories:
   - Vue.js
 tags:
-password:
-description:
 ---
 
 ## 数组和对象不能直接赋值情况

@@ -1,12 +1,10 @@
 ---
 title: Vue-生命周期钩子
-abbrlink: 58c8a9a0
 date: 2018-07-03 07:25:36
+publish: true
 categories:
   - Vue.js
 tags:
-password:
-description:
 ---
 
 # 生命周期函数

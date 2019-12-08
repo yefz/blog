@@ -1,7 +1,7 @@
 ---
 title: LESS 函数方法
-abbrlink: c578b8a8
 date: 2018-04-22 15:22:17
+publish: true
 categories:
   - SASS/LESS
 tags: LESS

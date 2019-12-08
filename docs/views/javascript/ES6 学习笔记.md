@@ -1,7 +1,7 @@
 ---
 title: ES6 学习总结
-abbrlink: 19516f1f
 date: 2018-04-12 09:23:12
+publish: true
 categories:
   - JavaScript
 tags:

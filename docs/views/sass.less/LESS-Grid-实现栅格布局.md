@@ -1,13 +1,12 @@
 ---
 title: LESS Grid 实现栅格布局
-abbrlink: '39347707'
 date: 2018-04-22 09:23:48
+publish: true
 categories:
   - SASS/LESS
 tags:
  - LESS
  - 栅格
-description: 定制栅格布局
 ---
 
 ## Guid

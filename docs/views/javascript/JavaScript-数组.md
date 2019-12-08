@@ -1,11 +1,10 @@
 ---
 title: JavaScript 数组
-abbrlink: f62c9be1
 date: 2018-04-20 22:18:50
+publish: true
 categories:
   - JavaScript
 tags: 原生JS
-description: 'JavaScript基础 - 数组篇回顾笔记'
 ---
 
 ## 创建
