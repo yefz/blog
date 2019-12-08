@@ -11,6 +11,8 @@ tags: element-ui
 结合 el-popover、el-tree、el-input 实现的下拉树状列表选择器
 :::
 
+<!-- more -->
+
 ## 组件调用
 
 ```html

@@ -11,6 +11,8 @@ tags: jquery-ui
 jQuery UI包含了许多维持状态的小部件（Widget），因此，它与典型的 jQuery 插件使用模式略有不同。所有的 jQuery UI 小部件（Widget）使用相同的模式。
 :::
 
+<!-- more -->
+
 # 交互
 
 ## 缩放
