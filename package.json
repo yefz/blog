@@ -1,24 +1,24 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
-  "private": true,
-  "hexo": {
-    "version": "3.7.1"
+  "name": "danranvm.github.io",
+  "title": "Vm Blog",
+  "author": "danranVm <danranvm@gmail.com>",
+  "version": "1.0.0",
+  "homepage": "http://danranvm.github.io/blog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danranvm/danranvm.github.io"
+  },
+  "bugs": "https://github.com/danranvm/danranvm.github.io/issues",
+  "description": "",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "dependencies": {
-    "hexo": "^3.7.0",
-    "hexo-abbrlink": "^2.0.5",
-    "hexo-deployer-git": "^0.3.1",
-    "hexo-generator-archive": "^0.1.5",
-    "hexo-generator-category": "^0.1.3",
-    "hexo-generator-feed": "^1.2.2",
-    "hexo-generator-index": "^0.2.1",
-    "hexo-generator-searchdb": "^1.0.8",
-    "hexo-generator-tag": "^0.2.0",
-    "hexo-renderer-ejs": "^0.3.1",
-    "hexo-renderer-marked": "^0.3.2",
-    "hexo-renderer-stylus": "^0.3.3",
-    "hexo-server": "^0.3.1",
-    "hexo-wordcount": "^6.0.1"
+    "vuepress": "^1.2.0",
+    "@vuepress/plugin-google-analytics": "^1.2.0",
+    "@vuepress/plugin-medium-zoom": "1.2.0",
+    "@vuepress/plugin-pwa": "^1.2.0",
+    "vuepress-theme-reco": "^1.1.1"
   }
 }
