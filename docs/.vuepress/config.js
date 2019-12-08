@@ -86,18 +86,13 @@ module.exports = {
     lineNumbers: true,
   },
   plugins: [
+    '@vuepress-reco/extract-code',
     ['@vuepress/medium-zoom', true],
     [
       '@vuepress/pwa',
       {
         serviceWorker: true,
         updatePopup: true,
-      },
-    ],
-    [
-      '@vuepress/google-analytics',
-      {
-        ga: 'UA-125817360-1',
       },
     ],
   ],
