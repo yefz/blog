@@ -1,14 +1,14 @@
 {
   "name": "yefz.github.io",
   "title": "yefz Blog",
-  "author": "danranVm <danranvm@gmail.com>",
+  "author": "凝弧 <free.ye@live.cn>",
   "version": "1.0.0",
-  "homepage": "http://danranvm.github.io/blog",
+  "homepage": "http://yefz.github.io/Node",
   "repository": {
     "type": "git",
-    "url": "https://github.com/danranvm/danranvm.github.io"
+    "url": "https://github.com/yefz/yefz.github.io"
   },
-  "bugs": "https://github.com/danranvm/danranvm.github.io/issues",
+  "bugs": "https://github.com/yefz/yefz.github.io/issues",
   "description": "",
   "scripts": {
     "dev": "vuepress dev docs",
