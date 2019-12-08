@@ -7,13 +7,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 检出
         uses: actions/checkout@master
-      - name: Setup node
+      - name: 设置 node
         uses: actions/setup-node@master
         with:
           node-version: 12
-      - name: install and build
+      - name: 安装与构建
         run: npm install && npm run build
       - name: copy file via ssh password
         uses: appleboy/scp-action@master
