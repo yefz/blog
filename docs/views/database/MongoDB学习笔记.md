@@ -1,5 +1,5 @@
 ---
-title: DB-MongoDB学习笔记
+title: DB-MongoDB 学习笔记
 abbrlink: fb23b0b5
 date: 2018-05-12 13:18:46
 categories:
