@@ -8,7 +8,7 @@ tags:
  - MongoDB
 ---
 
-::: tip
+:::tip
 非关系型数据库
 :::
 
