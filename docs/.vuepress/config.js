@@ -75,8 +75,8 @@ module.exports = {
     // },
 
     valineConfig: {
-      appId: '', // your appId
-      appKey: '',
+      appId: 'CgHo1Nf19RJc4dUzWTGACjwR-gzGzoHsz', // your appId
+      appKey: 'of84Nx1usWBJBR3mXAcNzBV5',
       placeholder: '填写邮箱可以收到回复提醒哦！',
       notify: true,
       recordIP: true,
