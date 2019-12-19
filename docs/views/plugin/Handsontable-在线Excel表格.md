@@ -167,3 +167,37 @@ export default {
   invalidCellClassName: '',
 }
 ```
+
+### 事件
+``` javascript
+{
+  /**
+   * @description 单元格点击事件, 左键弹起后触发
+   * @param {Event} event 事件对象
+   * @param {CellCoords} coords 单元格索引坐标
+   * @param {HTMLTableCellElement} TD 标签元素
+   */
+  afterOnCellMouseUp(event, { row, col }, TD) {},
+
+  /**
+   * @description 激活单元格编辑时触发
+   * @param {Numbar} row 行索引
+   * @param {Numbar} column 列索引
+   */
+  afterBeginEditing(row, column) {},
+
+  /**
+   * @description 单元格悬浮钩子
+   * @param {Event} event 事件对象
+   * @param {CellCoords} coords 单元格索引坐标
+   * @param {HTMLTableCellElement} TD 标签元素
+   */
+  afterOnCellMouseOver(event, { row, col }, TD) {},
+
+  /**
+   * @description 单元格值改变钩子
+   * @param {Array} changes 事件对象
+   */
+  afterChange(changes) {},
+}
+```
