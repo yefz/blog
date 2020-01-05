@@ -14,7 +14,7 @@ module.exports = {
     nav: [
       { text: '', link: '/', icon: 'reco-home' },
       { text: '时间轴', link: '/timeLine/', icon: 'reco-date' },
-      { text: '文档', link: '/docs/', icon: 'reco-document' },
+      // { text: '文档', link: '/docs/', icon: 'reco-document' },
       {
         text: '关于',
         icon: 'reco-message',
@@ -47,10 +47,10 @@ module.exports = {
         location: 3, // 在导航栏菜单中所占的位置，默认2
         text: '分类', // 默认 “分类”
       },
-      base: {
-        location: 5, // 在导航栏菜单中所占的位置，默认2
-        text: '文档', // 默认 “分类”
-      },
+      // base: {
+      //   location: 5, // 在导航栏菜单中所占的位置，默认2
+      //   text: '文档', // 默认 “分类”
+      // },
     },
     logo: '/images/avatar.png',
     // 搜索设置
