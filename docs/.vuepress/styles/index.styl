@@ -1,24 +1,52 @@
+// 底纹背景
+body {
+  background-color: #f9f8f8 !important
+  background-size 100%
+  background-image url('/images/line_bg.svg')
+  background-attachment fixed
+  background-repeat no-repeat
+  background-position 50%
+}
+
 // 首页标题
 .home-blog
   .hero
     z-index 1
     h1, .description, .action, .huawei
-      color #333!important
+      color #333 !important
       // text-shadow 2px 2px 1px #888
+  .info-wrapper
+    .personal-info-wrapper
+      padding-top 20px
+      .name
+        display none
+    .category-wrapper .category-item
+      box-shadow none !important
 
 // 页面去背景
 .page
   background var(--background-color)
-  background #fff
+
+// 分页去背景
+.pagation.pagation
+  background transparent !important
+  .pagation-list
+    .jump:not(.bgprimary)
+      background-color #fff;
 
 // 时间轴
 .timeline-wrapper
   .year
-    background var(--background-color)
-    background #fff
+    font-size 32px
+    background transparent
   .year-wrapper
+    margin-top 10px
     background var(--background-color)
     background #fff
+    li
+      padding 10px !important
+      .date::before
+        top 21px !important
 
 // 评论
 .vssue
@@ -50,3 +78,9 @@
             background: #f6f8fa
           .vssue-comment-footer
             background: #f0f2f4
+
+// 隐藏无用调色板与全屏
+.reco-color
+  display none
+.screenfull
+  display none

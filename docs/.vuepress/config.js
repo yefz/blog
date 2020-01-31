@@ -3,11 +3,10 @@ module.exports = {
   description: '理解了目标，方向自然就出现了',
   evergreen: true,
   dest: 'dist',
-  locales: { '/': { lang: 'zh-cmn-Hans' } },
+  locales: { '/': { lang: 'zh-CN' } },
   head: [
     ['link', { rel: 'icon', href: '/icons/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-    ['meta', { name: 'theme-color', content: '#222222' }],
   ],
   markdown: {
     // 代码显示行号
@@ -50,12 +49,17 @@ module.exports = {
   themeConfig: {
     type: 'blog',
     logo: '/images/avatar.png',
+    // 自动隐藏导航
     autoHideNavbar: true,
+    // 主题颜色选择
+    themePicker: false,
     // 搜索设置
     search: true,
+    // 搜索显示条目数量
     searchMaxSuggestions: 10,
     // 自动形成侧边导航
     sidebar: 'auto',
+    // 侧边导航层级
     sidebarDepth: 2,
     // 最后更新时间
     lastUpdated: '上次更新',
@@ -65,6 +69,7 @@ module.exports = {
     startYear: '2019',
     // 备案号
     record: "暂无",
+    // 顶部导航设置
     nav: [
       { text: '主页', link: '/', icon: 'reco-home' },
       { text: '时间轴', link: '/timeLine/', icon: 'reco-date' },
