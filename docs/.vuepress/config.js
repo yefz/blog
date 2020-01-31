@@ -101,15 +101,6 @@ module.exports = {
         text: '分类', // 默认 “分类”
       },
     },
-    // https://github.com/yefz/blog
-    // https://github.com/${owner}/${repo}
-    vssueConfig: {
-      platform: 'github',
-      owner: 'yefz',
-      repo: 'blog',
-      clientId: '9aaec055b30d64139e6a',
-      clientSecret: 'f0194b3a26d3a12ce64e4e3d465a8c6911e5f143'
-    },
     /**
      * 密钥 (if your blog is private)
      */
@@ -127,5 +118,14 @@ module.exports = {
       notify: true,
       recordIP: true,
     },
+    // https://github.com/yefz/blog
+    // https://github.com/${owner}/${repo}
+    // vssueConfig: {
+    //   platform: 'github',
+    //   owner: 'yefz',
+    //   repo: 'blog',
+    //   clientId: '9aaec055b30d64139e6a',
+    //   clientSecret: 'f0194b3a26d3a12ce64e4e3d465a8c6911e5f143'
+    // },
   },
 }
