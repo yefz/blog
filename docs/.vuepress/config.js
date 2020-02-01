@@ -8,6 +8,8 @@ module.exports = {
     ['link', { rel: 'icon', href: '/icons/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
   ],
+  // 配置永久链接
+  permalink: '/:regular',
   markdown: {
     // 代码显示行号
     lineNumbers: true,
