@@ -75,7 +75,7 @@ module.exports = {
       { 
         text: '知识体系',  
         icon: 'reco-category',
-        link: '/views/summary/前端知识体系汇总.md',
+        link: '/post-note/前端知识体系汇总.md',
       },
       { text: '流年', link: '/timeLine/', icon: 'reco-date' },
       { text: 'GitHub', link: 'https://github.com/yefz', icon: 'reco-github' },
@@ -86,15 +86,12 @@ module.exports = {
         location: 2, // 在导航栏菜单中所占的位置，默认3
         text: '标签', // 默认 “标签”
       },
-      category: {
-        location: 2, // 在导航栏菜单中所占的位置，默认2
-        text: '分类', // 默认 “分类”
-      },
+      // category: {
+      //   location: 2, // 在导航栏菜单中所占的位置，默认2
+      //   text: '分类', // 默认 “分类”
+      // },
     },
-    /**
-     * 密钥 (if your blog is private)
-     */
-
+    // 密钥 (if your blog is private)
     // keyPage: {
     //   keys: ['your password'],
     //   color: '#42b983',

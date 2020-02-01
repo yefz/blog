@@ -16,10 +16,19 @@ body {
       color #333 !important
       // text-shadow 2px 2px 1px #888
   .info-wrapper
+    box-shadow none !important
+    background rgba(255, 255, 255, .7) !important
+    &:hover
+      box-shadow none !important
     .personal-info-wrapper
       padding-top 20px
       .name
         display none
+      .num h3
+        font-size 2em
+        color #999
+      .num > div:first-child
+        border-right 1px solid transparent
     .category-wrapper .category-item
       box-shadow none !important
 
