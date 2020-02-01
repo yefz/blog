@@ -31,17 +31,24 @@ body {
   .content__default:not(.custom)
     max-width 830px !important
     background-color #fff
-  // 标题突出提示
-  .content__default h2
+    box-shadow $boxShadow
+  .page-title
     position relative
-    &::before
-      content ''
+    margin-bottom 20px
+    background-color transparent
+    box-shadow none
+    z-index 10
+    > h1
+      margin 5px 0
+    > div
       position absolute
-      left -40px
-      bottom 0
-      width 3px
-      height 40px
-      background-color $accentColor
+      top 34px
+      right 0
+      padding 0 10px
+      background-color rgba(255, 255, 255, .8)
+      display inline-block
+    > hr
+      display none
 
 // 分页去背景
 .pagation.pagation
