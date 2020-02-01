@@ -17,7 +17,7 @@ body {
       // text-shadow 2px 2px 1px #888
   .info-wrapper
     box-shadow none !important
-    background rgba(255, 255, 255, .7) !important
+    background $customColor !important
     &:hover
       box-shadow none !important
     .personal-info-wrapper
@@ -31,6 +31,10 @@ body {
         border-right 1px solid transparent
     .category-wrapper .category-item
       box-shadow none !important
+
+// 侧栏导航背景
+.sidebar
+  background-color $customColor !important
 
 // 页面去背景
 .page
