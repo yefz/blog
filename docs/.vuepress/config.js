@@ -73,16 +73,9 @@ module.exports = {
     nav: [
       { text: '主页', link: '/', icon: 'reco-home' },
       { 
-        text: '前端开发',  
-        icon: 'reco-document',
-        items: [],
-      },
-      { 
         text: '知识体系',  
         icon: 'reco-category',
-        items: [
-          { text: '前端知识体系汇总', link: '/views/summary/前端知识体系汇总.md' },
-        ],
+        link: '/views/summary/前端知识体系汇总.md',
       },
       { text: '流年', link: '/timeLine/', icon: 'reco-date' },
       { text: 'GitHub', link: 'https://github.com/yefz', icon: 'reco-github' },
@@ -93,10 +86,10 @@ module.exports = {
         location: 2, // 在导航栏菜单中所占的位置，默认3
         text: '标签', // 默认 “标签”
       },
-      // category: {
-      //   location: 3, // 在导航栏菜单中所占的位置，默认2
-      //   text: '分类', // 默认 “分类”
-      // },
+      category: {
+        location: 2, // 在导航栏菜单中所占的位置，默认2
+        text: '分类', // 默认 “分类”
+      },
     },
     /**
      * 密钥 (if your blog is private)
