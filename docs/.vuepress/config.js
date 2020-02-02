@@ -77,7 +77,7 @@ module.exports = {
       { 
         text: '知识体系',  
         icon: 'reco-category',
-        link: '/post-note/前端知识体系汇总.md',
+        link: '/note/前端知识体系汇总.md',
       },
       { text: '流年', link: '/timeLine/', icon: 'reco-date' },
       { text: 'GitHub', link: 'https://github.com/yefz', icon: 'reco-github' },
