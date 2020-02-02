@@ -1,6 +1,6 @@
 ---
 title: TypeScript 基础语法入门
-date: 2020-01-29 18:04:34
+date: 2020-02-02 19:00:00
 publish: true
 categories:
   - 前端开发
