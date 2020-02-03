@@ -2,7 +2,7 @@
 home: true
 bgImage: 'images/banner.jpg'
 bgImageStyle: { 
-  height: '400px',
+  height: '280px',
   color: '#EEE'
 }
 faceImage: 'images/avatar.png'
