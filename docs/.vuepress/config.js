@@ -54,7 +54,7 @@ module.exports = {
     // 自动隐藏导航
     autoHideNavbar: true,
     // 主题颜色选择
-    themePicker: false,
+    themePicker: true,
     // 搜索设置
     search: true,
     // 搜索显示条目数量

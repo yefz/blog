@@ -1,12 +1,13 @@
 // 底纹背景
-body {
-  background-color: #f9f8f8 !important
+body
   background-size 100%
   background-image url('/images/line_bg.svg')
   background-attachment fixed
   background-repeat no-repeat
   background-position 50%
-}
+
+#app
+  background-color: rgba(0, 0, 0, .02) !important
 
 // 首页标题
 .home-blog
@@ -25,7 +26,7 @@ body {
       // text-shadow 2px 2px 1px #888
   .info-wrapper
     box-shadow none !important
-    background $customColor !important
+    background var(--default-color-7) !important
     &:hover
       box-shadow none !important
     > h4
@@ -53,7 +54,7 @@ body {
 
 // 侧栏导航背景
 .sidebar
-  background-color $customColor !important
+  background-color var(--default-color-7) !important
 
 // 页面去背景
 .page
@@ -62,7 +63,7 @@ body {
   .page-title, 
   .content__default:not(.custom)
     max-width 830px !important
-    background-color #fff
+    background-color var(--background-color)
     box-shadow $boxShadow
   .page-title
     position relative
@@ -76,7 +77,7 @@ body {
       display none
     > div
       padding 0 10px
-      background-color rgba(255, 255, 255, .8)
+      background-color var(--default-color-8)
       display inline-block
       @media (min-width: 480px)
         position absolute
@@ -88,7 +89,7 @@ body {
   background transparent !important
   .pagation-list
     .jump:not(.bgprimary)
-      background-color #fff;
+      background-color var(--background-color);
 
 // 时间轴
 .timeline-wrapper
@@ -98,7 +99,6 @@ body {
   .year-wrapper
     margin-top 10px
     background var(--background-color)
-    background #fff
     li
       padding 10px !important
       .date::before
@@ -136,8 +136,8 @@ body {
             background #f0f2f4
 
 // 隐藏无用调色板与全屏
-.reco-color
-  display none
+// .reco-color
+//   display none
 .screenfull
   display none
 
