@@ -5,7 +5,21 @@ publish: true
 categories:
   - 前端开发
 tags:
+  - IE
 ---
+
+## IE10 new Date() 传参不兼容问题
+``` javascript
+// IE10 报错、Chrome 通过
+new Date('2020-02-06');
+
+// IE10 通过、Chrome 通过
+new Date('2020/02/06');
+
+// 把-替换成/传入即可
+const t = '2020-02-06'.replace('-', '/');
+new Date(t);
+```
 
 ## 获取滚动条位置
 - `window.pageXOffset` 和 `window.pageYOffset` 在`IE8`及以下是不兼容的
