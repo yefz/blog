@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题 1</title>
+<style type="text/css">
+body{
+	font-size:12px;
+}
+#d1 {
+	background-color: #FFFFCC;
+	width: 200px;
+	height: 200px;	
+	margin: 10px;/*两者外边距均为5*/
+	float:left;/*使用folat流动使层左右并排*/
+	/* display:inline; */
+}
+#d2 {
+	background-color: #FFCC99;
+	width: 200px;
+	height: 200px;
+	margin: 10px;/*两者外边距均为5*/
+	float:left;/*使用folat流动使层左右并排*/
+/* display:inline; */
+	}
+.style1 {
+	color: #FF0000;
+}
+</style>
+
+</head>
+
+<body>
+<div id="d1">
+	两者外边距均为10<br />
+	<br />
+	左右边距没有出现上例中的合并，而是直接叠加为20<span class="style1">（IE6）</span></div>
+<div id="d2">
+	该现象仅在IE6中可见，其他浏览器不可见叠加效果<br />
+	<br />
+	解决方法，加入:display:inline;</div>
+
+</body>
+
+</html>

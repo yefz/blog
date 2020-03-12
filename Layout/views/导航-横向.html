@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题 1</title>
+<style type="text/css">
+body {
+	margin: 0px;
+	font-size: 12px;
+}
+#List1 li/*名叫List1的元件中的li样式*/
+{
+	float:left;
+	height:30px;
+	background-color:#FFCC99;/*使用颜色便于观察，无意义*/
+	list-style:none;/*去掉列表前面的圆点，在IE7上写不写没有区别，但是其他浏览器一定要写这一句*/
+
+}
+#List1 li a/*名叫List1的元件中的，li中的，超链接  样式*/
+{
+color:black;
+text-decoration:none;/*黑色字符无下划线效果*/	
+display:block;/*让超链接（A）与层一样占位*/
+width:70px;
+text-align:center;/*在指定的70像素中间，居中对齐连接文本*/
+line-height:30px;/*与容器li的高度一致，以便垂直居中。同时，会让链接的点击区域占满整个“格子”而不是限于点击文本*/
+}
+
+#List1 li a:hover/*当超链接（占满整格）被鼠标激活时的样式*/
+{
+background-color:#CCCCFF;
+color:blue;
+}
+
+</style>
+</head>
+
+<body>
+
+使用ul标签实现导航<hr />
+<ul id="List1">
+	<li><a href="#">首页</a></li>
+	<li><a href="#">国内新闻</a></li>
+	<li><a href="#">国际新闻</a></li>
+	<li><a href="#">科技新闻</a></li>
+	<li><a href="#">军事新闻</a></li>
+	<li><a href="#">汽车新闻</a></li>
+	<li><a href="#">财经新闻</a></li>
+	<li><a href="#">娱乐星闻</a></li>
+</ul>
+
+</body>
+
+</html>

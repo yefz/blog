@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>侧轴对齐方式</title>
+	<style>
+		h2 {
+			margin-bottom: 5px;
+			line-height: 20px;
+			font: 300 17px "Consolas";
+		}
+		ul {
+			list-style: none;
+			clear: both;
+		}
+		ul:last-child {
+			padding-top: 20px;
+		}
+		li { margin: 0 10px; float: left; }
+		[class *= "box"] {
+			width: 160px;
+			height: 100px;
+			border: 1px solid #000;
+			font-family: Microsoft Yahei;
+			text-align: center;
+		}
+		[class *= "item"] {
+			width: 40px;
+			font-size: 12px;
+		}
+		.item1 { background: #FF6666; height: 30px; }
+		.item2 { background: #99CC66; height: 50px; }
+		.item3 { background: #66CCFF; height: 80px; }
+		.item4 { background: #FF9900; height: 100px; }
+
+
+		/* 新 - 侧轴对齐方式 */
+		#new [class *= "box"] {
+		    display: -webkit-flex;
+		    display: flex;
+		}
+		#new .box1 {
+			-webkit-align-items: flex-start;
+			align-items: flex-start;
+		}
+		#new .box2 {
+			-webkit-align-items: flex-end;
+			align-items: flex-end;
+		}
+		#new .box3 {
+			-webkit-align-items: center;
+			align-items: center;
+		}
+		#new .box4 {
+			-webkit-align-items: baseline;
+			align-items: baseline;
+		}
+		#new .box5 {
+			-webkit-align-items: stretch;
+			align-items: stretch;
+		}
+
+		/* 旧 - 侧轴对齐方式 */
+		#old [class *= "box"] {
+			/* Safari 、Opera 、Chrome */
+		    display: -webkit-box;
+		    display: -moz-box;
+		    display: box;
+		}
+		#old .box1 {
+			-webkit-box-align: start;
+			-moz-box-align: start;
+			box-align: start;
+		}
+		#old .box2 {
+			-webkit-box-align: end;
+			-moz-box-align: end;
+			box-align: end;
+		}
+		#old .box3 {
+			-webkit-box-align: center;
+			-moz-box-align: center;
+			box-align: center;
+		}
+		#old .box4 {
+			-webkit-box-align: baseline ;
+			-moz-box-align: baseline ;
+			box-align: baseline ;
+		}
+		#old .box5 {
+			-webkit-box-align: stretch;
+			-moz-box-align: stretch;
+			box-align: stretch;
+		}
+	</style>
+</head>
+<body>
+	<h1>弹性盒模型 - 侧轴对齐方式</h1>
+	<ul id="new">
+		<h4>
+			<p>display: flex;</p>
+			<p>align-items:</p>
+		</h4>
+		<li>
+			<h2 style="color: #096;">flex-start</h2>
+			<div class="box1">
+				<div class="item1">30px</div>
+				<div class="item2">50px</div>
+				<div class="item3">80px</div>
+				<div class="item4">100px</div>
+			</div>
+		</li>
+		<li>
+			<h2>flex-end</h2>
+			<div class="box2">
+				<div class="item1">30px</div>
+				<div class="item2">50px</div>
+				<div class="item3">80px</div>
+				<div class="item4">100px</div>
+			</div>
+		</li>
+		<li>
+			<h2>center</h2>
+			<div class="box3">
+				<div class="item1">30px</div>
+				<div class="item2">50px</div>
+				<div class="item3">80px</div>
+				<div class="item4">100px</div>
+			</div>
+		</li>
+		<li>
+			<h2>baseline </h2>
+			<div class="box4">
+				<div class="item1">30px</div>
+				<div class="item2">50px</div>
+				<div class="item3">80px</div>
+				<div class="item4">100px</div>
+			</div>
+		</li>
+		<li>
+			<h2>stretch</h2>
+			<div class="box5">
+				<div class="item1">30px</div>
+				<div class="item2">50px</div>
+				<div class="item3">80px</div>
+				<div class="item4">100px</div>
+			</div>
+		</li>
+	</ul>
+
+
+	<ul id="old">
+		<h4>
+			<p>display: box;</p>
+			<p>box-align:</p>
+		</h4>
+		<li>
+			<h2 style="color: #096;">start</h2>
+			<div class="box1">
+				<div class="item1">30px</div>
+				<div class="item2">50px</div>
+				<div class="item3">80px</div>
+				<div class="item4">100px</div>
+			</div>
+		</li>
+		<li>
+			<h2>end</h2>
+			<div class="box2">
+				<div class="item1">30px</div>
+				<div class="item2">50px</div>
+				<div class="item3">80px</div>
+				<div class="item4">100px</div>
+			</div>
+		</li>
+		<li>
+			<h2>center</h2>
+			<div class="box3">
+				<div class="item1">30px</div>
+				<div class="item2">50px</div>
+				<div class="item3">80px</div>
+				<div class="item4">100px</div>
+			</div>
+		</li>
+		<li>
+			<h2>baseline</h2>
+			<div class="box4">
+				<div class="item1">30px</div>
+				<div class="item2">50px</div>
+				<div class="item3">80px</div>
+				<div class="item4">100px</div>
+			</div>
+		</li>
+		<li>
+			<h2>stretch</h2>
+			<div class="box5">
+				<div class="item1">30px</div>
+				<div class="item2">50px</div>
+				<div class="item3">80px</div>
+				<div class="item4">100px</div>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>

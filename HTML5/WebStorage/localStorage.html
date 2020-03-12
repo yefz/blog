@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>带有过期机制的localStorage</title>
+</head>
+<body>
+<script>
+  'use srtict'
+  ;(function(){
+    var ls = window.localStorage;
+
+    function oops () {
+      return console.warn('您的浏览器不支持localStorage API');
+    }
+
+    function getItem (key) {
+      var data = ls.getItem(key);
+      data = JSON.parse(data) || {}; //避免none造成 if 报错
+
+      if (data.time === 0) {
+        return data.value;
+      } else if (Date.now() > data.time) {
+        ls.removeItem(key);
+        return '';
+      } else {
+        return typeof data.value !== 'undefined' ? data.value : '';
+      }
+    }
+
+    function setItem (key,value,time) {
+      if (typeof key === 'undefined') {return}
+      var data = {
+        time : time ? Date.now() + time : 0,
+        value : value
+      }
+      data = JSON.stringify(data); //对象字符串序列化
+      try { //若超出存储配额，则清空存储数据
+        ls.setItem(key,data)
+      } catch (e) {
+        ls.clear();
+        ls.setItem(key,data);
+      }
+    }
+
+    function removeItem () {
+      ls.removeItem(key);
+    }
+
+    function clear() {
+      ls.clear;
+    }
+
+    window.cacheStorage = {
+      getItem: ls ? getItem : oops,
+      setItem: ls ? setItem : oops,
+      removeItem: ls ? removeItem : oops,
+      clear: ls ? clear: clear
+    }
+  })()
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <title>计算属性</title>
+</head>
+<body>
+    <div id="app">
+        <p v-once>{{count}}</p>
+        <p>{{"计算后的处理数据为："+ autoAdd}}</p>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                count: 0
+            },
+            //计算属性：定义的是一些方法，在方法中完成复杂的逻辑运算，相比methods属性对应的方法，具有依赖缓存的优势
+            computed: {
+                autoAdd: function () {
+                    //只是做了自增运算，其实在实际的开发中，可以在进行复杂的业务逻辑处理
+                    this.count++;
+                    return this.count;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+/*css reset*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+fieldset,
+legend,
+input,
+button,
+select,
+textarea,
+th,
+td,
+pre {
+  padding: 0;
+  margin: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  color: #333;
+  font: 12px/1 "Microsoft YaHei", Tahoma, Helvetica, Arial, SimSun, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+em,
+i {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+  vertical-align: top;
+}
+img {
+  border: none;
+  vertical-align: top;
+}
+textarea {
+  overflow: auto;
+  resize: none;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}

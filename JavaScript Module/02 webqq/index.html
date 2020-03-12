@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #one {
+      width: 200px;
+      height: 200px;
+      background: red;
+      position: absolute;
+
+      display: none;
+    }
+    #two {
+      width: 30px;
+      height: 30px;
+      background: green;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    #three {
+      width: 100px;
+      height: 100px;
+      background: blue;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="button" value="弹窗" id="input1">
+  <div id="one">
+    <div id="two"></div>
+  </div>
+  <div id="three"></div>
+
+  <script src="../node_modules/seajs/dist/sea.js"></script>
+  <script>
+    seajs.use("./main.js");
+  </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>主轴对齐方式</title>
+	<style>
+		h2 {
+			margin-bottom: 5px;
+			line-height: 20px;
+			font: 300 17px "Consolas";
+		}
+		ul {
+			list-style: none;
+			clear: both;
+		}
+		ul:last-child {
+			padding-top: 20px;
+		}
+		li { margin: 0 10px; float: left; }
+		[class *= "box"] {
+			width: 150px;
+			height: 80px;
+			border: 1px solid #000;
+			font-family: Microsoft Yahei;
+			text-align: center;
+		}
+		[class *= "item"] {
+			width: 25px;
+			height: 50px;
+		}
+		.item1 { background: #FF6666; }
+		.item2 { background: #99CC66; }
+		.item3 { background: #66CCFF; }
+		.item4 { background: #FF9900; }
+
+
+		/* 新 - 主轴对齐方式 */
+		#new [class *= "box"] {
+		    /*display: -webkit-flex;*/
+		    display: flex;
+		}
+		#new .box1 {
+			-webkit-justify-content: flex-start
+			justify-content: flex-start
+		}
+		#new .box2 {
+			-webkit-justify-content: flex-end;
+			justify-content: flex-end;
+		}
+		#new .box3 {
+			-webkit-justify-content: center;
+			justify-content: center;
+		}
+		#new .box4 {
+			-webkit-justify-content: space-between;
+			justify-content: space-between;
+		}
+		#new .box5 {
+			-webkit-justify-content: space-around;
+			justify-content: space-around;
+		}
+
+		/* 旧 - 主轴对齐方式 */
+		#old [class *= "box"] {
+			/* Safari 、Opera 、Chrome */
+		    display: -webkit-box;
+		    display: -moz-box;
+		    display: -ms-box;
+		    display: box;
+		}
+		#old .box1 {
+			-webkit-box-pack: start;
+			-moz-box-pack: start;
+			-ms-box-pack: start;
+			box-pack: start;
+		}
+		#old .box2 {
+			-webkit-box-pack: end;
+			-moz-box-pack: end;
+			-ms-box-pack: end;
+			box-pack: end;
+		}
+		#old .box3 {
+			-webkit-box-pack: center;
+			-moz-box-pack: center;
+			-ms-box-pack: center;
+			box-pack: center;
+		}
+		#old .box4 {
+			-webkit-box-pack: justify;
+			-moz-box-pack: justify;
+			-ms-box-pack: justify;
+			box-pack: justify;
+		}
+	</style>
+</head>
+<body>
+	<h1>弹性盒模型 - 主轴对齐方式</h1>
+	<ul id="new">
+		<h4>
+			<p>display: flex;</p>
+			<p>justify-content:</p>
+		</h4>
+		<li>
+			<h2 style="color: #096;">flex-start</h2>
+			<div class="box1">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>flex-end</h2>
+			<div class="box2">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>center</h2>
+			<div class="box3">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>space-between</h2>
+			<div class="box4">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>space-around</h2>
+			<div class="box5">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+	</ul>
+
+
+	<ul id="old">
+		<h4>
+			<p>display: box;</p>
+			<p>box-pack:</p>
+		</h4>
+		<li>
+			<h2 style="color: #096;">start</h2>
+			<div class="box1">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>end</h2>
+			<div class="box2">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>center</h2>
+			<div class="box3">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>justify</h2>
+			<div class="box4">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>

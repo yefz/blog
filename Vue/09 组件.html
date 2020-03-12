@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <title>组件</title>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+        <!-- 调用局部组件，就像是使用html标签一样-->
+        <test-component></test-component>
+        <!-- 调用全局组件-->
+        <demo-component></demo-component>
+    </div>
+    <!--
+    局部组件只能用在vue实例所绑定的element
+    全局组件可以用在任何一个组价中
+    -->
+    <script>
+        // 组件分为2大类：①全局组件 ②局部组件
+        // 创建全局组件
+        Vue.component('demo-component',{
+            template:'<span> a global component</span>'
+        });
+        new Vue({
+            el: '#app',
+            data: {
+                msg: 'hello world'
+            },
+            // 创建局部组件
+            components:{
+                'test-component':{
+                    template:'<h1>this is a component</h1>'
+                }
+            }
+        })
+
+
+        // 全局组件和局部组件的区别：
+        // 局部组件只能用在vue实例所绑定的element范围内
+        // 全局组件可以用在任何一个组件中。
+
+    </script>
+</body>
+</html>

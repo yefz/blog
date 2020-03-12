@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <title>侦听</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 在用户输入的时候，要求将用户所输入的信息打印在控制台-->
+        <input type="text" v-model="myInput"/>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                myInput: '',
+                msg: 'hello world'
+            },
+            watch:{
+                myInput: function (newValue,oldValue) {
+                    console.log("newValue: " + newValue + ", oldValue: " + oldValue);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.3.3/vue-resource.min.js"></script>
+    <title>Http请求</title>
+</head>
+<body>
+    <div id="app">
+        <test></test>
+    </div>
+    <script>
+    Vue.component('test',{
+        data: function () {
+            return {
+                myList:[]
+            }
+        },
+        methods:{
+            loadData: function () {
+                // 发起网络请求
+                this.$http
+                    .get('data/stu.json')
+                    .then(function (response) {
+                        console.log(response.data);
+                        this.myList = response.data;
+                    })
+            }
+        },
+        template:
+            `<div>
+                <ul>
+                    <li v-for="stu in myList">
+                        {{stu.name}}
+                    </li>
+                </ul>
+                <button @click="loadData">加载数据</button>
+            </div>`
+    })
+    new Vue({
+        el: '#app'
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    sea.js
+    1.如何变成模块？ define
+    2.如何调用模块？ exports / seajs.use
+    3.如何依赖模块？ require
+  -->
+  <script src="../node_modules/seajs/dist/sea.js"></script>
+  <script>
+    // 模块地址
+    /**
+     * 参数1：模块地址，相对于sea.js路径
+     * 参数2：加载成功、后回调，形参指向 exports
+     */
+    seajs.use("../01 seajs/js/A.js", function (ex) {
+
+      ex.show();
+
+      show();
+
+    })
+
+    seajs.use("../01 seajs/js/B.js", function (ex) {
+      ex.show();
+      show();
+    })
+  </script>
+</body>
+</html>

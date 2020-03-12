@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题 1</title>
+<style type="text/css">
+a
+{
+	display:block;
+	float:left;
+	width:70px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	text-decoration:none;
+	font-size:12px;
+	color:black;
+	margin:10px;/*打开边距以便观察，无意义*/
+	
+	background-image:url('背景.gif');/*所有连接均使用同一个背景图*/	
+}
+#a1
+{
+	background-position:0px 0px;/*根据图片中的位置进行位移输出*/
+}
+#a1:hover
+{
+	background-position:140px 0px;
+}
+
+#a2
+{
+	background-position:70px 0px;
+}
+#a2:hover
+{
+	background-position:0px 0px;
+}
+
+#a3
+{
+	background-position:140px 0px;
+}
+#a3:hover
+{
+	background-position:70px 0px;
+}
+
+</style>
+</head>
+
+<body>
+<a id="a1" href="#">标签卡A</a>
+<a id="a2" href="#">标签卡B</a>
+<a id="a3" href="#">标签卡C</a>
+<br style="clear:both;" />
+<br />
+注意上图中的标签卡背景图，是同一张背景的不同剪切<br />
+Google 采用此种方式
+</body>
+
+</html>

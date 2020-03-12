@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题 1</title>
+<style type="text/css">
+body
+{
+	margin:0px;
+}
+#d1{
+	width:100%;
+	height:40px;
+	background-color:#FFFFCC
+}
+#d2
+{
+	width:150px;
+	height:200px;
+	position:absolute;
+	top:40px;/*需要与d1相关*/
+	left:0px;/*左对齐绝对定位*/
+	background-color:#ccffff;
+}
+#d3
+{
+/*要点，不要设置宽度*/
+margin-left:150px;
+margin-right:100px;
+	background-color:#ccccff;
+	height:200px;
+
+}
+
+#d4
+{
+	position:absolute;
+	top:40px;/*需要与d1相关*/
+	right:0px;/*右对齐绝对定位*/
+	width:100px;
+	background-color:#ccffff;
+	height:200px;
+
+}
+#d5{
+	clear:both;
+	width:100%;
+	height:40px;
+	background-color:#FFFFCC
+}
+
+</style>
+
+</head>
+
+<body>
+<div id="d1">标题</div>
+<div id="d2">目录</div>
+<div id="d3">正文</div>
+<div id="d4">工具条</div>
+<div id="d5">页脚</div>
+
+</body>
+
+</html>

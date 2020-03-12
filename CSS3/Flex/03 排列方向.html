@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>排列方向</title>
+	<style>
+		h2 {
+			margin-bottom: 5px;
+			line-height: 20px;
+			font: 300 17px "Consolas";
+		}
+		ul {
+			list-style: none;
+			clear: both;
+		}
+		ul:last-child {
+			padding-top: 20px;
+		}
+		li { margin: 0 10px; float: left; }
+		[class *= "box"] {
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			font-family: Microsoft Yahei;
+			text-align: center;
+		}
+		[class *= "item"] {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+		}
+		.item1 { background: #FF6666; }
+		.item2 { background: #99CC66; }
+		.item3 { background: #66CCFF; }
+		.item4 { background: #FF9900; }
+
+
+		/* 新 - 排列方向 */
+		#new [class *= "box"] {
+		    display: -webkit-flex;
+		    display: flex;
+		}
+		#new .box1 {
+			-webkit-flex-direction: row;
+			flex-direction: row;
+		}
+		#new .box2 {
+			-webkit-flex-direction: row-reverse;
+			flex-direction: row-reverse;
+		}
+		#new .box3 {
+			-webkit-flex-direction: column;
+			flex-direction: column;
+		}
+		#new .box4 {
+			-webkit-flex-direction: column-reverse;
+			flex-direction: column-reverse;
+		}
+
+		/* 旧 - 排列方向 */
+		#old [class *= "box"] {
+			/* Safari 、Opera 、Chrome */
+		    display: -webkit-box;
+		    display: -moz-box;
+		    display: box;
+		}
+		#old .box1 {
+			-webkit-box-direction: normal;
+			-moz-box-direction: normal;
+			box-direction: normal;
+		}
+		#old .box2 {
+			-webkit-box-direction: reverse;
+			-moz-box-direction: reverse;
+			box-direction: reverse;
+		}
+	</style>
+</head>
+<body>
+	<h1>弹性盒模型 - 排列方向</h1>
+	<ul id="new">
+		<h4>
+			<p>display: flex;</p>
+			<p>flex-direction:</p>
+		</h4>
+		<li>
+			<h2 style="color: #096;">row</h2>
+			<div class="box1">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>row-reverse</h2>
+			<div class="box2">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>column</h2>
+			<div class="box3">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>column-reverse</h2>
+			<div class="box4">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+	</ul>
+
+
+	<ul id="old">
+		<h4>
+			<p>display: box;</p>
+			<p>box-direction:</p>
+		</h4>
+		<li>
+			<h2 style="color: #096;">normal</h2>
+			<div class="box1">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>reverse</h2>
+			<div class="box2">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>

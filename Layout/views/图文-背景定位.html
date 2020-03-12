@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题 1</title>
+<style type="text/css">
+div{
+	margin:0px auto;
+	width:500px;
+	height:300px;
+	background-color:#FFFF99;
+	border:1px #FF9933 solid;
+	background-image:url('书.png');
+}
+#d1
+{/*不做任何限制，背景将被水平和垂直平铺*/
+}
+#d2
+{
+background-position:center;/*由中间向四周铺开*/
+}
+
+#d3
+{
+background-position:right;/*自右侧向左铺开*/
+}
+
+#d4
+{
+background-position:50px 50px;/*指定位移量铺开*/
+}
+
+</style>
+
+</head>
+
+<body>
+<div id="d1"></div><br/>
+<div id="d2"></div><br/>
+<div id="d3"></div><br/>
+<div id="d4"></div>
+
+</body>
+
+</html>

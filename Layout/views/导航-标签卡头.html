@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			margin: 0px;
+			font-size: 12px;
+		}
+		#List1 li {
+			float: left;
+			height: 30px;
+			width: 70px;
+			background-image: url('../static/image/A.gif');
+			list-style: none;/*去掉列表前面的圆点，在IE7上写不写没有区别，但是其他浏览器一定要写这一句*/
+		}
+		#List1 li a {
+			color: black;
+			text-decoration: none;/*黑色字符无下划线效果*/;
+			display: block;/*让超链接（A）与层一样占位*/;
+			width: 70px;
+			text-align: center;/*在指定的70像素中间，居中对齐连接文本*/;
+			line-height: 30px;/*与容器li的高度一致，以便垂直居中。同时，会让链接的点击区域占满整个“格子”而不是限于点击文本*/
+		}
+		#List1 #Current {
+			/*在不同网页中使用该标签表头时，只要在不同的标签卡（li）上设置id为指定样式的名字即可*/
+			background-image: url('../static/image/B.gif');
+		}
+		#List1 li:hover {
+			background-image: url('../static/image/C.gif');
+		}
+	</style>
+</head>
+<body>
+
+使用ul标签实现导航<hr />
+<ul id="List1">
+	<li><a href="#">首页</a></li>
+	<li><a href="#">国内新闻</a></li>
+	<li><a href="#">国际新闻</a></li>
+	<!--在不同网页中使用该标签表头时，只要在不同的标签卡（li）上设置id为指定样式的名字即可-->	
+	<li id="Current"><a href="#">科技新闻</a></li>
+	<li><a href="#">军事新闻</a></li>
+	<li><a href="#">汽车新闻</a></li>
+	<li><a href="#">财经新闻</a></li>
+	<li><a href="#">娱乐星闻</a></li>
+</ul>
+
+</body>
+</html>

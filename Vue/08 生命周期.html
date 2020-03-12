@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <title>生命周期</title>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+        <button @click="handleClick">clickMe</button>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                msg: 'hello world'
+            },
+            methods:{
+                handleClick: function () {
+                    this.msg = 'data after modify';
+                }
+            },
+
+            // 可以在这加个loading事件，在加载实例时触发
+            beforeCreate: function () {
+                console.log('beforeCreate');
+            },
+
+            // 初始化完成时的事件写在这里，如在这结束loading事件，异步请求也适宜在这里调用
+            created: function () {
+                console.log('created');
+            },
+
+            beforeMount: function () {
+                console.log('beforeMount');
+            },
+
+            // 挂载元素，获取到DOM节点
+            mounted: function () {
+                console.log('mounted');
+            },
+
+            beforeUpdate: function () {
+                console.log('beforeUpdate');
+            },
+
+            // 如果对数据统一处理，在这里写上相应函数
+            updated: function () {
+                console.log('updated');
+            },
+
+            // 可以做一个确认停止事件的确认框
+            beforeDestroy: function () {
+                console.log('beforeDestroy');
+            },
+
+            destroyed: function () {
+                console.log('destroyed');
+            }
+        })
+    </script>
+</body>
+</html>

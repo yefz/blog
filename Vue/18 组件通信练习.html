@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div id="app">
+            <chat-room></chat-room>
+        </div>
+        <script>
+        Vue.component('chat-room',{
+            data: function() {
+                return {
+                    chatList:[]
+                }
+            },
+            methods:{
+                addItem: function(msg) {
+                    this.chatList.push(msg);
+                    console.log(this.chatList)
+                }
+            },
+            template:
+                `<div>
+                    <ul>
+                        <li v-for="val in chatList">{{val}}</li>
+                    </ul>
+                    <contact name="jack" @toFather="addItem"></contact>
+                    <contact name="tom" @toFather="addItem"></contact>
+                </div>`
+        })
+
+        Vue.component('contact', {
+            props:['name'],
+            data: function() {
+                return {
+                    msg:''
+                }
+            },
+            methods:{
+                sendToFather: function() {
+                    // 将用户输入的内容发给父组件
+
+                    // 方式1：通过事件
+                    this.$emit('toFather',this.name+' : '+this.msg);
+
+                    // 方式2：直接通过$parent来操作数组
+                    // this.$parent.chatList.push(this.name + ' : ' + this.msg)
+                }
+            },
+            template:
+                `<div>
+                    <p>{{this.name + " :"}}</p>
+                    <input type="text" v-model="msg"/>
+                    <button @click="sendToFather">发送</button>
+                </div>`
+        })
+
+        new Vue({
+            el: '#app',
+            data: {
+                msg: 'hello world'
+            }
+        })
+        </script>
+    </body>
+</html>

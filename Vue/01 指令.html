@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.bootcss.com/vue/2.3.0/vue.js"></script>
+	<title>指令</title>
+</head>
+<body>
+	<div id="app">
+
+		<!-- 循环遍历 -->
+		<ul>
+			<li v-for="value in arrList">
+				{{value}}
+			</li>
+		</ul>
+		<ul>
+			<li v-for="(value, key) in arrList">
+				{{"key: " + key + "，value: " + value}}
+			</li>
+		</ul>
+		<ul>
+			<li v-for="(value, key, index) in objList">
+				{{"index: " + index + ", key: " + key + ", value: " + value}}
+			</li>
+		</ul>
+
+		<!-- 选择/判断 布尔值，true:显示, false隐藏 -->
+		<button v-if="hasMore">加载更多</button>
+		<p v-if="!hasMore">对不起，没有更多数据可以加载了</p>
+
+		<!-- 判断分支结构 -->
+		<p v-if = "answer == 'A'">选 A</p>
+		<p v-else-if = "answer == 'B'">选 B</p>
+		<p v-else-if = "answer == 'C'">选 C</p>
+		<p v-else>以上都不是</p>
+
+		<!-- v-text v-html v-show -->
+		<p v-text = "myHtml">this is a container</p>
+		<p v-html = "myHtml">this is a container</p>
+		<p v-show = "hasMore">show</p>
+
+		<!-- 将urlName的内容绑定到a的href中, 相似的还有img中的src -->
+		<a v-bind:href = "urlB">内事问百度</a>
+		<a :href = "urlG">外事找谷歌</a>
+
+		<!-- 按钮绑定处理函数 -->
+		<button v-on:click = "clickMe">点我试试</button>
+		<button @click = "clickMe()">再点我试试</button>
+
+		<!-- input事件 -->
+		<input type="text" @input = 'inpchange'>
+	</div>
+
+	<script>
+		new Vue({
+
+			// 定义根元素
+			el: '#app',
+
+			// 设置属性
+			data: {
+				arrList: [100, 200, 300],
+				objList: {name: "tom", age: 5, sex: "male"},
+				hasMore: true,
+				answer: 'A',
+				myHtml: '<h1>这是一个被替换的文本</h1>',
+				urlB: 'http://www.baidu.com',
+				urlG: 'http://www.google.com'
+			},
+
+			// 设置方法
+			methods: {
+				clickMe: function(){
+					console.log('叫你点你就点呀');
+				},
+				inpchange: function(){
+					console.log(event);
+					console.log(event.target.value);
+				}
+			}
+		})
+
+	</script>
+</body>
+</html>

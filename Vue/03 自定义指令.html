@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+	<title>自定义指令</title>
+</head>
+<body>
+	<div id="app">
+
+		<button @click="changebool()">点下试试</button>
+
+		<h1 v-if="hasBool" v-change>{{msg}}</h1>
+
+	</div>
+	<script>
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+				hasBool: true,
+				msg: 'hello world'
+			},
+			methods: {
+				changebool: function(){
+					this.hasBool = !this.hasBool;
+				}
+			},
+
+			// 设置指令
+			directives: {
+				// 自定义指令
+				change: {
+					bind: function(el,bindings){
+						console.log('调用 自定义指令 change')
+						console.log(bindings)
+						el.style.background = getRandomColor();
+					},
+					unbind: function(){
+						console.log('解除 自定义指令 change')
+					}
+				}
+			}
+		})
+
+		// 获取随机颜色
+		function getRandomColor() {
+    		var R = (Math.floor(Math.random()*256)).toString(16);
+    		var G = (Math.floor(Math.random()*256)).toString(16);
+    		var B = (Math.floor(Math.random()*256)).toString(16);
+    		return '#' + R + G + B;
+  		}
+
+	</script>
+</body>
+</html>

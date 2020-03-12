@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题 1</title>
+<style type="text/css">
+#d1 {
+	background-color: #FFFFCC;
+	width: 200px;
+	height: 200px;
+	border: 5px gray solid;
+	margin: 5px;
+	padding: 5px;
+}
+#d2 {
+	background-color: #FFCC99;
+	width: 200px;
+	height: 200px;
+}
+</style>
+</head>
+
+<body>
+黄色层实际宽度为：<br />
+宽度width + 双份内边距padding + 双份外边距margin + 双份边框border<br />
+=200+5*2+5*2+5*2<br />
+=230
+<hr/>
+<div id="d1">
+	外边框5<br />
+	保持与外部元件的边距<br />
+	<br />
+	内边距5<br />
+	保持与内部元件边距<br />
+	<br />
+	边线5<br />
+	由5像素构成外框</div>
+<div id="d2">
+	对比层，无内外边距和边框设定</div>
+
+</body>
+
+</html>

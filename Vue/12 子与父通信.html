@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <title>子组件向父组件通信</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 调用父组件-->
+        <father-component></father-component>
+    </div>
+    <script>
+    //创建一个父组件
+    Vue.component('father-component',{
+        methods:{
+            recvMsg: function (msg) {
+                console.log('父组件事件被触发'+msg);
+            }
+        },
+        template:
+            `<div>
+                <h1>这是父组件</h1>
+                <hr/>
+                <son-component v-on:toFather="recvMsg"></son-component>
+            </div>`
+    })
+    //创建一个子组件
+    Vue.component('son-component',{
+        methods:{
+            handleClick: function () {
+                //触发事件,并传值
+                this.$emit('toFather',100);
+            }
+        },
+        template:
+            `<div>
+                <h1>这是子组件</h1>
+                <button @click="handleClick">向父组件通过事件传值</button>
+            </div>`
+    })
+
+    new Vue({
+        el: '#app',
+        data: {
+            msg: 'hello world'
+        }
+    })
+    </script>
+</body>
+</html>

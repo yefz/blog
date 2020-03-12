@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <!-- 引入对应的js文件-->
+    <script src="https://cdn.bootcss.com/vue-router/2.5.3/vue-router.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <!-- 指定组件插入的容器-->
+        <router-view></router-view>
+    </div>
+    <script>
+    // 创建组件
+    // 要求：将输入框中用户所输入的信息作为参数发送给Main组件
+
+    /*  步骤：
+        ①获取到用户输入的值
+        ②发送login 接收main
+        ③配置接收方的path
+        ④接收 this.$route.params
+    */
+    var Login = Vue.component('login', {
+        data: function () {
+            return {
+                inpName: ''
+            }
+        },
+        methods:{
+            jumpMain: function () {
+                myRouter.push('/home/'+this.inpName);
+            }
+        },
+        template:
+            `<div>
+                <h1>Login Page</h1>
+
+                <input type="text" v-model="inpName"/>
+
+                <router-link v-bind:to="'/home/' + inpName">登录</router-link>
+                <button @click="jumpMain">登录</button>
+            </div>`
+    })
+
+    // 在main组件中接收到传递来的参数 将参数显示在视图中
+    var Main = Vue.component('main01', {
+        data: function () {
+            return {
+                result: ''
+            }
+        },
+        created: function () {
+            // 接收传递过来的参数
+            this.result = this.$route.params.name;
+        },
+        template:
+            `<div>
+                <h1>Main Page</h1>
+                <p>{{"接收到的数据为: " + result}}</p>
+            </div>`
+    })
+
+    //②创建一个路由的实例
+    const myRouter = new VueRouter({
+        routes: [
+            {
+                path: '/login',
+                component: Login
+            },
+            {
+                path: '/home/:name',
+                component: Main
+            },
+            {
+                path: '/',
+                component: Login
+            }
+        ]
+    })
+    new Vue({
+        router: myRouter,
+        el: '#app',
+        data: {
+            msg: 'hello world'
+        }
+    })
+    </script>
+</body>
+</html>

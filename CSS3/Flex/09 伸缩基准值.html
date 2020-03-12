@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伸缩基准值</title>
+	<style>
+		h2 {
+			margin-bottom: 5px;
+			line-height: 20px;
+			font: 300 17px "Consolas";
+		}
+		ul {
+			list-style: none;
+			clear: both;
+		}
+		ul:last-child {
+			padding-top: 20px;
+		}
+		li { margin: 0 10px; float: left; }
+		.box {
+			height: 52px;
+			border: 1px solid #000;
+			font-family: Microsoft Yahei;
+			text-align: center;
+			box-sizing: border-box;
+		}
+		[class *= "item"] {
+			height: 50px;
+			line-height: 50px;
+		}
+		.item1 { background: #FF6666; }
+		.item2 { background: #99CC66; }
+		.item3 { background: #66CCFF; }
+		.item4 { background: #FF9900; }
+		.item5 { background: #CCCC99; }
+		.item6 { background: #CCFF66; }
+
+
+		/* 新 - 排列方向 */
+		.box {
+			width: 300px;
+		    display: -webkit-flex;
+		    display: flex;
+		}
+		.item1 {
+			flex-basis : 200px;
+		}
+		.item2 {
+			flex-basis : 200px;
+		}
+		.item3 {
+			flex-basis : 100px;
+		}
+
+		/* 计算溢出：300 - (150 + 150 + 100) = -100px */
+
+	</style>
+</head>
+<body>
+	<h1>弹性盒模型 - 伸缩基准值</h1>
+
+	<h2 style="color: #096;"></h2>
+	<div class="box">
+		<div class="item1">200px</div>
+		<div class="item2">200px</div>
+		<div class="item3">100px</div>
+	</div>
+
+</body>
+</html>

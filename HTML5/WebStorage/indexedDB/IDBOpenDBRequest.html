@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  var db = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+
+  var request,result,version = 1,
+    dbName = 'testDB',
+    osName = 'objectStore';
+
+  function createDB () {
+    request = db.open(dbName,version);
+    // 打开数据库成功
+    request.onsuccess = function () {
+      db = request.result;
+    }
+    // 打开失败
+    request.onerror = function (e) {
+      console.log(e.currentTarget.error.message);
+    }
+    // 数据库更新
+    request.onupgradeneeded = function () {
+      db = request.result;
+      // 如果数据库中不含有，则创建
+      if (!db.objectStoreNames.contains(osName)) {
+        store = db.createObjectStore(osName,{keyPath: 'id'});
+        store.createIndex('idIndex','id',{unique: true});
+        store.createIndex('hpIndex','hp',{unique: false});        store.createIndex('categoryIndex','category',{multiEntry: true});
+      }
+    }
+  }
+
+  // save data
+  var data = [{
+    name: '史莱姆',
+    id: '001',
+    hp: 3
+  },{
+    name: '小蝙蝠',
+    id: '002',
+    hp: 5
+  },{
+    name: '小恶魔',
+    id: '003',
+    hp: 9
+  }];
+
+  function addData () {
+    var transaction = db.transaction(osName,'readwrite'),
+    store = transaction.objectStore(osName);
+
+    data.map(function (o) {
+      store.add(o);
+    });
+  }
+
+  function getData (id) {
+    var transaction = db.transaction(osName,'readwrite'),
+    store = transaction.objectStore(osName);
+    var request = store.get(id);
+    request.onsuccess = function () {
+      console.log(request.result)
+    }
+  }
+
+  function getAllData () {
+    var transaction = db.transaction(osName,'readwrite'),
+    store = transaction.objectStore(osName);
+    var request = store.getAll();
+    request.onsuccess = function () {
+      console.log(request.result)
+    }
+  }
+
+  function updateData (id) {
+    var transaction = db.transaction(osName,'readwrite'),
+    store = transaction.objectStore(osName);
+    var request = store.get(id);
+    request.onsuccess = function () {
+      request = store.put({
+        name: '小猎犬',
+        id: id,
+        hp: 9
+      })
+    }
+  }
+
+  function deleteData (id) {
+    var transaction = db.transaction(osName,'readwrite'),
+    store = transaction.objectStore(osName);
+    var request = store.delete(id);
+    request.onsuccess = function () {
+      console.log('delete success')
+    }
+  }
+
+  function clear () {
+    var transaction = db.transaction(osName,'readwrite'),
+    store = transaction.objectStore(osName);
+    var request = store.clear();
+    request.onsuccess = function () {
+      console.log('clear success')
+    }
+  }
+
+  function useCursorGetData () {
+    var transaction = db.transaction(osName,'readwrite'),
+    store = transaction.objectStore(osName),
+    // 查询所有
+    // request = store.openCursor();
+    //查询指定
+    // request = store.openCursor(IDBKeyRange.only('002'));
+    //逆序遍历
+    request = store.openCursor(null,'prev');
+
+    request.onsuccess = function () {
+      var cursor = request.result;
+      if (cursor) {
+        console.log(cursor.value);
+        cursor.continue();
+      }
+    }
+  }
+
+  function useIndexAndCursorOperateData () {
+    var transaction = db.transaction(osName,'readwrite'),
+    store = transaction.objectStore(osName),
+    index = store.index('hpIndex'),
+    request = index.openCursor(IDBKeyRange.bound(5,10,true,true));
+
+    request.onsuccess = function () {
+      var cursor = request.result,value = null;
+      if (cursor) {
+        value = cursor.value;
+        value.hp += 20;
+        cursor.update(value);
+        console.log(cursor.value);
+        cursor.continue();
+      }
+    }
+  }
+
+
+
+</script>
+
+</body>
+</html>

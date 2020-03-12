@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <title>父组件向子组件通信</title>
+</head>
+<body>
+    <div id="example">
+        {{msg}}
+        <father-component></father-component>
+    </div>
+    <script>
+    Vue.component('father-component',{
+        data: function () {
+            return {
+                myValue:''
+            }
+        },
+        template:
+            `<div>
+                <input type="text" v-model="myValue"/>
+                <hr/>
+                <son-component v-bind:msg="myValue"></son-component>
+            </div>`
+    })
+
+    Vue.component('son-component',{
+
+        // 接收父组件参数
+        props:['msg'],
+
+        template:`<p>{{"接收到的参数为:"+msg}}</p>`
+    })
+
+    new Vue({
+        el: '#example',
+        data: {
+            msg: 'hello world'
+        }
+    })
+    </script>
+</body>
+</html>

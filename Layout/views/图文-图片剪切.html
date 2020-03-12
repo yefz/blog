@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题 1</title>
+<style type="text/css">
+#img1 {
+	position: absolute;/*只能在绝对定位的对象上进行剪切*/;
+	clip: rect(50px 410px 390px 195px);/*上、宽、高、左顺序的边距裁剪*/;
+	border-bottom-width: 100px;/*剪切后，边框将被损失，这是一个问题~~~~~如何解决呢？*/
+}
+#d1
+{
+position:absolute;
+top:650px;
+
+width:215px;/*根据自己需要的剪切大小设定宽度410-195=215*/
+height:340px;/*390-50=340*/
+
+overflow:hidden;/*强制不显示超出边界部分*/
+
+border:3px black solid;
+}
+#img2
+{
+	position: absolute;/*只能在绝对定位的对象上进行剪切*/;
+	clip: rect(50px 410px 390px 195px);/*上、宽、高、左顺序的边距裁剪*/;
+	margin-left:-195px;/*负数左边距，即，向左平移主体部分*/
+	margin-top:-50px;/*负数上边距，即，向上平移*/
+
+}
+</style>
+</head>
+
+<body>
+
+<img id="img1" alt="" src="公主日记.jpg" />
+<div id="d1">
+	<img id="img2" alt="" src="公主日记.jpg" style="left: 0px; top: 0px" /> </div>
+
+</body>
+
+</html>

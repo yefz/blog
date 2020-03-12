@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <title>过滤器</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 转大写 -->
+        <p>{{msg}}</p>
+        <p>{{msg | myUppercase}}</p>
+
+        <!-- 货币前缀 -->
+        <p>{{price}}</p>
+        <p>{{price | myCurrency('￥') }}</p>
+
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                msg: 'hello',
+                price: 30
+            },
+            filters:{
+                myUppercase: function (arg1) {
+                    return arg1.toUpperCase();
+                },
+                myCurrency: function (arg1, arg2) {
+                    return arg2 + arg1;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-router/2.5.3/vue-router.min.js"></script>
+    <title>router 练习</title>
+</head>
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+
+    <script>
+    var Menu = Vue.component('menus', {
+        data: function() {
+            return {
+                dishList: ['鱼香肉丝', '油泼面', '大虾']
+            }
+        },
+        methods: {
+            jumpToOrder: function(index) {
+                // 如何跳转
+                myRouter.push('/order/' + index);
+            }
+        },
+        //方式1：router-link
+        template:
+            `<ul>
+                <li v-for="(val,index) in dishList">
+
+                    <router-link :to="'/order/' + index"> {{val}} </router-link>
+
+                    <button @click="jumpToOrder(index + val)"> {{val}} </button>
+
+                </li>
+            </ul>`
+    })
+
+    var order = Vue.component('order', {
+        data: function () {
+            return {
+                result:''
+            }
+        },
+        mounted: function () {
+            //读取传递来的参数
+            this.result = this.$route.params.index;
+        },
+        template: `
+            <div>
+               <h1>
+                   {{"这是详情组件 接收到的值为:" + result}}
+                </h1>
+            </div>
+        `
+    })
+
+    const myRoutes = [
+        {
+            path: '/menu',
+            component: Menu
+        },
+        {
+            path: '/order/:index',
+            component: order
+        },
+        {
+            path: '/',
+            component: Menu
+        }
+    ]
+    const myRouter = new VueRouter({
+        routes: myRoutes
+        })
+    new Vue({
+        router: myRouter,
+        el: '#app',
+        data: {
+            msg: 'hello world'
+        }
+    })
+    </script>
+</body>
+</html>

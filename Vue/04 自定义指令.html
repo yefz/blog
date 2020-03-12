@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <title>自定义指令</title>
+</head>
+<body>
+    <div id="app">
+
+        <button @click="autoAdd">clickMe</button>
+
+        <h1 v-test="count" v-if="count < 5">{{count}}</h1>
+
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                count: 0
+            },
+            methods: {
+                autoAdd: function() {
+                    this.count++;
+                }
+            },
+            directives: {
+                test: {
+                    bind: function (el,bindings) {
+                        console.log('指令被绑定到了元素');
+                    },
+                    update: function(el,bindings) {
+                        console.log('正在更新');
+                        console.log("当前数据已经被修改为"+bindings.value);
+                    },
+                    unbind: function () {
+                        console.log('解绑');
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

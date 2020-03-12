@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+        <title>兄弟组件通信</title>
+    </head>
+    <body>
+        <div id="app">
+            <xiong-da></xiong-da>
+            <hr/>
+            <xiong-er></xiong-er>
+        </div>
+        <script>
+        // 兄弟通信采用的技术方案，就是事件的绑定和触发
+        // 触发:this.$emit()
+        // 绑定:this.$on();
+
+        // 创建一个vue的实例，借助该实例完成事件的绑定和触发
+        var bus = new Vue();
+
+        //熊大告诉熊二：光头强来了
+        //熊二给熊大回复消息：知道了
+        Vue.component('xiong-da',{
+            created: function () {
+                //绑定事件
+                bus.$on('toXiongDa', function (msg) {
+                    console.log('熊大收到消息:' + msg);
+                })
+            },
+            methods:{
+                tellXiongEr: function () {
+                    //触发自定义事件并传值
+                    bus.$emit('toXiongEr','光头强来了');
+                }
+            },
+            template:
+                `<div>
+                    <h1>这是熊大</h1>
+                    <button @click="tellXiongEr">通知熊二</button>
+                </div>`
+        })
+
+        Vue.component('xiong-er',{
+            created: function () {
+                //完成事件的绑定
+                bus.$on('toXiongEr', function (msg) {
+                    console.log('熊二收到消息:' + msg);
+                })
+            },
+            methods:{
+                replyToXiongDa: function () {
+                    //触发自定义事件
+                    bus.$emit('toXiongDa','熊二知道了');
+                }
+            },
+            template:
+                `<div>
+                    <h1>这是熊二</h1>
+                    <button @click="replyToXiongDa">回复熊大</button>
+                </div>`
+        })
+
+        new Vue({
+            el: '#app',
+            data: {
+                msg: 'hello world'
+            }
+        })
+        </script>
+    </body>
+</html>

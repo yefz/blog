@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <title>父子组件通信</title>
+</head>
+<body>
+    <div id="app">
+        <father></father>
+    </div>
+    <script>
+    // 父组件
+    Vue.component('father',{
+        data: function () {
+            return {
+                name:'小头爸爸'
+            }
+        },
+        methods:{
+            toChild: function() {
+
+                // 读取子组件的属性显示在控制台
+                console.log('调用子组件的属性：' + this.$refs.Child.name);
+                console.log('调用子组件的方法：' + this.$refs.Child.getAge());
+            },
+            getAge: function() {
+                return 25
+            }
+        },
+        template:
+            `<div>
+                <h1>这是父组件</h1>
+                <button @click="toChild">调用子组件属性和方法</button>
+                <hr/>
+                <son ref="Child"></son>
+            </div>`
+    })
+
+    // 子组件
+    Vue.component('son',{
+        data: function () {
+            return {
+                name:'大头儿子'
+            }
+        },
+        methods:{
+            getAge: function () {
+                return 5
+            },
+            getParentInfo: function () {
+                // 调用父组件中的属性和方法
+                console.log("调用父组件的属性：" + this.$parent.name);
+                console.log("调用父组件的方法：" + this.$parent.getAge());
+            }
+        },
+        template:
+            `<div>
+                <h1>这是子组件</h1>
+                <button @click="getParentInfo">调用父组件属性和方法</button>
+            </div>`
+    })
+
+    new Vue({
+        el: '#app',
+        data: {
+            msg: 'hello world'
+        }
+    })
+    </script>
+</body>
+</html>

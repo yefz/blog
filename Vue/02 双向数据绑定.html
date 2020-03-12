@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+	<title>双向数据绑定</title>
+</head>
+<body>
+	<div id="app">
+
+		<!-- 将数据绑定到模型上面，实现双向数据的绑定 -->
+		<input type="text" v-model="msg">
+
+		<h1>{{msg}}</h1>
+
+	</div>
+
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				msg: 'hello world'
+			}
+		})
+	</script>
+</body>
+</html>

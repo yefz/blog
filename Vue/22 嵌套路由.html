@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-router/2.5.3/vue-router.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+    <script>
+    var Login = Vue.component('login',{
+        template:
+            `<div>
+                <h1>这是登录页面</h1>
+                <router-link to="/GetEmail">登录</router-link>
+            </div>`
+    })
+    var Email = Vue.component('email',{
+        template:
+            `<div>
+                <h1>这是邮箱页面</h1>
+
+                <router-link to="/getEmail">收件箱</router-link>
+                <router-link to="/sendEmail">发件箱</router-link>
+
+                <router-view></router-view>
+            </div>`
+    })
+    var GetEmail = Vue.component('inbox',{
+        template:
+            `<ul>
+                <li>新邮件1</li>
+                <li>新邮件2</li>
+                <li>新邮件3</li>
+            </ul>`
+    })
+    var SendEmail = Vue.component('outbox',{
+        template:
+            `<ul>
+                <li>已发邮件1</li>
+                <li>已发邮件2</li>
+                <li>已发邮件3</li>
+            </ul>`
+        })
+    const myRoutes = [
+        {
+            path:'/login',
+            component:Login
+        },
+        {
+            path:'/email',
+            component:Email,
+            children:[{
+                    path:'/getEmail',
+                    component:GetEmail
+                },
+                {
+                    path:'/sendEmail',
+                    component:SendEmail
+                }
+            ]
+        },
+        {
+            path:'/',
+            component:Login
+        }
+    ]
+    const myRouter = new VueRouter({
+        routes:myRoutes
+    })
+    new Vue({
+        router:myRouter,
+        el: '#app'
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>order 序列</title>
+	<style>
+		h2 {
+			margin: 0;
+			padding-bottom: 5px;
+			line-height: 20px;
+			font: 300 17px "Consolas";
+		}
+		ul {
+			list-style: none;
+			clear: both;
+		}
+		ul:last-child {
+			padding-top: 20px;
+		}
+		li {
+			margin: 0 10px;
+			float: left;
+			/*border: 1px solid red;*/
+		}
+		[class *= "box"] {
+			width: 200px;
+			height: 80px;
+			border: 1px solid #000;
+			font-family: Microsoft Yahei;
+			text-align: center;
+		}
+		[class *= "item"] {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+		}
+		.item1 { background: #FF6666; }
+		.item2 { background: #99CC66; }
+		.item3 { background: #66CCFF; }
+		.item4 { background: #FF9900; }
+		.item5 { background: #CCCC99; }
+		.item6 { background: #CCCCFF; }
+		.item7 { background: #CCFF66; }
+
+
+		/* 新 - 排列方向 */
+		#new [class *= "box"] {
+		    display: -webkit-flex;
+		    display: flex;
+		}
+		#new .item1 {
+			-webkit-order: 1;
+			order: 1;
+		}
+		#new .item2 {
+			-webkit-order: 3;
+			order: 3;
+		}
+		#new .item3 {
+			-webkit-order: 1;
+			order: 1;
+		}
+		#new .item4 {
+			-webkit-order: 5;
+			order: 5;
+		}
+		#new .item5 {
+			-webkit-order: 2;
+			order: 2;
+		}
+		#new .item6 {
+			-webkit-order: 3;
+			order: 3;
+		}
+
+
+		/* 旧 - 排列方向 */
+		#old [class *= "box"] {
+			/* Safari 、Opera 、Chrome */
+		    display: -webkit-box;
+		    display: -moz-box;
+		    display: box;
+		}
+		#old .item1 {
+			-webkit-box-ordinal-group: 1;
+			-moz-box-ordinal-group: 1;
+			box-ordinal-group: 1;
+		}
+		#old .item2 {
+			-webkit-box-ordinal-group: 3;
+			-moz-box-ordinal-group: 3;
+			box-ordinal-group: 3;
+		}
+		#old .item3 {
+			-webkit-box-ordinal-group: 1;
+			-moz-box-ordinal-group: 1;
+			box-ordinal-group: 1;
+		}
+		#old .item4 {
+			-webkit-box-ordinal-group: 5;
+			-moz-box-ordinal-group: 5;
+			box-ordinal-group: 5;
+		}
+		#old .item5 {
+			-webkit-box-ordinal-group: 2;
+			-moz-box-ordinal-group: 2;
+			box-ordinal-group: 2;
+		}
+		#old .item6 {
+			-webkit-box-ordinal-group: 3;
+			-moz-box-ordinal-group: 3;
+			box-ordinal-group: 3;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>弹性盒模型 - order 序列</h1>
+	<ul>
+		<li id="new">
+			<h2>order :</h2>
+			<div class="box1">
+				<div class="item1">1</div>
+				<div class="item2">3</div>
+				<div class="item3">1</div>
+				<div class="item4">5</div>
+				<div class="item5">2</div>
+				<div class="item6">3</div>
+			</div>
+		</li>
+		<li id="old">
+			<h2>box-ordinal-group :</h2>
+			<div class="box1">
+				<div class="item1">1</div>
+				<div class="item2">3</div>
+				<div class="item3">1</div>
+				<div class="item4">5</div>
+				<div class="item5">2</div>
+				<div class="item6">3</div>
+			</div>
+		</li>
+	</ul>
+
+</body>
+</html>

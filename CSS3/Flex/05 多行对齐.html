@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>排列方向</title>
+	<style>
+		h2 {
+			margin-bottom: 5px;
+			line-height: 20px;
+			font: 300 17px "Consolas";
+		}
+		ul {
+			list-style: none;
+			clear: both;
+		}
+		ul:last-child {
+			padding-top: 20px;
+		}
+		li { margin: 0 10px; float: left; }
+		[class *= "box"] {
+			width: 120px;
+			height: 240px;
+			border: 1px solid #000;
+			font-family: Microsoft Yahei;
+			text-align: center;
+		}
+		[class *= "item"] {
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+		}
+		.item1 { background: #FF6666; }
+		.item2 { background: #99CC66; }
+		.item3 { background: #66CCFF; }
+		.item4 { background: #FF9900; }
+		.item5 { background: #CCCC99; }
+		.item6 { background: #CCFF66; }
+
+
+		/* 新 - 排列方向 */
+		#new [class *= "box"] {
+		    display: -webkit-flex;
+		    display: flex;
+			-webkit-flex-flow: row wrap;
+			flex-flow: row wrap;
+		}
+		#new .box1 {
+			-webkit-align-content: flex-start;
+			align-content: flex-start;
+		}
+		#new .box2 {
+			-webkit-align-content: flex-end;
+			align-content: flex-end;
+		}
+		#new .box3 {
+			-webkit-align-content: center;
+			align-content: center;
+		}
+		#new .box4 {
+			-webkit-align-content: space-between;
+			align-content: space-between;
+		}
+		#new .box5 {
+			-webkit-align-content: space-around;
+			align-content: space-around;
+		}
+		#new .box6 {
+			-webkit-align-content: stretch;
+			align-content: stretch;
+		}
+
+
+		/* 旧 - 排列方向 */
+box-orient：horizontal | vertical | inline-axis | block-axis
+		#old [class *= "box"] {
+			/* Safari 、Opera 、Chrome */
+		    display: -webkit-box;
+		    display: -moz-box;
+		    display: box;
+			-webkit-flex-flow: row wrap;
+			flex-flow: row wrap;
+		}
+		#old .box1 {
+			-webkit-box-orient: horizontal;
+			-moz-box-orient: horizontal;
+			box-orient: horizontal;
+		}
+		#old .box2 {
+			-webkit-box-orient: vertical;
+			-moz-box-orient: vertical;
+			box-orient: vertical;
+		}
+		#old .box3 {
+			-webkit-box-orient: inline-axis;
+			-moz-box-orient: inline-axis;
+			box-orient: inline-axis;
+		}
+		#old .box4 {
+			-webkit-box-orient: block-axis;
+			-moz-box-orient: block-axis;
+			box-orient: block-axis;
+		}
+	</style>
+</head>
+<body>
+	<h1>弹性盒模型 - 多行对齐</h1>
+	<ul id="new">
+		<h4>
+			<p>display: flex;</p>
+			<p>align-content:</p>
+		</h4>
+		<li>
+			<h2 style="color: #096;">flex-start</h2>
+			<div class="box1">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+				<div class="item5">5</div>
+				<div class="item6">6</div>
+			</div>
+		</li>
+		<li>
+			<h2>flex-end</h2>
+			<div class="box2">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+				<div class="item5">5</div>
+				<div class="item6">6</div>
+			</div>
+		</li>
+		<li>
+			<h2>center</h2>
+			<div class="box3">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+				<div class="item5">5</div>
+				<div class="item6">6</div>
+			</div>
+		</li>
+		<li>
+			<h2>space-between</h2>
+			<div class="box4">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+				<div class="item5">5</div>
+				<div class="item6">6</div>
+			</div>
+		</li>
+		<li>
+			<h2>space-around</h2>
+			<div class="box5">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+				<div class="item5">5</div>
+				<div class="item6">6</div>
+			</div>
+		</li>
+		<li>
+			<h2>stretch</h2>
+			<div class="box6">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+				<div class="item5">5</div>
+				<div class="item6">6</div>
+			</div>
+		</li>
+	</ul>
+
+
+	<ul id="old">
+		<h4>
+			<p>display: box;</p>
+			<p>box-lines:</p>
+			<p>无浏览器支持</p>
+		</h4>
+		<li>
+			<h2 style="color: #096;">single</h2>
+			<div class="box1">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+				<div class="item5">2</div>
+				<div class="item6">3</div>
+				<div class="item7">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>multiple</h2>
+			<div class="box2">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+				<div class="item5">2</div>
+				<div class="item6">3</div>
+				<div class="item7">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>multiple</h2>
+			<div class="box3">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+				<div class="item5">2</div>
+				<div class="item6">3</div>
+				<div class="item7">4</div>
+			</div>
+		</li>
+		<li>
+			<h2>multiple</h2>
+			<div class="box4">
+				<div class="item1">1</div>
+				<div class="item2">2</div>
+				<div class="item3">3</div>
+				<div class="item4">4</div>
+				<div class="item5">2</div>
+				<div class="item6">3</div>
+				<div class="item7">4</div>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>

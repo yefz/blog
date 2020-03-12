@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题 1</title>
+<style type="text/css">
+#s1
+{
+/*text-transform:capitalize;首字母大些形式*/
+font-variant:small-caps;	/*将小写字母全大写，但是占有的高度却是小写的样子*/
+}
+#s2
+{
+text-transform:lowercase;	/*控制自动转换为指定的大、小写形式*/
+
+}
+</style>
+</head>
+
+<body>
+<div>
+<span id="s1">这是一段文字 this is a string.[将小写字母全大写，但是占有的高度却是小写的样子]</span>
+<br/>
+<span id="s2">这是一段文字 THIS IS A STRING.[大写自动被转换为小写]</span>
+</div>
+<hr/>对比部分，未作任何设置：
+<div>
+<span>这是一段文字 This is a string.[小写]</span> <br/>
+<span>这是一段文字 THIS IS A STRING.[大写]</span>
+</div>
+
+</body>
+
+</html>

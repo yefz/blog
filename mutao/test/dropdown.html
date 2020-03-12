@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单</title>
+	<link rel="stylesheet" href="../static/css/master.css">
+	<style>
+		/* dropdown */
+		.dropdown {
+			position: relative;
+			/*overflow: hidden;*/
+		}
+		.dropdown-toggle {
+			position: relative;
+			z-index: 2;
+		}
+		.dropdown-arrow {
+			display: inline-block;
+			background-repeat: no-repeat;
+			vertical-align: middle;
+		}
+		.dropdown-layer {
+			display: none;
+			position: absolute;
+			z-index: 1;
+		}
+		.dropdown-left {
+			left: 0;
+			right: auto;
+		}
+		.dropdown-right {
+			left: auto;
+			right: 0;
+		}
+
+		/* menu dropdown */
+		.menu .dropdown-toggle {
+			display: block;
+			height: 100%;
+			padding: 0 16px 0 12px;
+			border-left: 1px solid #f3f5f7;
+			border-right: 1px solid #f3f5f7;
+		}
+		.menu .dropdown-arrow {
+			margin-left: 8px;
+			width: 8px;
+			height: 6px;
+			background-image: url('../static/image/dropdown-arrow.png')
+		}
+		.menu .dropdown-layer {
+			top: 100%;
+			background-color: #fff;
+			border: 1px solid #cdd0d4;
+		}
+
+		.menu-item {
+			display: block;
+			padding: 0 12px;
+			height: 30px;
+			line-height: 30px;
+			color: #4d555d;
+			white-space: nowrap;
+		}
+
+		.menu-item:hover {
+			background-color: #f3f5f7;
+		}
+
+		.menu-active .dropdown-toggle {
+			background-color: #fff;
+			border-color: #cdd0d4;
+		}
+
+		.menu-active .dropdown-arrow {
+			background-color: #fff;
+			background-image: url('../static/image/dropdown-arrow-active.png');
+		}
+
+		.fadeOut {
+			visibility: hidden !important;
+			opacity: 0 !important;
+		}
+
+		.slideUpDownCollapse {
+			height: 0 !important;
+			padding-top: 0 !important;
+			padding-bottom: 0 !important;
+		}
+
+		.slideLeftRightCollapse {
+			width: 0 !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="menu dropdown fl" data-active="menu">
+		<a class="dropdown-toggle" href="">我的慕淘
+			<i class="dropdown-arrow"></i>
+		</a>
+		<ul class="dropdown-layer dropdown-left">
+			<li><a class="menu-item" href="###" target="_blank">已买到的宝贝</a></li>
+			<li><a class="menu-item" href="###" target="_blank">我的足迹</a></li>
+		</ul>
+	</div>
+	<div class="menu dropdown fl" data-active="menu">
+		<a class="dropdown-toggle" href="">我的慕淘
+			<i class="dropdown-arrow"></i>
+		</a>
+		<ul class="dropdown-layer dropdown-left">
+			<li><a class="menu-item" href="###" target="_blank">已买到的宝贝</a></li>
+			<li><a class="menu-item" href="###" target="_blank">我的足迹</a></li>
+		</ul>
+	</div>
+
+	<script src="../static/js/jquery-1.11.3.min.js"></script>
+	<script src="../static/js/transition.js"></script>
+	<script src="../static/js/showHide.js"></script>
+	<script src="../static/js/dropdown.js"></script>
+	<script>
+		// $('.dropdown').hover(function() {
+		// 	var me = $(this);
+		// 	me.addClass(me.data('active') + '-active');
+		// },function() {
+		// 	var me = $(this);
+		// 	me.removeClass(me.data('active') + '-active');
+		// })
+
+		// function dropdown(el) {
+		// 	var $el = $(el),
+		// 		activeClass = $el.data('active') + '-active';
+
+		// 	$el.hover(function() {
+		// 		$el.addClass(activeClass);
+		// 	}, function() {
+		// 		$el.removeClass(activeClass);
+		// 	})
+		// }
+
+		// $.fn.extend({
+		// 	dropdown: function() {
+		// 		return this.each(function() {
+		// 			dropdown(this);
+		// 		})
+		// 	}
+		// })
+
+		$('.dropdown').dropdown();
+
+		// $('.dropdown').each(function() {
+		// 	dropdown($(this))
+		// })
+
+	</script>
+</body>
+</html>

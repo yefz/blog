@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-router/2.5.3/vue-router.min.js"></script>
+    <title>路由 router</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 指定组件插入的容器-->
+        <router-view></router-view>
+    </div>
+    <script>
+    var compA = Vue.component('', {
+        methods:{
+            jump: function() {
+                myRouter.push('/about');
+            }
+        },
+        template:
+            `<div>
+                <h1>这是组件A</h1>
+                <router-link to="/about">跳转到B</router-link>
+                <button @click="jump">跳转到B</button>
+            </div>`
+    })
+
+    var compB = Vue.component('', {
+        methods:{
+            jump: function() {
+                myRouter.push('/home');
+            }
+        },
+        template:
+            `<div>
+                <h1>这是组件B</h1>
+                <router-link to="/home">跳转到A</router-link>
+                <button @click="jump">跳转到A</button>
+            </div>`
+    })
+
+    // 定义一个对象数组
+    const pathList = [
+        {
+            path:'/home',     // 通过路径跳转
+            component:compA   // 通过组件跳转
+        },
+        {
+            path:'/about',
+            component:compB
+        },
+        {
+            path:'/',
+            component:compA
+        }
+    ];
+
+    // 创建router实例
+    const myRouter = new VueRouter({
+        routes: pathList
+    })
+
+    new Vue({
+        el: '#app',
+        router: myRouter
+    })
+    </script>
+</body>
+</html>
