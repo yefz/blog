@@ -2,6 +2,7 @@
 title: JavaScript 常用正则验证
 date: 2020-03-29 09:05:12
 publish: true
+sticky: 3
 categories:
   - 前端开发
 tags: 原生JS
