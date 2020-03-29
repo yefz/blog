@@ -8,7 +8,7 @@ categories:
 tags: 原生JS
 ---
 
-# 浏览器操作相关browser工具函数
+## 浏览器操作相关browser工具函数
 
 ### 返回当前url
 ``` javascript
@@ -269,11 +269,11 @@ export function AutoResponse(width = 750) {
 }
 ```
 
-# 日期工具date工具函数
+## 日期工具date工具函数
 
-# 浏览器存储相关storage工具函数
+## 浏览器存储相关storage工具函数
 
-# 更多的工具函数
+## 更多的工具函数
 
 ### 获取数据类型，返回字符串
 >有传参则判断传参类型，没有则判断调用对象类型，返回字符串
