@@ -83,3 +83,11 @@ export default {
 };
 </script>
 ```
+
+## 表单提交禁止重载页面
+w3c标准 使用submit会触发提交了整个表单,只要禁止这个默认行为,自定义提交即可
+
+``` html
+<el-form @submit.native.prevent>
+</form>
+```
