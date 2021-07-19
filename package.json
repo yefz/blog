@@ -1,36 +1,31 @@
 {
-  "name": "yefz.github.io",
-  "title": "yefz Blog",
-  "author": "凝弧 <free.ye@live.cn>",
-  "license": "MIT",
+  "name": "theme-vdoing-blog",
   "version": "1.0.0",
-  "homepage": "http://yefz.github.io/Node",
-  "keywords": [
-    "note",
-    "blog",
-    "codes"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yefz/yefz.github.io"
-  },
-  "bugs": "https://github.com/yefz/yefz.github.io/issues",
-  "description": "",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh",
+    "editFm": "node utils/editFrontmatter.js",
+    "baiduPush": "node utils/baiduPush.js https://xugaoyi.com && bash baiduPush.sh",
+    "publish": "cd ./theme-vdoing && npm publish && cd ../ && npm run updateTheme",
+    "updateTheme": "npm uninstall vuepress-theme-vdoing && rm -rf node_modules && npm i && npm i vuepress-theme-vdoing -D"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "dayjs": "^1.9.7",
+    "inquirer": "^7.1.0",
+    "json2yaml": "^1.1.0",
+    "vuepress": "1.8.0",
+    "vuepress-plugin-baidu-autopush": "^1.0.1",
+    "vuepress-plugin-baidu-tongji": "^1.0.1",
+    "vuepress-plugin-demo-block": "^0.7.2",
+    "vuepress-plugin-one-click-copy": "^1.0.2",
+    "vuepress-plugin-thirdparty-search": "^1.0.2",
+    "vuepress-plugin-zooming": "^1.1.7",
+    "vuepress-theme-vdoing": "^1.8.3",
+    "yamljs": "^0.3.0"
   },
   "dependencies": {
-    "@iktakahiro/markdown-it-katex": "^3.1.0",
-    "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.3",
-    "@vuepress/plugin-medium-zoom": "1.2.0",
-    "@vuepress/plugin-pwa": "^1.2.0",
-    "markdown-it": "^10.0.0",
-    "markdown-it-mark": "^3.0.0",
-    "markdown-it-task-lists": "^2.1.1",
-    "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1",
-    "vuepress": "^1.2.0",
-    "vuepress-plugin-ribbon": "^1.0.0",
-    "vuepress-theme-reco": "^1.2.2"
+    "vuepress-plugin-comment": "^0.7.3"
   }
 }

@@ -1,7 +1,18 @@
-.DS_Store
+# npm
+package-lock.json
 node_modules
-*.log
-.temp
-TODOs.md
-types
-dist
+
+# yarn
+yarn.lock
+
+# vscode
+.vscode
+
+# vuepress
+docs/.vuepress/dist
+
+# 百度链接推送
+urls.txt
+
+# mac
+.DS_Store
