@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  Build and Deploy: # 自定义名称
+  Build_Deploy: # 自定义名称
     runs-on: ubuntu-latest # 运行在虚拟机环境ubuntu-latest
     steps:
       - name: Checkout # 步骤1
