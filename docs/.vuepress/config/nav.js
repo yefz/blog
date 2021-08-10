@@ -9,6 +9,7 @@ module.exports = [
       {
         text: '前端文章',
         items: [
+          { text: '代码风格', link: '/pages/bd18b7/' },
           { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
           { text: 'Vue', link: '/pages/5d463fbdb172d43b/' },
         ],
